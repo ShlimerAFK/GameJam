@@ -1,5 +1,7 @@
 extends State
 
+class_name IdleState
+
 func enter():
 	print("entered idle state")
 	animation.play("idle")
@@ -11,7 +13,8 @@ func update(delta: float):
 	pass
 
 func physics_update(delta: float):
-	pass
+	
+	player.move_and_slide()
 
 func handle_input(event: InputEvent):
 	if event.is_action_pressed("up") or event.is_action_pressed("down") or event.is_action_pressed("left") or event.is_action_pressed("right"):
