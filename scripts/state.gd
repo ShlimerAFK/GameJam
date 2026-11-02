@@ -3,8 +3,8 @@ extends Node
 class_name State
 var state_machine: StateMachine
 
-@onready var animation = $AnimatedSprite2D
-@onready var player = $"../../AnimatedSprite2D"
+@onready var animation = $"../../AnimatedSprite2D"
+@onready var player = $"../.."
 
 func enter():
 	pass

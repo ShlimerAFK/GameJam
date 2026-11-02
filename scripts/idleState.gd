@@ -2,6 +2,7 @@ extends State
 
 func enter():
 	print("entered idle state")
+	animation.play("idle")
 	
 func exit():
 	pass
