@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bmr54w3iy4jx7"]
+
+[ext_resource type="Texture2D" uid="uid://barq67eed08is" path="res://icon.svg" id="1_hmw4m"]
+[ext_resource type="Script" uid="uid://c0f8v0x4crel3" path="res://scripts/npc/npc_test.gd" id="1_t6imf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hmw4m"]
+size = Vector2(62, 62)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hpciv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hmw4m")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_snb48"]
+radius = 98.02041
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=1453047402]
+script = ExtResource("1_t6imf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=344392392]
+shape = SubResource("RectangleShape2D_hmw4m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1776900411]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_hpciv")
+animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=901339833]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=574447027]
+shape = SubResource("CircleShape2D_snb48")

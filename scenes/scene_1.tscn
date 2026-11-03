@@ -1,8 +1,15 @@
 [gd_scene format=3 uid="uid://c2ouubw8cdfl6"]
 
 [ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://thingies/player.tscn" id="1_ta4h7"]
+[ext_resource type="PackedScene" uid="uid://bmr54w3iy4jx7" path="res://thingies/npc_test.tscn" id="2_ka884"]
+[ext_resource type="PackedScene" uid="uid://cc1x44ypsamki" path="res://thingies/gui.tscn" id="3_cn2eb"]
 
 [node name="Node2D" type="Node2D" unique_id=580393968]
 
 [node name="player" parent="." unique_id=2090668697 instance=ExtResource("1_ta4h7")]
-position = Vector2(525, 499)
+position = Vector2(544, 504)
+
+[node name="Area2D" parent="." unique_id=1712531811 instance=ExtResource("2_ka884")]
+position = Vector2(393, 499)
+
+[node name="GUI" parent="." unique_id=910458424 instance=ExtResource("3_cn2eb")]

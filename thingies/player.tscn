@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://oy67rn0cumj3"]
 
-[ext_resource type="Script" uid="uid://c5hjtq0mhk4ue" path="res://scripts/stateMachine.gd" id="1_86rj8"]
+[ext_resource type="Script" uid="uid://dle0csipaihnl" path="res://scripts/player/player.gd" id="1_76jg7"]
+[ext_resource type="Script" uid="uid://c5hjtq0mhk4ue" path="res://scripts/player/stateMachine.gd" id="1_86rj8"]
 [ext_resource type="Texture2D" uid="uid://fwbspwftxnfy" path="res://sprites/player/idle_temp.png" id="1_ybvl4"]
 [ext_resource type="Texture2D" uid="uid://bekyce7ce45i0" path="res://sprites/player/walk_temp.png" id="2_1makr"]
-[ext_resource type="Script" uid="uid://cuij2t2vyqnla" path="res://scripts/idleState.gd" id="2_jeytj"]
-[ext_resource type="Script" uid="uid://dnbl05w8p0q1" path="res://scripts/runState.gd" id="3_ltg3l"]
-[ext_resource type="Script" uid="uid://cxptm6csl73o2" path="res://scripts/walkState.gd" id="4_ybvl4"]
+[ext_resource type="Script" uid="uid://cuij2t2vyqnla" path="res://scripts/player/idleState.gd" id="2_jeytj"]
+[ext_resource type="Script" uid="uid://dnbl05w8p0q1" path="res://scripts/player/runState.gd" id="3_ltg3l"]
+[ext_resource type="Script" uid="uid://cxptm6csl73o2" path="res://scripts/player/walkState.gd" id="4_ybvl4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ybvl4"]
 atlas = ExtResource("1_ybvl4")
@@ -99,8 +100,12 @@ animations = [{
 radius = 7.5
 height = 28.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_76jg7"]
+radius = 18.506756
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2090668697]
 scale = Vector2(2, 2)
+script = ExtResource("1_76jg7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1202618391]
 texture_filter = 1
@@ -128,4 +133,19 @@ script = ExtResource("4_ybvl4")
 [node name="IdleTimer" type="Timer" parent="." unique_id=1074425924]
 one_shot = true
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1978829475]
+limit_left = -1000
+limit_top = -1000
+limit_right = 2000
+limit_bottom = 1000
+position_smoothing_enabled = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=277373216]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2071294014]
+position = Vector2(-0.5, 1.5)
+shape = SubResource("CircleShape2D_76jg7")
+
 [connection signal="timeout" from="IdleTimer" to="StateMachine/WalkState" method="_on_idle_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

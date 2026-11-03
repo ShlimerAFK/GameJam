@@ -6,6 +6,13 @@ class_name MovementState
 
 var speed = 20000
 
+func physics_update(delta: float):
+	
+	handle_movement(delta)
+	
+	player.move_and_slide()
+
+
 func handle_movement(delta: float):
 	var direction := Input.get_vector("left", "right", "up", "down")
 	
