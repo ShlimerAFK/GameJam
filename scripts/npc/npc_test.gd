@@ -1,5 +1,4 @@
-extends RigidBody2D
-
+extends StaticBody2D
 
 func write_stuff():
 	print("AAAAAAAAAAAAAHHHHHHHHHH")
