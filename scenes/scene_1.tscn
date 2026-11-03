@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://c2ouubw8cdfl6"]
 
-[ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://scenes/player.tscn" id="1_ta4h7"]
+[ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://thingies/player.tscn" id="1_ta4h7"]
 [ext_resource type="Texture2D" uid="uid://c61jd4344swwg" path="res://sprites/tilesets/office_temp.png" id="2_ka884"]
-[ext_resource type="PackedScene" uid="uid://cc1x44ypsamki" path="res://scenes/gui.tscn" id="3_cn2eb"]
-[ext_resource type="PackedScene" uid="uid://bmr54w3iy4jx7" path="res://scenes/npc_test.tscn" id="4_sj5te"]
+[ext_resource type="PackedScene" uid="uid://cc1x44ypsamki" path="res://thingies/gui.tscn" id="3_cn2eb"]
+[ext_resource type="PackedScene" uid="uid://bmr54w3iy4jx7" path="res://thingies/npc_test.tscn" id="4_sj5te"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cn2eb"]
 texture = ExtResource("2_ka884")
@@ -23,9 +23,6 @@ sources/0 = SubResource("TileSetAtlasSource_cn2eb")
 
 [node name="Node2D" type="Node2D" unique_id=580393968]
 
-[node name="player" parent="." unique_id=2090668697 instance=ExtResource("1_ta4h7")]
-position = Vector2(544, 504)
-
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=273562251]
 tile_set = SubResource("TileSet_f1dwg")
 
@@ -33,3 +30,6 @@ tile_set = SubResource("TileSet_f1dwg")
 position = Vector2(354, 511)
 
 [node name="GUI" parent="." unique_id=910458424 instance=ExtResource("3_cn2eb")]
+
+[node name="CharacterBody2D" parent="." unique_id=629992924 instance=ExtResource("1_ta4h7")]
+position = Vector2(504, 522)
