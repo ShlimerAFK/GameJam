@@ -3,6 +3,23 @@
 [ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://thingies/player.tscn" id="1_ta4h7"]
 [ext_resource type="PackedScene" uid="uid://bmr54w3iy4jx7" path="res://thingies/npc_test.tscn" id="2_ka884"]
 [ext_resource type="PackedScene" uid="uid://cc1x44ypsamki" path="res://thingies/gui.tscn" id="3_cn2eb"]
+[ext_resource type="Texture2D" uid="uid://c61jd4344swwg" path="res://sprites/tilesets/office_temp.png" id="2_ka884"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cn2eb"]
+texture = ExtResource("2_ka884")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+4:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_f1dwg"]
+sources/0 = SubResource("TileSetAtlasSource_cn2eb")
 
 [node name="Node2D" type="Node2D" unique_id=580393968]
 
@@ -13,3 +30,7 @@ position = Vector2(544, 504)
 position = Vector2(393, 499)
 
 [node name="GUI" parent="." unique_id=910458424 instance=ExtResource("3_cn2eb")]
+position = Vector2(525, 499)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=273562251]
+tile_set = SubResource("TileSet_f1dwg")
