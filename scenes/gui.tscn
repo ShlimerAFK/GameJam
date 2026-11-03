@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cc1x44ypsamki"]
+
+[ext_resource type="Script" uid="uid://cxot46u1tj7x0" path="res://scripts/gui/gui.gd" id="1_834qp"]
+
+[node name="GUI" type="CanvasLayer" unique_id=910458424]
+script = ExtResource("1_834qp")
+
+[node name="InteractText" type="Label" parent="." unique_id=1681718435]
+offset_left = 12.0
+offset_top = 434.0
+offset_right = 152.0
+offset_bottom = 457.0
+text = "Press E to interact"

@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://oy67rn0cumj3"]
 
-[ext_resource type="Script" uid="uid://dle0csipaihnl" path="res://scripts/player/player.gd" id="1_76jg7"]
 [ext_resource type="Script" uid="uid://c5hjtq0mhk4ue" path="res://scripts/player/stateMachine.gd" id="1_86rj8"]
 [ext_resource type="Texture2D" uid="uid://fwbspwftxnfy" path="res://sprites/player/idle_temp.png" id="1_ybvl4"]
 [ext_resource type="Texture2D" uid="uid://bekyce7ce45i0" path="res://sprites/player/walk_temp.png" id="2_1makr"]
@@ -105,7 +104,6 @@ radius = 18.506756
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2090668697]
 scale = Vector2(2, 2)
-script = ExtResource("1_76jg7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1202618391]
 texture_filter = 1
