@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var interactabe_object: RigidBody2D
+var interactabe_object: Node2D
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	interactabe_object = area.get_parent()

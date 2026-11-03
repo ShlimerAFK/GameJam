@@ -24,7 +24,7 @@ sources/0 = SubResource("TileSetAtlasSource_gk7kh")
 [sub_resource type="CircleShape2D" id="CircleShape2D_t1s07"]
 radius = 25.24381
 
-[node name="Node2D" type="Node2D" unique_id=339328991]
+[node name="Node2D2" type="Node2D" unique_id=339328991]
 script = ExtResource("1_gk7kh")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=859561840]
@@ -39,6 +39,7 @@ position = Vector2(57, 37.5)
 shape = SubResource("CircleShape2D_t1s07")
 
 [node name="CharacterBody2D" parent="." unique_id=2090668697 instance=ExtResource("4_xy8ay")]
+script = null
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
