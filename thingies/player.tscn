@@ -1,50 +1,50 @@
 [gd_scene format=3 uid="uid://oy67rn0cumj3"]
 
-[ext_resource type="Script" uid="uid://dle0csipaihnl" path="res://scripts/player/player.gd" id="1_76jg7"]
 [ext_resource type="Script" uid="uid://c5hjtq0mhk4ue" path="res://scripts/player/stateMachine.gd" id="1_86rj8"]
 [ext_resource type="Texture2D" uid="uid://fwbspwftxnfy" path="res://sprites/player/idle_temp.png" id="1_ybvl4"]
 [ext_resource type="Texture2D" uid="uid://bekyce7ce45i0" path="res://sprites/player/walk_temp.png" id="2_1makr"]
 [ext_resource type="Script" uid="uid://cuij2t2vyqnla" path="res://scripts/player/idleState.gd" id="2_jeytj"]
 [ext_resource type="Script" uid="uid://dnbl05w8p0q1" path="res://scripts/player/runState.gd" id="3_ltg3l"]
 [ext_resource type="Script" uid="uid://cxptm6csl73o2" path="res://scripts/player/walkState.gd" id="4_ybvl4"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ybvl4"]
-atlas = ExtResource("1_ybvl4")
-region = Rect2(0, 6, 16, 24)
+[ext_resource type="PackedScene" uid="uid://ci8auqj37jge7" path="res://thingies/canvas_layer.tscn" id="8_5t78w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1makr"]
 atlas = ExtResource("1_ybvl4")
-region = Rect2(16, 6, 16, 24)
+region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_76jg7"]
-atlas = ExtResource("2_1makr")
-region = Rect2(0, 0, 16, 32)
+atlas = ExtResource("1_ybvl4")
+region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5t78w"]
 atlas = ExtResource("2_1makr")
-region = Rect2(16, 0, 16, 32)
+region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lp3ep"]
 atlas = ExtResource("2_1makr")
-region = Rect2(32, 0, 16, 32)
+region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bm45k"]
 atlas = ExtResource("2_1makr")
-region = Rect2(48, 0, 16, 32)
+region = Rect2(32, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vp63t"]
 atlas = ExtResource("2_1makr")
-region = Rect2(0, 0, 16, 32)
+region = Rect2(48, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ucihn"]
 atlas = ExtResource("2_1makr")
-region = Rect2(16, 0, 16, 32)
+region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_drqk7"]
 atlas = ExtResource("2_1makr")
-region = Rect2(32, 0, 16, 32)
+region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8w6he"]
+atlas = ExtResource("2_1makr")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ooty"]
 atlas = ExtResource("2_1makr")
 region = Rect2(48, 0, 16, 32)
 
@@ -52,19 +52,16 @@ region = Rect2(48, 0, 16, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ybvl4")
+"texture": SubResource("AtlasTexture_1makr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1makr")
+"texture": SubResource("AtlasTexture_76jg7")
 }],
 "loop": 1,
 "name": &"idle",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_76jg7")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5t78w")
 }, {
@@ -73,15 +70,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bm45k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vp63t")
 }],
 "loop": 1,
 "name": &"run",
-"speed": 100.0
+"speed": 10.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vp63t")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ucihn")
 }, {
@@ -90,63 +87,58 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8w6he")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ooty")
 }],
 "loop": 1,
 "name": &"walk",
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ta4h7"]
-radius = 7.5
-height = 28.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aft4u"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_76jg7"]
-radius = 18.506756
+[sub_resource type="CircleShape2D" id="CircleShape2D_1makr"]
+radius = 20.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=2090668697]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=629992924]
 scale = Vector2(2, 2)
-collision_layer = 3
-script = ExtResource("1_76jg7")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1202618391]
-texture_filter = 1
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1426137098]
 sprite_frames = SubResource("SpriteFrames_ltg3l")
-animation = &"run"
+animation = &"walk"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1461105064]
-position = Vector2(-0.5, 2)
-shape = SubResource("CapsuleShape2D_ta4h7")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=254351039]
+shape = SubResource("CapsuleShape2D_aft4u")
 
-[node name="StateMachine" type="Node" parent="." unique_id=1076053462 node_paths=PackedStringArray("initial_state")]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1282992361]
+position_smoothing_enabled = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=513328246]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1672988585]
+shape = SubResource("CircleShape2D_1makr")
+
+[node name="StateMachine" type="Node" parent="." unique_id=1368388137 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("1_86rj8")
 initial_state = NodePath("IdleState")
 metadata/_custom_type_script = "uid://c5hjtq0mhk4ue"
 
-[node name="IdleState" type="Node" parent="StateMachine" unique_id=685969972]
+[node name="IdleState" type="Node" parent="StateMachine" unique_id=280974506]
 script = ExtResource("2_jeytj")
+metadata/_custom_type_script = "uid://cuij2t2vyqnla"
 
-[node name="RunState" type="Node" parent="StateMachine" unique_id=300252238]
+[node name="RunState" type="Node" parent="StateMachine" unique_id=1273061917]
 script = ExtResource("3_ltg3l")
+metadata/_custom_type_script = "uid://dnbl05w8p0q1"
 
-[node name="WalkState" type="Node" parent="StateMachine" unique_id=1669208348]
+[node name="WalkState" type="Node" parent="StateMachine" unique_id=363417547]
 script = ExtResource("4_ybvl4")
+metadata/_custom_type_script = "uid://cxptm6csl73o2"
 
-[node name="IdleTimer" type="Timer" parent="." unique_id=1074425924]
-one_shot = true
+[node name="IdleTimer" type="Timer" parent="." unique_id=1933726966]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1978829475]
-limit_left = -1000
-limit_top = -1000
-limit_right = 2000
-limit_bottom = 1000
-position_smoothing_enabled = true
+[node name="CanvasLayer" parent="." unique_id=282255516 instance=ExtResource("8_5t78w")]
 
-[node name="Area2D" type="Area2D" parent="." unique_id=277373216]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2071294014]
-position = Vector2(-0.5, 1.5)
-shape = SubResource("CircleShape2D_76jg7")
-
+[connection signal="timeout" from="IdleTimer" to="StateMachine/RunState" method="_on_idle_timer_timeout"]
 [connection signal="timeout" from="IdleTimer" to="StateMachine/WalkState" method="_on_idle_timer_timeout"]
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

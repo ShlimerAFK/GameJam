@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bmr54w3iy4jx7"]
 
 [ext_resource type="Texture2D" uid="uid://barq67eed08is" path="res://icon.svg" id="1_hmw4m"]
-[ext_resource type="Script" uid="uid://c0f8v0x4crel3" path="res://scripts/npc/npc_test.gd" id="1_t6imf"]
+[ext_resource type="Script" uid="uid://wakopjo34qaw" path="res://scripts/npc/npc_interact.gd" id="1_t6imf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hmw4m"]
 size = Vector2(62, 62)
@@ -35,3 +35,6 @@ animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=574447027]
 shape = SubResource("CircleShape2D_snb48")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

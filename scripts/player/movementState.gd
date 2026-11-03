@@ -26,6 +26,7 @@ func handle_movement(delta: float):
 	if not player.velocity == Vector2(0,0)	:
 		idle_timer.start(0.2)
 
+
 func _on_idle_timer_timeout() -> void:
-	
+
 	state_machine.change_state("IdleState")
