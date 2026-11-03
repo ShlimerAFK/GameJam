@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ouwtrpojk6r4" path="res://scenes/room_test_1.gd" id="1_gk7kh"]
 [ext_resource type="Texture2D" uid="uid://c61jd4344swwg" path="res://sprites/tilesets/office_temp.png" id="1_hv0dh"]
+[ext_resource type="Script" uid="uid://dqwfi7yh1ei38" path="res://scenes/area_2d.gd" id="3_nvuww"]
+[ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://thingies/player.tscn" id="4_xy8ay"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gk7kh"]
 texture = ExtResource("1_hv0dh")
@@ -19,9 +21,24 @@ texture = ExtResource("1_hv0dh")
 [sub_resource type="TileSet" id="TileSet_f1dwg"]
 sources/0 = SubResource("TileSetAtlasSource_gk7kh")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_t1s07"]
+radius = 25.24381
+
 [node name="Node2D" type="Node2D" unique_id=339328991]
 script = ExtResource("1_gk7kh")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=859561840]
 tile_map_data = PackedByteArray("AAAEAAIAAAAAAAEAAAADAAIAAAAEAAEAAAACAAIAAAAAAAEAAAABAAIAAAAAAAEAAAAAAAIAAAAAAAEAAAAFAAIAAAAAAAEAAAAFAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAADAAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAACAAEAAAABAAMAAAACAAEAAAACAAMAAAACAAEAAAADAAMAAAACAAEAAAAEAAMAAAACAAEAAAAFAAMAAAACAAEAAAAFAAQAAAACAAEAAAAFAAUAAAACAAEAAAAEAAUAAAACAAEAAAAEAAQAAAACAAEAAAADAAQAAAACAAEAAAACAAQAAAACAAEAAAADAAUAAAACAAEAAAACAAUAAAACAAEAAAABAAUAAAACAAEAAAAAAAUAAAACAAEAAAAAAAQAAAACAAEAAAABAAQAAAACAAEAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAEAAAAGAAMAAAACAAEAAAAGAAQAAAACAAEAAAAGAAUAAAACAAEAAAD//wUAAAABAAEAAAD//wQAAAABAAEAAAD//wMAAAABAAEAAAD//wIAAAABAAEAAAD//wEAAAABAAEAAAD//wAAAAABAAEAAAAHAAUAAAADAAEAAAAHAAQAAAADAAEAAAAHAAMAAAADAAEAAAAHAAIAAAADAAEAAAAHAAEAAAADAAEAAAAHAAAAAAADAAEAAAAGAP//AAACAAAAAAAFAP//AAACAAAAAAAEAP//AAACAAAAAAADAP//AAACAAAAAAACAP//AAACAAAAAAABAP//AAACAAAAAAAAAP//AAACAAAAAAD/////AAABAAAAAAAHAP//AAADAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAEAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_f1dwg")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=857766546]
+script = ExtResource("3_nvuww")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1431984521]
+position = Vector2(57, 37.5)
+shape = SubResource("CircleShape2D_t1s07")
+
+[node name="CharacterBody2D" parent="." unique_id=2090668697 instance=ExtResource("4_xy8ay")]
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
