@@ -2,21 +2,21 @@ extends Area2D
 
 
 
-var entered
+var player_has_entered: bool
 
 func _ready():
-	entered = false
+	player_has_entered = false
 
 
 func _on_body_entered(body):
-	entered = true
+	player_has_entered = true
 	#print("entered") just used to check if the player entered collision
 
 func _on_body_exited(body):
-	entered = false
+	player_has_entered = false
 	#print("exit") just used to check if the player is not in the collision
 
 func _process(_delta):
-	if entered == true:
-		if Input.is_action_just_pressed("ui_accept"):
+	if player_has_entered == true:
+		if Input.is_action_just_pressed("interact"):
 			get_tree().change_scene_to_file("res://scenes/roomTest2.tscn")

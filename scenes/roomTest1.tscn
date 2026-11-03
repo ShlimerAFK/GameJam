@@ -32,6 +32,8 @@ tile_map_data = PackedByteArray("AAAEAAIAAAAAAAEAAAADAAIAAAAEAAEAAAACAAIAAAAAAAE
 tile_set = SubResource("TileSet_f1dwg")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=857766546]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("3_nvuww")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1431984521]
@@ -39,6 +41,7 @@ position = Vector2(57, 37.5)
 shape = SubResource("CircleShape2D_t1s07")
 
 [node name="CharacterBody2D" parent="." unique_id=2090668697 instance=ExtResource("4_xy8ay")]
+position = Vector2(57, 40)
 script = null
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
