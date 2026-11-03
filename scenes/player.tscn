@@ -104,6 +104,8 @@ radius = 18.506756
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2090668697]
 scale = Vector2(2, 2)
+collision_layer = 3
+script = ExtResource("1_76jg7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1202618391]
 texture_filter = 1
