@@ -3,7 +3,6 @@ extends State
 class_name IdleState
 
 func enter():
-	print("entered idle state")
 	animation.play("idle")
 	
 func exit():
@@ -19,3 +18,5 @@ func physics_update(delta: float):
 func handle_input(event: InputEvent):
 	if event.is_action_pressed("up") or event.is_action_pressed("down") or event.is_action_pressed("left") or event.is_action_pressed("right"):
 		state_machine.change_state("WalkState")
+	elif event.is_action_pressed("run"):
+		state_machine.change_state("RunState")
