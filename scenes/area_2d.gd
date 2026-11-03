@@ -1,4 +1,6 @@
 extends Area2D
+@onready var fade: CanvasLayer = $"."
+
 
 
 
@@ -20,3 +22,5 @@ func _process(_delta):
 	if player_has_entered == true:
 		if Input.is_action_just_pressed("interact"):
 			get_tree().change_scene_to_file("res://scenes/roomTest2.tscn")
+
+	

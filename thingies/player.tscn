@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cuij2t2vyqnla" path="res://scripts/player/idleState.gd" id="2_jeytj"]
 [ext_resource type="Script" uid="uid://dnbl05w8p0q1" path="res://scripts/player/runState.gd" id="3_ltg3l"]
 [ext_resource type="Script" uid="uid://cxptm6csl73o2" path="res://scripts/player/walkState.gd" id="4_ybvl4"]
+[ext_resource type="PackedScene" uid="uid://ci8auqj37jge7" path="res://thingies/canvas_layer.tscn" id="8_5t78w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ybvl4"]
 atlas = ExtResource("1_ybvl4")
@@ -146,6 +147,8 @@ position_smoothing_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2071294014]
 position = Vector2(-0.5, 1.5)
 shape = SubResource("CircleShape2D_76jg7")
+
+[node name="CanvasLayer" parent="." unique_id=282255516 instance=ExtResource("8_5t78w")]
 
 [connection signal="timeout" from="IdleTimer" to="StateMachine/WalkState" method="_on_idle_timer_timeout"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
