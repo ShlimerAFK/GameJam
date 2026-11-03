@@ -8,6 +8,7 @@ func enter():
 	speed = 40000
 
 
+
 func handle_input(event: InputEvent):
 	if event.is_action_released("run") and not player.velocity == Vector2(0,0):
 		state_machine.change_state("WalkState")

@@ -59,15 +59,9 @@ run={
 ]
 }
 
-[layer_names]
-
-2d_physics/layer_1="General"
-2d_physics/layer_2="Player"
-
 [physics]
 
 3d/physics_engine="Jolt Physics"
-2d/default_gravity=0.0
 
 [rendering]
 
