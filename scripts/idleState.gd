@@ -3,7 +3,6 @@ extends State
 class_name IdleState
 
 func enter():
-	print("entered idle state")
 	animation.play("idle")
 	
 func exit():

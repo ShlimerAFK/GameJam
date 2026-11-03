@@ -3,7 +3,6 @@ extends MovementState
 class_name RunState
 
 func enter():
-	print("entered run state")
 	animation.play("run")
 	
 	speed = 40000

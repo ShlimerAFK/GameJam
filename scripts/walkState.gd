@@ -3,7 +3,6 @@ extends MovementState
 class_name MoveState
 
 func enter():
-	print("entered walk state")
 	animation.play("walk")
 	
 func exit():
