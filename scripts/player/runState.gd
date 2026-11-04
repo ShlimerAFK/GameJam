@@ -5,7 +5,7 @@ class_name RunState
 func enter():
 	animation.play("run")
 	
-	speed = 40000
+	speed = 10000
 
 
 

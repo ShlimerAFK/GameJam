@@ -4,7 +4,7 @@ class_name MovementState
 
 @onready var idle_timer = $"../../IdleTimer"
 
-var speed = 20000
+var speed = 5000
 
 func physics_update(delta: float):
 	
