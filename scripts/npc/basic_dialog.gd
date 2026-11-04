@@ -4,14 +4,15 @@ var file_path = "res://data/dialog.json"
 var dialog = "dialog_1"
 
 @onready var dialog_lable: Label = $TextBox/MarginContainer/Label
-
-var count = 0
 @onready var textbox: MarginContainer = $TextBox
 
+
+var count = 0
 var dialogues = []
 var tween: Tween = null
 
 func _ready() -> void:
+	textbox.visible = true
 	
 	dialogues = read_json_data(file_path).get(dialog, [])
 	if dialogues.size() > 0:
@@ -23,7 +24,10 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and count < len(dialogues) - 1:
 		count += 1
 		play_text_animation()
-
+		
+	elif Input.is_action_just_pressed("ui_accept") and count == len(dialogues) - 1:
+		textbox.visible = false
+		
 func read_json_data(filepath):
 	
 	var file = FileAccess.open(file_path, FileAccess.READ)

@@ -3,9 +3,11 @@ extends MovementState
 class_name WalkState
 
 
+
 func enter():
 	animation.play("walk")
-
+	
+	animations = ["walk_down", "walk_up", "walk_side"]
 
 func handle_input(event: InputEvent):
 	if event.is_action_pressed("run"):

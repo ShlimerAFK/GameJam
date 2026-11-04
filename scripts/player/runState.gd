@@ -3,11 +3,9 @@ extends MovementState
 class_name RunState
 
 func enter():
-	animation.play("run")
+	animations = ["run_down", "run_up", "run_side"]
 	
 	speed = 10000
-
-
 
 func handle_input(event: InputEvent):
 	if event.is_action_released("run") and not player.velocity == Vector2(0,0):
