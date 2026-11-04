@@ -1,7 +1,6 @@
 extends Node
 
 var file_path = "res://data/dialog.json"
-var dialog = "dialog_1"
 
 @onready var dialog_lable: Label = $TextBox/MarginContainer/Label
 @onready var textbox: MarginContainer = $TextBox
@@ -11,7 +10,7 @@ var count = 0
 var dialogues = []
 var tween: Tween = null
 
-func _ready() -> void:
+func start_dialog(dialog: String) -> void:
 	textbox.visible = true
 	
 	dialogues = read_json_data(file_path).get(dialog, [])
@@ -27,6 +26,8 @@ func _process(delta: float) -> void:
 		
 	elif Input.is_action_just_pressed("ui_accept") and count == len(dialogues) - 1:
 		textbox.visible = false
+		Global.player_is_interacting = false
+		count = 0
 		
 func read_json_data(filepath):
 	

@@ -316,7 +316,7 @@ radius = 20.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1426137098]
 sprite_frames = SubResource("SpriteFrames_ltg3l")
-animation = &"run_down"
+animation = &"walk_side"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=254351039]
 shape = SubResource("CapsuleShape2D_aft4u")

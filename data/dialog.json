@@ -2,14 +2,19 @@
 	"dialog_1": [
 		
 		{
-			"speaker": "player",
-			"text" : "HIIIIIIIII"
+			"speaker": "Bob",
+			"text" : "Wazzzzzzzzzaaaaaaa"
 			
 		},
 		
 		{
-			"speaker": "player",
-			"text" : "HIIIIIIIII"
+			"speaker": "Bob",
+			"text" : "What is poping yoooo"
+			
+		},
+		{
+			"speaker": "Bob",
+			"text" : "How is your morning going?"
 			
 		},
 		

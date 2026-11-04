@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cc1x44ypsamki"]
 
 [ext_resource type="Script" uid="uid://cxot46u1tj7x0" path="res://scripts/gui/gui.gd" id="1_834qp"]
+[ext_resource type="PackedScene" uid="uid://dfretmhc5jorh" path="res://thingies/dialog.tscn" id="2_q2p4s"]
 
 [node name="GUI" type="CanvasLayer" unique_id=910458424]
 script = ExtResource("1_834qp")
@@ -11,3 +12,5 @@ offset_top = 434.0
 offset_right = 152.0
 offset_bottom = 457.0
 text = "Press E to interact"
+
+[node name="DialogNode" parent="." unique_id=540160289 instance=ExtResource("2_q2p4s")]

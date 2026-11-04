@@ -4,10 +4,11 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_jfv3o"]
 
-[node name="Node" type="Node2D" unique_id=540160289]
+[node name="DialogNode" type="Node2D" unique_id=540160289]
 script = ExtResource("1_l3d60")
 
 [node name="TextBox" type="MarginContainer" parent="." unique_id=197041775]
+visible = false
 offset_left = 264.0
 offset_top = 428.0
 offset_right = 382.0
