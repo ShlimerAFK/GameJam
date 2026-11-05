@@ -7,7 +7,6 @@ radius = 22.0
 
 [node name="DoorArea" type="Area2D" unique_id=148327902]
 script = ExtResource("1_ycw4k")
-scene_destination = "roomTest2.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1141445772]
 shape = SubResource("CircleShape2D_f2an6")
