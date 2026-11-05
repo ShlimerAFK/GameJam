@@ -1,8 +1,10 @@
 [gd_scene format=4 uid="uid://swdhk75sra0h"]
 
-[ext_resource type="Script" uid="uid://dsh0fg115vvhe" path="res://scenes/room_test_2.gd" id="1_5uryr"]
+[ext_resource type="Script" uid="uid://dsh0fg115vvhe" path="res://scripts/generic/root_node.gd" id="1_5uryr"]
 [ext_resource type="Texture2D" uid="uid://c61jd4344swwg" path="res://sprites/tilesets/office_terrain.png" id="2_5uryr"]
 [ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://thingies/player.tscn" id="2_8nhl8"]
+[ext_resource type="PackedScene" uid="uid://bs46i8y6tukst" path="res://thingies/door_area.tscn" id="4_ih0se"]
+[ext_resource type="PackedScene" uid="uid://cc1x44ypsamki" path="res://thingies/gui.tscn" id="5_o57ab"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8nhl8"]
 texture = ExtResource("2_5uryr")
@@ -20,34 +22,6 @@ texture = ExtResource("2_5uryr")
 [sub_resource type="TileSet" id="TileSet_f1dwg"]
 sources/0 = SubResource("TileSetAtlasSource_8nhl8")
 
-[sub_resource type="GDScript" id="GDScript_8nhl8"]
-script/source = "extends Area2D
-
-
-
-var player_has_entered: bool
-
-func _ready():
-	player_has_entered = false
-
-
-func _on_body_entered(body):
-	player_has_entered = true
-	#print(\"entered\") just used to check if the player entered collision
-
-func _on_body_exited(body):
-	player_has_entered = false
-	#print(\"exit\") just used to check if the player is not in the collision
-
-func _process(_delta):
-	if player_has_entered == true:
-		if Input.is_action_just_pressed(\"interact\"):
-			get_tree().change_scene_to_file(\"res://scenes/roomTest1.tscn\")
-"
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_ih0se"]
-radius = 25.24381
-
 [node name="Node2D" type="Node2D" unique_id=527766482]
 script = ExtResource("1_5uryr")
 
@@ -56,16 +30,11 @@ tile_map_data = PackedByteArray("AAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAEAAA
 tile_set = SubResource("TileSet_f1dwg")
 
 [node name="CharacterBody2D" parent="." unique_id=2090668697 instance=ExtResource("2_8nhl8")]
-position = Vector2(73, 61)
+position = Vector2(246, 94)
 
-[node name="Door1" type="Area2D" parent="." unique_id=720777602]
-collision_layer = 0
-collision_mask = 2
-script = SubResource("GDScript_8nhl8")
+[node name="Door1" parent="." unique_id=148327902 instance=ExtResource("4_ih0se")]
+position = Vector2(72, 51)
+scene_destination = "roomTest1.tscn"
+destination_door_name = "Door1"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door1" unique_id=557579346]
-position = Vector2(72, 52)
-shape = SubResource("CircleShape2D_ih0se")
-
-[connection signal="body_entered" from="Door1" to="Door1" method="_on_body_entered"]
-[connection signal="body_exited" from="Door1" to="Door1" method="_on_body_exited"]
+[node name="GUI" parent="." unique_id=910458424 instance=ExtResource("5_o57ab")]

@@ -14,6 +14,7 @@ func physics_update(delta: float):
 	
 	player.move_and_slide()
 
+
 func handle_movement(delta: float):
 	var direction := Input.get_vector("left", "right", "up", "down")
 	

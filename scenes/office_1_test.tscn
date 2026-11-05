@@ -1,13 +1,13 @@
 [gd_scene format=4 uid="uid://d1prxgy6srh8p"]
 
-[ext_resource type="Texture2D" uid="uid://c61jd4344swwg" path="res://sprites/tilesets/office_terrain.png" id="1_51g46"]
-[ext_resource type="Texture2D" uid="uid://do7os2w3jqni3" path="res://sprites/tilesets/office_decor.png" id="2_sjnxt"]
-[ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://thingies/player.tscn" id="3_3e0pf"]
-[ext_resource type="PackedScene" uid="uid://bmr54w3iy4jx7" path="res://thingies/npc_test.tscn" id="4_sjnxt"]
-[ext_resource type="PackedScene" uid="uid://cc1x44ypsamki" path="res://thingies/gui.tscn" id="5_3e0pf"]
+[ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://thingies/player.tscn" id="1_enrnp"]
+[ext_resource type="PackedScene" uid="uid://bmr54w3iy4jx7" path="res://thingies/npc_test.tscn" id="2_eyl0h"]
+[ext_resource type="PackedScene" uid="uid://cc1x44ypsamki" path="res://thingies/gui.tscn" id="3_pab7y"]
+[ext_resource type="Texture2D" uid="uid://c61jd4344swwg" path="res://sprites/tilesets/office_terrain.png" id="4_it6b0"]
+[ext_resource type="Texture2D" uid="uid://do7os2w3jqni3" path="res://sprites/tilesets/office_decor.png" id="5_2ud8q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5jnyr"]
-texture = ExtResource("1_51g46")
+texture = ExtResource("4_it6b0")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -64,7 +64,7 @@ texture = ExtResource("1_51g46")
 sources/0 = SubResource("TileSetAtlasSource_5jnyr")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5pbfn"]
-texture = ExtResource("2_sjnxt")
+texture = ExtResource("5_2ud8q")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -87,10 +87,13 @@ texture = ExtResource("2_sjnxt")
 0:5/0 = 0
 1:5/0 = 0
 4:1/size_in_atlas = Vector2i(2, 2)
+4:1/next_alternative_id = 2
 4:1/0 = 0
 4:1/0/texture_origin = Vector2i(0, 8)
 4:1/0/y_sort_origin = -13
 4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-13.669264, -5.3957615, 12.949829, -5.755479, 13.309547, 0, -14.388699, 0)
+4:1/1 = 1
+4:1/1/physics_layer_0/polygon_0/points = PackedVector2Array(-10.072089, -4.856185, -12.410253, 6.6547737, 8, 6.4749146, 8, -5.3957615, 8, -5.3957615)
 7:0/size_in_atlas = Vector2i(2, 1)
 7:0/0 = 0
 7:0/0/y_sort_origin = 6
@@ -98,13 +101,14 @@ texture = ExtResource("2_sjnxt")
 7:1/0 = 0
 7:2/size_in_atlas = Vector2i(2, 1)
 7:2/0 = 0
+2:3/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_pgu65"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5pbfn")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kauny"]
-texture = ExtResource("2_sjnxt")
+texture = ExtResource("5_2ud8q")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -145,7 +149,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_kauny")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4gnml"]
-texture = ExtResource("1_51g46")
+texture = ExtResource("4_it6b0")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -206,13 +210,13 @@ y_sort_enabled = true
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1074922896]
 polygon = PackedVector2Array(239, 256, 240, 192, 352, 192, 353, 256, 362, 256, 361, 100, 226, 101, 226, 267, 364, 266, 363, 256)
 
-[node name="CharacterBody2D" parent="." unique_id=629992924 instance=ExtResource("3_3e0pf")]
+[node name="CharacterBody2D" parent="." unique_id=629992924 instance=ExtResource("1_enrnp")]
 position = Vector2(277, 233)
 
-[node name="StaticBody2D2" parent="." unique_id=936663778 instance=ExtResource("4_sjnxt")]
+[node name="StaticBody2D2" parent="." unique_id=936663778 instance=ExtResource("2_eyl0h")]
 position = Vector2(337, 207)
 
-[node name="GUI" parent="." unique_id=910458424 instance=ExtResource("5_3e0pf")]
+[node name="GUI" parent="." unique_id=910458424 instance=ExtResource("3_pab7y")]
 
 [node name="TileMaps" type="Node2D" parent="." unique_id=600484982]
 y_sort_enabled = true
@@ -228,7 +232,7 @@ tile_set = SubResource("TileSet_pgu65")
 
 [node name="Decor3" type="TileMapLayer" parent="TileMaps" unique_id=39588807]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAASAAwAAAAHAAAAAAA=")
+tile_map_data = PackedByteArray("AAASAAwAAAAHAAAAAAAQAA0AAAAEAAEAAQA=")
 tile_set = SubResource("TileSet_pgu65")
 
 [node name="Decor4" type="TileMapLayer" parent="TileMaps" unique_id=8498846]

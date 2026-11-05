@@ -36,6 +36,6 @@ position = Vector2(105, 67)
 [node name="CharacterBody2D" parent="." unique_id=629992924 instance=ExtResource("1_ta4h7")]
 position = Vector2(188, 118)
 
-[node name="DoorArea" parent="." unique_id=148327902 node_paths=PackedStringArray("player") instance=ExtResource("5_lki8s")]
+[node name="DoorArea" parent="." unique_id=148327902 instance=ExtResource("5_lki8s")]
 position = Vector2(104, 127)
-player = NodePath("../CharacterBody2D")
+destination_door_name = "Door1"
