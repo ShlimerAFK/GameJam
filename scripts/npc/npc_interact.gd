@@ -11,3 +11,11 @@ func _process(delta: float) -> void:
 		Global.player_is_interacting = true
 		dialog_node.start_dialog(dialog)
 		
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	entered_area(area)
+
+
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	exited_area(area)

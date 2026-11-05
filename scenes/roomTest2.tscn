@@ -1,11 +1,11 @@
 [gd_scene format=4 uid="uid://swdhk75sra0h"]
 
 [ext_resource type="Script" uid="uid://dsh0fg115vvhe" path="res://scenes/room_test_2.gd" id="1_5uryr"]
-[ext_resource type="Texture2D" uid="uid://c61jd4344swwg" path="res://sprites/tilesets/office_temp.png" id="1_bddgt"]
+[ext_resource type="Texture2D" uid="uid://c61jd4344swwg" path="res://sprites/tilesets/office_terrain.png" id="2_5uryr"]
 [ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://thingies/player.tscn" id="2_8nhl8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8nhl8"]
-texture = ExtResource("1_bddgt")
+texture = ExtResource("2_5uryr")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -58,14 +58,14 @@ tile_set = SubResource("TileSet_f1dwg")
 [node name="CharacterBody2D" parent="." unique_id=2090668697 instance=ExtResource("2_8nhl8")]
 position = Vector2(73, 61)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=720777602]
+[node name="Door1" type="Area2D" parent="." unique_id=720777602]
 collision_layer = 0
 collision_mask = 2
 script = SubResource("GDScript_8nhl8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=557579346]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door1" unique_id=557579346]
 position = Vector2(72, 52)
 shape = SubResource("CircleShape2D_ih0se")
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="Door1" to="Door1" method="_on_body_entered"]
+[connection signal="body_exited" from="Door1" to="Door1" method="_on_body_exited"]
