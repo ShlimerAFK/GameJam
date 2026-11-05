@@ -1,0 +1,282 @@
+[gd_scene format=4 uid="uid://d1prxgy6srh8p"]
+
+[ext_resource type="Texture2D" uid="uid://c61jd4344swwg" path="res://sprites/tilesets/office_terrain.png" id="1_51g46"]
+[ext_resource type="Texture2D" uid="uid://do7os2w3jqni3" path="res://sprites/tilesets/office_decor.png" id="2_sjnxt"]
+[ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://thingies/player.tscn" id="3_3e0pf"]
+[ext_resource type="PackedScene" uid="uid://bmr54w3iy4jx7" path="res://thingies/npc_test.tscn" id="4_sjnxt"]
+[ext_resource type="PackedScene" uid="uid://cc1x44ypsamki" path="res://thingies/gui.tscn" id="5_3e0pf"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5jnyr"]
+texture = ExtResource("1_51g46")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/next_alternative_id = 3
+4:0/0 = 0
+5:0/next_alternative_id = 2
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/next_alternative_id = 2
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_snb48"]
+sources/0 = SubResource("TileSetAtlasSource_5jnyr")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hyegi"]
+texture = ExtResource("2_sjnxt")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+6:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+0:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+3:1/size_in_atlas = Vector2i(1, 2)
+3:1/0 = 0
+2:1/size_in_atlas = Vector2i(1, 2)
+2:1/0 = 0
+4:1/size_in_atlas = Vector2i(2, 2)
+4:1/0 = 0
+4:1/0/texture_origin = Vector2i(0, 8)
+7:0/size_in_atlas = Vector2i(2, 1)
+7:0/0 = 0
+7:1/size_in_atlas = Vector2i(2, 1)
+7:1/0 = 0
+7:2/size_in_atlas = Vector2i(2, 1)
+7:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_4fc15"]
+sources/3 = SubResource("TileSetAtlasSource_hyegi")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5pbfn"]
+texture = ExtResource("2_sjnxt")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+6:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+0:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+4:1/size_in_atlas = Vector2i(2, 2)
+4:1/0 = 0
+4:1/0/texture_origin = Vector2i(0, 8)
+4:1/0/y_sort_origin = -13
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-13.669264, -5.3957615, 12.949829, -5.755479, 13.309547, 0, -14.388699, 0)
+7:0/size_in_atlas = Vector2i(2, 1)
+7:0/0 = 0
+7:0/0/y_sort_origin = 6
+7:1/size_in_atlas = Vector2i(2, 1)
+7:1/0 = 0
+7:2/size_in_atlas = Vector2i(2, 1)
+7:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_pgu65"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_5pbfn")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kauny"]
+texture = ExtResource("2_sjnxt")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+0:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+4:1/size_in_atlas = Vector2i(2, 2)
+4:1/0 = 0
+4:1/0/y_sort_origin = -4
+3:1/size_in_atlas = Vector2i(1, 2)
+3:1/0 = 0
+3:1/0/texture_origin = Vector2i(0, 8)
+3:1/0/y_sort_origin = -3
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 1.978447, 8, 1.978447, 8, 8, -8, 8)
+2:1/size_in_atlas = Vector2i(1, 2)
+2:1/0 = 0
+7:0/size_in_atlas = Vector2i(2, 1)
+7:0/0 = 0
+7:0/0/y_sort_origin = 100
+
+[sub_resource type="TileSet" id="TileSet_tjh11"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_kauny")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4gnml"]
+texture = ExtResource("1_51g46")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_dlach"]
+sources/1 = SubResource("TileSetAtlasSource_4gnml")
+
+[node name="Node2D" type="Node2D" unique_id=1406552093]
+y_sort_enabled = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1187831791]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1074922896]
+polygon = PackedVector2Array(239, 256, 240, 192, 352, 192, 353, 256, 362, 256, 361, 100, 226, 101, 226, 267, 364, 266, 363, 256)
+
+[node name="CharacterBody2D" parent="." unique_id=629992924 instance=ExtResource("3_3e0pf")]
+position = Vector2(277, 233)
+
+[node name="StaticBody2D2" parent="." unique_id=936663778 instance=ExtResource("4_sjnxt")]
+position = Vector2(337, 207)
+
+[node name="GUI" parent="." unique_id=910458424 instance=ExtResource("5_3e0pf")]
+
+[node name="TileMaps" type="Node2D" parent="." unique_id=600484982]
+y_sort_enabled = true
+
+[node name="Base" type="TileMapLayer" parent="TileMaps" unique_id=644019717]
+tile_map_data = PackedByteArray("AAAQAAwAAAACAAEAAAARAAwAAAACAAEAAAASAAwAAAACAAEAAAATAAwAAAACAAEAAAAUAAwAAAACAAEAAAAVAAwAAAACAAEAAAAPAA8AAAACAAEAAAAPAA4AAAACAAEAAAAPAA0AAAACAAEAAAAQAA0AAAACAAEAAAARAA0AAAACAAEAAAASAA0AAAACAAEAAAATAA0AAAACAAEAAAAUAA0AAAACAAEAAAAVAA0AAAACAAEAAAAQAA8AAAACAAEAAAAQAA4AAAACAAEAAAARAA4AAAACAAEAAAASAA4AAAACAAEAAAATAA4AAAACAAEAAAAUAA4AAAACAAEAAAAVAA4AAAACAAEAAAAVAA8AAAACAAEAAAARAA8AAAACAAEAAAASAA8AAAACAAEAAAATAA8AAAACAAEAAAAUAA8AAAACAAEAAAAPAAwAAAACAAEAAAAPAAsAAAAAAAEAAAAQAAsAAAAAAAEAAAARAAsAAAAAAAEAAAASAAsAAAAAAAEAAAATAAsAAAAAAAEAAAAUAAsAAAAAAAEAAAAVAAsAAAAAAAEAAAAPAAoAAAAAAAAAAAAPAAkAAAAAAAAAAAAPAAgAAAAAAAAAAAAQAAgAAAAAAAAAAAARAAgAAAAAAAAAAAASAAgAAAAAAAAAAAATAAgAAAAAAAAAAAAUAAgAAAAAAAAAAAAVAAgAAAAAAAAAAAAVAAkAAAAAAAAAAAAVAAoAAAAAAAAAAAAUAAoAAAAAAAAAAAATAAoAAAAAAAAAAAASAAoAAAAAAAAAAAARAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAAQAAkAAAAAAAAAAAARAAkAAAAAAAAAAAASAAkAAAAAAAAAAAATAAkAAAAAAAAAAAAUAAkAAAAAAAAAAAAOAA8AAAABAAEAAAAOAA4AAAABAAEAAAAOAA0AAAABAAEAAAAOAAwAAAABAAEAAAAWAA8AAAADAAEAAAAWAA4AAAADAAEAAAAWAA0AAAADAAEAAAAWAAwAAAADAAEAAAAWAAsAAAADAAEAAAAWAAoAAAADAAEAAAAWAAkAAAADAAEAAAAWAAgAAAADAAEAAAAOAAsAAAABAAEAAAAOAAoAAAABAAEAAAAOAAkAAAABAAEAAAAOAAgAAAABAAEAAAAPAAcAAAACAAAAAAAQAAcAAAACAAAAAAARAAcAAAACAAAAAAASAAcAAAACAAAAAAATAAcAAAACAAAAAAAUAAcAAAACAAAAAAAVAAcAAAACAAAAAAAOAAcAAAABAAAAAAAWAAcAAAADAAAAAAA=")
+tile_set = SubResource("TileSet_snb48")
+
+[node name="Details" type="TileMapLayer" parent="TileMaps" unique_id=491197324]
+tile_map_data = PackedByteArray("AAAPAAsAAwAAAAMAAAAVAAsAAwABAAMAAAAPAAgAAwAAAAAAAAAVAAgAAwABAAAAAAAQAAgAAwAAAAEAAAATAAgAAwABAAEAAAAQAAkAAwADAAAAAAA=")
+tile_set = SubResource("TileSet_4fc15")
+
+[node name="Decor1" type="TileMapLayer" parent="TileMaps" unique_id=1199490261]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAASAA0AAAAEAAEAAAA=")
+tile_set = SubResource("TileSet_pgu65")
+
+[node name="Decor3" type="TileMapLayer" parent="TileMaps" unique_id=39588807]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAASAAwAAAAHAAAAAAA=")
+tile_set = SubResource("TileSet_pgu65")
+
+[node name="Decor4" type="TileMapLayer" parent="TileMaps" unique_id=8498846]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAASAA0AAAADAAEAAAA=")
+tile_set = SubResource("TileSet_tjh11")
+
+[node name="Door" type="TileMapLayer" parent="TileMaps" unique_id=2096559720]
+z_index = 1
+tile_map_data = PackedByteArray("AAATAA8AAQAEAAEAAAATAA4AAQAEAAAAAAA=")
+tile_set = SubResource("TileSet_dlach")

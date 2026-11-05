@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://wakopjo34qaw" path="res://scripts/npc/npc_interact.gd" id="1_t6imf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hmw4m"]
-size = Vector2(62, 62)
+size = Vector2(12, 12)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hpciv"]
 animations = [{
@@ -18,7 +18,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_snb48"]
-radius = 98.02041
+radius = 15.0
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=936663778]
 script = ExtResource("1_t6imf")
@@ -27,7 +27,7 @@ script = ExtResource("1_t6imf")
 shape = SubResource("RectangleShape2D_hmw4m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1776900411]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_hpciv")
 animation = &"idle"
 

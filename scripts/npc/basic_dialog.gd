@@ -32,8 +32,6 @@ func start_new_dialog(index: int):
 
 func _process(delta: float) -> void:
 	
-	print(count)
-	
 	if Input.is_action_just_pressed("scroll_dialog") and count < len(dialogues) and player_is_choosing == false:
 		play_text_animation()
 		count += 1

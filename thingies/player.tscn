@@ -308,17 +308,24 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aft4u"]
+radius = 2.0
+height = 12.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1makr"]
 radius = 20.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=629992924]
+y_sort_enabled = true
+position = Vector2(0, -3)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1426137098]
+position = Vector2(1, -9)
 sprite_frames = SubResource("SpriteFrames_ltg3l")
 animation = &"walk_side"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=254351039]
+position = Vector2(0, 1)
+rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_aft4u")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1282992361]
@@ -328,6 +335,7 @@ position_smoothing_enabled = true
 [node name="Area2D" type="Area2D" parent="." unique_id=513328246]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1672988585]
+position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_1makr")
 
 [node name="StateMachine" type="Node" parent="." unique_id=1368388137 node_paths=PackedStringArray("initial_state")]
