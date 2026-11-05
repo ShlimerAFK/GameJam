@@ -10,6 +10,10 @@
 [ext_resource type="Script" uid="uid://cxptm6csl73o2" path="res://scripts/player/walkState.gd" id="4_ybvl4"]
 [ext_resource type="PackedScene" uid="uid://ci8auqj37jge7" path="res://thingies/canvas_layer.tscn" id="8_5t78w"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bphqr"]
+atlas = ExtResource("1_lp3ep")
+region = Rect2(36, 0, 18, 24)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_3fx1y"]
 atlas = ExtResource("1_lp3ep")
 region = Rect2(0, 0, 18, 24)
@@ -17,18 +21,6 @@ region = Rect2(0, 0, 18, 24)
 [sub_resource type="AtlasTexture" id="AtlasTexture_lfslr"]
 atlas = ExtResource("1_lp3ep")
 region = Rect2(18, 0, 18, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bphqr"]
-atlas = ExtResource("1_lp3ep")
-region = Rect2(36, 0, 18, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gswws"]
-atlas = ExtResource("1_lp3ep")
-region = Rect2(54, 0, 18, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ccjma"]
-atlas = ExtResource("1_lp3ep")
-region = Rect2(72, 0, 18, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5t78w"]
 atlas = ExtResource("2_76jg7")
@@ -177,20 +169,14 @@ region = Rect2(90, 0, 18, 24)
 [sub_resource type="SpriteFrames" id="SpriteFrames_ltg3l"]
 animations = [{
 "frames": [{
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_bphqr")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3fx1y")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lfslr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bphqr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gswws")
-}, {
-"duration": 4.0,
-"texture": SubResource("AtlasTexture_ccjma")
 }],
 "loop": 1,
 "name": &"idle",
