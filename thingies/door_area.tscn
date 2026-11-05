@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bs46i8y6tukst"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f2an6"]
+radius = 22.0
+
+[node name="DoorArea" type="Area2D" unique_id=148327902]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1141445772]
+shape = SubResource("CircleShape2D_f2an6")
