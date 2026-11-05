@@ -1,4 +1,4 @@
-extends Node
+extends Control
 
 var file_path = "res://data/dialog.json"
 
@@ -6,28 +6,58 @@ var file_path = "res://data/dialog.json"
 @onready var textbox: MarginContainer = $TextBox
 
 
-var count = 0
-var dialogues = []
+var count := 0
+var dialogues := []
 var tween: Tween = null
+var player_is_choosing := false
+var amout_of_choises := 0
 
 func start_dialog(dialog: String) -> void:
-	textbox.visible = true
+	if not textbox.visible:
+		textbox.visible = true
 	
 	dialogues = read_json_data(file_path).get(dialog, [])
 	if dialogues.size() > 0:
-		print("playing text animation?")
 		play_text_animation()
+		count += 1
+		
+	else:
+		textbox.visible = false
+
+func start_new_dialog(index: int):
+	player_is_choosing = false
+	var new_dialog = dialogues[count -1]["options"][index]["dialog"]
+	count = 0
+	start_dialog(new_dialog)
 
 func _process(delta: float) -> void:
-
-	if Input.is_action_just_pressed("ui_accept") and count < len(dialogues) - 1:
-		count += 1
+	
+	print(count)
+	
+	if Input.is_action_just_pressed("scroll_dialog") and count < len(dialogues) and player_is_choosing == false:
 		play_text_animation()
+		count += 1
+	
+	elif Input.is_action_just_pressed("1") and amout_of_choises >= 1 and player_is_choosing:
+		start_new_dialog(0)
+	
+	elif Input.is_action_just_pressed("2") and amout_of_choises >= 2 and player_is_choosing:
+		start_new_dialog(1)
+	
+	elif Input.is_action_just_pressed("3") and amout_of_choises >= 3 and player_is_choosing:
+		start_new_dialog(2)
+	
+	elif Input.is_action_just_pressed("4") and amout_of_choises >= 4 and player_is_choosing:
+		start_new_dialog(3)
+	
+	elif Input.is_action_just_pressed("5") and amout_of_choises >= 5 and player_is_choosing:
+		start_new_dialog(4)
 		
-	elif Input.is_action_just_pressed("ui_accept") and count == len(dialogues) - 1:
+	elif Input.is_action_just_pressed("scroll_dialog") and count == len(dialogues) and player_is_choosing == false:
 		textbox.visible = false
 		Global.player_is_interacting = false
 		count = 0
+		
 		
 func read_json_data(filepath):
 	
@@ -35,16 +65,46 @@ func read_json_data(filepath):
 	var data = file.get_as_text()
 	file.close()
 	
-	var json = JSON.new()
+	var json := JSON.new()
 	if json.parse(data) != OK:
 		return{}
 	return json.get_data()
 
 func play_text_animation():
+	var text: String
 	
 	if tween:
 		tween.kill()
-	dialog_lable.text = str(dialogues[count]["speaker"]) + ": " + str(dialogues[count]["text"])
+	
+	if dialogues[count]["speaker"] == "you" or dialogues[count]["speaker"] == "You":
+		player_is_choosing = true
+		player_speaking(text)
+	else:
+		others_speaking(text)
+	
+func others_speaking(text: String):
+	text = str(dialogues[count]["speaker"]) + ": " + str(dialogues[count]["text"])
+	
+	dialog_lable.text = text
+	animate_lable()
+	
+func player_speaking(text: String):
+	amout_of_choises = dialogues[count]["options"].size()
+	
+	for i in range (amout_of_choises):
+		text += str(i +1) + ". "
+		text += str(dialogues[count]["options"][i]["text"])
+		
+		if not i == dialogues[count]["options"].size() - 1:
+			text += "\n"
+	
+	dialog_lable.text = text
+	
+	animate_lable()
+
+	
+func animate_lable():
 	dialog_lable.visible_ratio = 0
 	tween = get_tree().create_tween()
 	tween.tween_property(dialog_lable, "visible_ratio", 1, 1)
+	

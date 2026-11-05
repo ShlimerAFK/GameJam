@@ -1,5 +1,7 @@
 extends Interactable
 
+class_name NPC
+
 var dialog = "dialog_1"
 
 @onready var dialog_node = $"../GUI/DialogNode"

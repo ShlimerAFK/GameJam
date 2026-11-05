@@ -5,7 +5,6 @@ class_name WalkState
 
 
 func enter():
-	animation.play("walk")
 	
 	animations = ["walk_down", "walk_up", "walk_side"]
 
