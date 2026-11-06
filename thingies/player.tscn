@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://c5hjtq0mhk4ue" path="res://scripts/player/stateMachine.gd" id="1_86rj8"]
 [ext_resource type="Texture2D" uid="uid://bb1y4ht6t4b32" path="res://sprites/player/playerDown/playerDIdle.png" id="1_lp3ep"]
 [ext_resource type="Texture2D" uid="uid://d1ltw841l2l5o" path="res://sprites/player/playerDown/playerDWalk.png" id="2_76jg7"]
+[ext_resource type="Texture2D" uid="uid://dy80dn6krwkvp" path="res://sprites/player/playerUp/playerUpIdle.png" id="2_bm45k"]
 [ext_resource type="Script" uid="uid://cuij2t2vyqnla" path="res://scripts/player/idleState.gd" id="2_jeytj"]
+[ext_resource type="Texture2D" uid="uid://bdiec5q37vgeb" path="res://sprites/player/playerSide/playerSideIdle.png" id="2_vp63t"]
 [ext_resource type="Texture2D" uid="uid://ckeirkc7b67i7" path="res://sprites/player/playerSide/playerSWalk.png" id="3_lp3ep"]
 [ext_resource type="Script" uid="uid://dnbl05w8p0q1" path="res://scripts/player/runState.gd" id="3_ltg3l"]
 [ext_resource type="Texture2D" uid="uid://db3yghhj3upxd" path="res://sprites/player/playerUp/playerUWalk.png" id="4_bm45k"]
@@ -21,6 +23,18 @@ region = Rect2(0, 0, 18, 24)
 [sub_resource type="AtlasTexture" id="AtlasTexture_lfslr"]
 atlas = ExtResource("1_lp3ep")
 region = Rect2(18, 0, 18, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gswws"]
+atlas = ExtResource("2_vp63t")
+region = Rect2(0, 0, 18, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccjma"]
+atlas = ExtResource("2_vp63t")
+region = Rect2(18, 0, 18, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuu1n"]
+atlas = ExtResource("2_vp63t")
+region = Rect2(36, 0, 18, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5t78w"]
 atlas = ExtResource("2_76jg7")
@@ -179,8 +193,30 @@ animations = [{
 "texture": SubResource("AtlasTexture_lfslr")
 }],
 "loop": 1,
-"name": &"idle",
+"name": &"idle_down",
 "speed": 3.0
+}, {
+"frames": [{
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_gswws")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ccjma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fuu1n")
+}],
+"loop": 1,
+"name": &"idle_side",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bm45k")
+}],
+"loop": 1,
+"name": &"idle_up",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -334,7 +370,7 @@ y_sort_enabled = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1426137098]
 position = Vector2(1, -12)
 sprite_frames = SubResource("SpriteFrames_ltg3l")
-animation = &"idle"
+animation = &"idle_side"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=254351039]
 position = Vector2(0, -2)
@@ -372,5 +408,7 @@ metadata/_custom_type_script = "uid://cxptm6csl73o2"
 
 [node name="CanvasLayer" parent="." unique_id=282255516 instance=ExtResource("8_5t78w")]
 
+[connection signal="changed_direction" from="StateMachine/RunState" to="StateMachine/IdleState" method="_on_run_state_changed_direction"]
+[connection signal="changed_direction" from="StateMachine/WalkState" to="StateMachine/IdleState" method="_on_walk_state_changed_direction"]
 [connection signal="timeout" from="IdleTimer" to="StateMachine/RunState" method="_on_idle_timer_timeout"]
 [connection signal="timeout" from="IdleTimer" to="StateMachine/WalkState" method="_on_idle_timer_timeout"]

@@ -36,5 +36,6 @@ position = Vector2(57, 40)
 position = Vector2(56, 34)
 scene_destination = "roomTest2.tscn"
 destination_door_name = "Door1"
+door_position_in_room = "top"
 
 [node name="GUI" parent="." unique_id=910458424 instance=ExtResource("5_yldrt")]

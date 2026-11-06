@@ -1,0 +1,79 @@
+{
+	"dialog_1": [
+		
+		{
+			"speaker": "Janet",
+			"text" : "Hello"
+		},
+		
+		{
+			"speaker": "Janet",
+			"text" : "How are you doing today"
+		},
+		{
+			"speaker": "You",
+			"options" : [
+				{
+					"text" : "Hello",
+					"dialog" : "dialog_2"
+				},
+				{
+					"text" : "What is up",
+					"dialog" : "dialog_3"
+				},
+				{
+					"text" : "Good morning",
+					"dialog" : "dialog_4"
+				},
+				{
+					"text" : "Bye",
+					"dialog" : "dialog_5"
+				}
+				
+			]
+		}
+	],
+	
+	"dialog_2": [
+		{
+			"speaker": "Janet",
+			"text" : "Hello"
+		}
+		
+	],
+	
+	"dialog_3": [
+		{
+			"speaker": "Janet",
+			"text" : "Nothing much"
+		},
+		
+		{
+			"speaker": "Janet",
+			"text" : "How about you?"
+		}
+		
+	],
+	
+	"dialog_4": [
+		{
+			"speaker": "Janet",
+			"text" : "Good morning"
+		},
+		
+		{
+			"speaker": "Janet",
+			"text" : "How hos your morning been"
+		}
+		
+	],
+	
+	"dialog_5": [
+		{
+			"speaker": "Janet",
+			"text" : "Bye bye"
+		}
+		
+	]
+	
+}

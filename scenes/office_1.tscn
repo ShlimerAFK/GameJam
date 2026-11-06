@@ -7,37 +7,42 @@
 [ext_resource type="PackedScene" uid="uid://cc1x44ypsamki" path="res://thingies/gui.tscn" id="5_3e0pf"]
 [ext_resource type="PackedScene" uid="uid://bs46i8y6tukst" path="res://thingies/door_area.tscn" id="6_e1il7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q7uuk"]
-size = Vector2(102, 20)
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7w20u"]
+a = Vector2(-48, 0)
+b = Vector2(48, 0)
 
 [node name="Node2D" type="Node2D" unique_id=350274399]
 y_sort_enabled = true
 script = ExtResource("1_3e0pf")
 
-[node name="GUI" parent="." unique_id=910458424 instance=ExtResource("5_3e0pf")]
-
 [node name="CharacterBody2D" parent="." unique_id=629992924 instance=ExtResource("3_3e0pf")]
+
+[node name="GUI" parent="." unique_id=910458424 instance=ExtResource("5_3e0pf")]
 
 [node name="Tilemaps" type="Node2D" parent="." unique_id=1476671647]
 y_sort_enabled = true
 
 [node name="base" parent="Tilemaps" unique_id=135059640 instance=ExtResource("4_e1il7")]
-tile_map_data = PackedByteArray("AAACAP//AAACAAEAAAABAP//AAACAAEAAAAAAP//AAACAAEAAAD/////AAACAAEAAAD+////AAACAAEAAAD9////AAACAAEAAAD///7/AAACAAEAAAD///3/AAACAAEAAAD//wAAAAACAAEAAAD//wEAAAACAAEAAAD+/wEAAAACAAEAAAD+/wAAAAACAAEAAAD9/wEAAAACAAEAAAD9/wAAAAACAAEAAAD9//7/AAACAAEAAAD9//3/AAACAAEAAAD+//3/AAACAAEAAAD+//7/AAACAAEAAAAAAP3/AAACAAEAAAABAP3/AAACAAEAAAACAP3/AAACAAEAAAACAP7/AAACAAEAAAABAP7/AAACAAEAAAAAAP7/AAACAAEAAAACAAAAAAACAAEAAAABAAAAAAACAAEAAAAAAAAAAAACAAEAAAAAAAEAAAACAAEAAAABAAEAAAACAAEAAAACAAEAAAACAAEAAAD9//z/AAAAAAEAAAD+//z/AAAAAAEAAAD///z/AAAAAAEAAAAAAPz/AAAAAAEAAAABAPz/AAAAAAEAAAACAPz/AAAAAAEAAAD9//v/AAAAAAAAAAD9//r/AAAAAAAAAAD+//r/AAAAAAAAAAD+//v/AAAAAAAAAAD///v/AAAAAAAAAAD///r/AAAAAAAAAAAAAPv/AAAAAAAAAAAAAPr/AAAAAAAAAAABAPr/AAAAAAAAAAABAPv/AAAAAAAAAAACAPv/AAAAAAAAAAACAPr/AAAAAAAAAAD8/wEAAAABAAEAAAD8/wAAAAABAAEAAAD8////AAABAAEAAAD8//7/AAABAAEAAAD8//3/AAABAAEAAAD8//z/AAABAAEAAAD8//v/AAABAAEAAAD8//r/AAABAAEAAAD8//n/AAABAAAAAAD9//n/AAACAAAAAAD+//n/AAACAAAAAAD///n/AAACAAAAAAAAAPn/AAACAAAAAAABAPn/AAACAAAAAAACAPn/AAACAAAAAAADAPn/AAADAAAAAAADAPr/AAADAAEAAAADAPv/AAADAAEAAAADAPz/AAADAAEAAAADAP3/AAADAAEAAAADAP7/AAADAAEAAAADAP//AAADAAEAAAADAAAAAAADAAEAAAADAAEAAAADAAEAAAA=")
+tile_map_data = PackedByteArray("AAACAP//AAACAAEAAAABAP//AAACAAEAAAAAAP//AAACAAEAAAD/////AAACAAEAAAD+////AAACAAEAAAD9////AAACAAEAAAD///7/AAACAAEAAAD///3/AAACAAEAAAD//wAAAAACAAEAAAD//wEAAAACAAEAAAD+/wEAAAACAAEAAAD+/wAAAAACAAEAAAD9/wEAAAACAAEAAAD9/wAAAAACAAEAAAD9//7/AAACAAEAAAD9//3/AAACAAEAAAD+//3/AAACAAEAAAD+//7/AAACAAEAAAAAAP3/AAACAAEAAAABAP3/AAACAAEAAAACAP3/AAACAAEAAAACAP7/AAACAAEAAAABAP7/AAACAAEAAAAAAP7/AAACAAEAAAACAAAAAAACAAEAAAABAAAAAAACAAEAAAAAAAAAAAACAAEAAAAAAAEAAAACAAEAAAABAAEAAAACAAEAAAACAAEAAAACAAEAAAD9//z/AAAAAAEAAAD+//z/AAAAAAEAAAD///z/AAAAAAEAAAAAAPz/AAAAAAEAAAABAPz/AAAAAAEAAAACAPz/AAAAAAEAAAD9//v/AAAAAAAAAAD9//r/AAAAAAAAAAD+//r/AAAAAAAAAAD+//v/AAAAAAAAAAD///v/AAAAAAAAAAD///r/AAAAAAAAAAAAAPv/AAAAAAAAAAAAAPr/AAAAAAAAAAABAPr/AAAAAAAAAAABAPv/AAAAAAAAAAACAPv/AAAAAAAAAAACAPr/AAAAAAAAAAD8/wEAAAABAAEAAAD8/wAAAAABAAEAAAD8//3/AAABAAEAAAD8//z/AAABAAEAAAD8//v/AAABAAEAAAD8//r/AAABAAEAAAD8//n/AAABAAAAAAD9//n/AAACAAAAAAD+//n/AAACAAAAAAD///n/AAACAAAAAAAAAPn/AAACAAAAAAABAPn/AAACAAAAAAACAPn/AAACAAAAAAADAPn/AAADAAAAAAADAPr/AAADAAEAAAADAPv/AAADAAEAAAADAPz/AAADAAEAAAADAP3/AAADAAEAAAADAP7/AAADAAEAAAADAP//AAADAAEAAAADAAAAAAADAAEAAAADAAEAAAADAAEAAAD8//7/AAABAAEAAAD8////AAABAAEAAAA=")
 
 [node name="TileMapLayer | decor template" parent="Tilemaps" unique_id=1762042962 instance=ExtResource("5_1l8wq")]
+tile_map_data = PackedByteArray("AAD9//r/AAAAAAAAAAD9//z/AAAAAAMAAAACAPz/AAABAAMAAAACAPr/AAABAAAAAAABAPr/AAAAAAEAAAD///r/AAABAAEAAAA=")
 
 [node name="TileMapLayer | decor template2" parent="Tilemaps" unique_id=1549788477 instance=ExtResource("5_1l8wq")]
+tile_map_data = PackedByteArray("AAABAPr/AAACAAAAAAA=")
 
-[node name="door" parent="Tilemaps" unique_id=2073150406 instance=ExtResource("4_e1il7")]
+[node name="foreground" parent="Tilemaps" unique_id=2073150406 instance=ExtResource("4_e1il7")]
+z_index = 10
 tile_map_data = PackedByteArray("AAABAAEAAAAEAAAAAAA=")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Tilemaps" unique_id=1932010984]
+[node name="BottomCollision" type="StaticBody2D" parent="Tilemaps" unique_id=1932010984]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemaps/StaticBody2D" unique_id=1555419080]
-position = Vector2(0, 42)
-shape = SubResource("RectangleShape2D_q7uuk")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemaps/BottomCollision" unique_id=1555419080]
+position = Vector2(0, 32)
+shape = SubResource("SegmentShape2D_7w20u")
 
-[node name="Door1" parent="Tilemaps" unique_id=148327902 instance=ExtResource("6_e1il7")]
+[node name="Door1" parent="." unique_id=148327902 instance=ExtResource("6_e1il7")]
 position = Vector2(24, 17)
-scene_destination = "roomTest2.tscn"
+scene_destination = "corridor.tscn"
 destination_door_name = "Door1"
+door_position_in_room = "bottom"
