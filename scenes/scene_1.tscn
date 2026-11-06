@@ -3,8 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://thingies/player.tscn" id="1_ta4h7"]
 [ext_resource type="Texture2D" uid="uid://c61jd4344swwg" path="res://sprites/tilesets/office_terrain.png" id="2_ka884"]
 [ext_resource type="PackedScene" uid="uid://cc1x44ypsamki" path="res://thingies/gui.tscn" id="3_cn2eb"]
-[ext_resource type="PackedScene" uid="uid://bmr54w3iy4jx7" path="res://thingies/npc_test.tscn" id="4_sj5te"]
+[ext_resource type="PackedScene" uid="uid://bmr54w3iy4jx7" path="res://thingies/generic_npc.tscn" id="4_sj5te"]
 [ext_resource type="PackedScene" uid="uid://bs46i8y6tukst" path="res://thingies/door_area.tscn" id="5_lki8s"]
+[ext_resource type="PackedScene" uid="uid://dxws188rknph" path="res://thingies/NPC/janet.tscn" id="5_t6bmd"]
+[ext_resource type="PackedScene" uid="uid://crcrptu6khfas" path="res://thingies/NPC/dan.tscn" id="6_d7a6c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cn2eb"]
 texture = ExtResource("2_ka884")
@@ -28,9 +30,6 @@ sources/0 = SubResource("TileSetAtlasSource_cn2eb")
 tile_map_data = PackedByteArray(0, 0, 6, 0, 8, 0, 0, 0, 4, 0, 1, 0, 0, 0, 6, 0, 7, 0, 0, 0, 4, 0, 0, 0, 0, 0)
 tile_set = SubResource("TileSet_f1dwg")
 
-[node name="NPC" parent="." unique_id=1453047402 instance=ExtResource("4_sj5te")]
-position = Vector2(105, 67)
-
 [node name="GUI" parent="." unique_id=910458424 instance=ExtResource("3_cn2eb")]
 
 [node name="CharacterBody2D" parent="." unique_id=629992924 instance=ExtResource("1_ta4h7")]
@@ -41,3 +40,11 @@ position = Vector2(104, 127)
 scene_destination = "roomTest1.tscn"
 destination_door_name = "Door1"
 door_position_in_room = "top"
+
+[node name="StaticBody2D" parent="." unique_id=256800973 instance=ExtResource("5_t6bmd")]
+position = Vector2(145, 101)
+
+[node name="StaticBody2D2" parent="." unique_id=1711188476 instance=ExtResource("6_d7a6c")]
+position = Vector2(225, 95)
+
+[node name="StaticBody2D3" parent="." unique_id=936663778 instance=ExtResource("4_sj5te")]
