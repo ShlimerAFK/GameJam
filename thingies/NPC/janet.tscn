@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://dxws188rknph"]
+
+[ext_resource type="Script" uid="uid://wakopjo34qaw" path="res://scripts/npc/npc_interact.gd" id="1_cuhq0"]
+[ext_resource type="Texture2D" uid="uid://1xd6tur0acpy" path="res://sprites/npc/Janet/janetIdle.png" id="2_knqk3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e56wq"]
+size = Vector2(11, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8x1ys"]
+atlas = ExtResource("2_knqk3")
+region = Rect2(0, 0, 15, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5qqb"]
+atlas = ExtResource("2_knqk3")
+region = Rect2(15, 0, 15, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egmwj"]
+atlas = ExtResource("2_knqk3")
+region = Rect2(30, 0, 15, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blcds"]
+atlas = ExtResource("2_knqk3")
+region = Rect2(45, 0, 15, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhrt6"]
+atlas = ExtResource("2_knqk3")
+region = Rect2(60, 0, 15, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1asyt"]
+atlas = ExtResource("2_knqk3")
+region = Rect2(75, 0, 15, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q04ux"]
+atlas = ExtResource("2_knqk3")
+region = Rect2(90, 0, 15, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16jfe"]
+atlas = ExtResource("2_knqk3")
+region = Rect2(105, 0, 15, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ys4fn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8x1ys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5qqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_egmwj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_blcds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhrt6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1asyt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q04ux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16jfe")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kv0jq"]
+radius = 15.0
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=256800973]
+script = ExtResource("1_cuhq0")
+file_name = "janet.json"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1168315723]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_e56wq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=498070247]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_ys4fn")
+animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1681705094]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1101488399]
+position = Vector2(0, -13)
+shape = SubResource("CircleShape2D_kv0jq")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
