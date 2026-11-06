@@ -10,3 +10,5 @@ script = ExtResource("1_834qp")
 [node name="DialogNode" parent="." unique_id=540160289 instance=ExtResource("2_q2p4s")]
 
 [node name="InteractText" parent="." unique_id=940032747 instance=ExtResource("3_8xa08")]
+offset_right = 1922.0
+offset_bottom = 1082.0

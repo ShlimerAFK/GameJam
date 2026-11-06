@@ -8,8 +8,8 @@ script = ExtResource("1_l6cm7")
 [node name="ButtonManeger" type="Control" parent="." unique_id=1227240553]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1151.0
-offset_bottom = 650.0
+offset_right = 1924.0
+offset_bottom = 1081.0
 
 [node name="MarginContainer" type="MarginContainer" parent="ButtonManeger" unique_id=475628451]
 custom_minimum_size = Vector2(200, 300)
