@@ -2,15 +2,11 @@
 
 [ext_resource type="Script" uid="uid://cxot46u1tj7x0" path="res://scripts/gui/gui.gd" id="1_834qp"]
 [ext_resource type="PackedScene" uid="uid://dfretmhc5jorh" path="res://thingies/dialog.tscn" id="2_q2p4s"]
+[ext_resource type="PackedScene" uid="uid://dvlif1k0q0p3v" path="res://scenes/interact_text.tscn" id="3_8xa08"]
 
 [node name="GUI" type="CanvasLayer" unique_id=910458424]
 script = ExtResource("1_834qp")
 
-[node name="InteractText" type="Label" parent="." unique_id=1681718435]
-offset_left = 12.0
-offset_top = 434.0
-offset_right = 152.0
-offset_bottom = 457.0
-text = "Press E to interact"
-
 [node name="DialogNode" parent="." unique_id=540160289 instance=ExtResource("2_q2p4s")]
+
+[node name="InteractText" parent="." unique_id=940032747 instance=ExtResource("3_8xa08")]
