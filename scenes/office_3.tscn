@@ -1,0 +1,48 @@
+[gd_scene format=4 uid="uid://8hrjqha8qu7s"]
+
+[ext_resource type="Script" uid="uid://dsh0fg115vvhe" path="res://scripts/generic/root_node.gd" id="1_xo1on"]
+[ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://thingies/player.tscn" id="2_rtwqf"]
+[ext_resource type="PackedScene" uid="uid://cc1x44ypsamki" path="res://thingies/gui.tscn" id="3_76a0y"]
+[ext_resource type="PackedScene" uid="uid://jroxlsrexcqi" path="res://thingies/tileset_templates/terrain.tscn" id="4_thxof"]
+[ext_resource type="PackedScene" uid="uid://cchsb3liba1f8" path="res://thingies/tileset_templates/decor.tscn" id="5_aqdri"]
+[ext_resource type="PackedScene" uid="uid://bs46i8y6tukst" path="res://thingies/door_area.tscn" id="6_nd5di"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7w20u"]
+a = Vector2(-48, 0)
+b = Vector2(48, 0)
+
+[node name="Node2D" type="Node2D" unique_id=350274399]
+y_sort_enabled = true
+script = ExtResource("1_xo1on")
+
+[node name="CharacterBody2D" parent="." unique_id=629992924 instance=ExtResource("2_rtwqf")]
+
+[node name="GUI" parent="." unique_id=910458424 instance=ExtResource("3_76a0y")]
+
+[node name="Tilemaps" type="Node2D" parent="." unique_id=1476671647]
+y_sort_enabled = true
+
+[node name="base" parent="Tilemaps" unique_id=135059640 instance=ExtResource("4_thxof")]
+tile_map_data = PackedByteArray("AAACAP//AAACAAEAAAABAP//AAACAAEAAAAAAP//AAACAAEAAAD/////AAACAAEAAAD+////AAACAAEAAAD9////AAACAAEAAAD///7/AAACAAEAAAD///3/AAACAAEAAAD//wAAAAACAAEAAAD//wEAAAACAAEAAAD+/wEAAAACAAEAAAD+/wAAAAACAAEAAAD9/wEAAAACAAEAAAD9/wAAAAACAAEAAAD9//7/AAACAAEAAAD9//3/AAACAAEAAAD+//3/AAACAAEAAAD+//7/AAACAAEAAAAAAP3/AAACAAEAAAABAP3/AAACAAEAAAACAP3/AAACAAEAAAACAP7/AAACAAEAAAABAP7/AAACAAEAAAAAAP7/AAACAAEAAAACAAAAAAACAAEAAAABAAAAAAACAAEAAAAAAAAAAAACAAEAAAAAAAEAAAACAAEAAAABAAEAAAACAAEAAAACAAEAAAACAAEAAAD9//z/AAAAAAEAAAD+//z/AAAAAAEAAAD///z/AAAAAAEAAAAAAPz/AAAAAAEAAAABAPz/AAAAAAEAAAACAPz/AAAAAAEAAAD9//v/AAAAAAAAAAD9//r/AAAAAAAAAAD+//r/AAAAAAAAAAD+//v/AAAAAAAAAAD///v/AAAAAAAAAAD///r/AAAAAAAAAAAAAPv/AAAAAAAAAAAAAPr/AAAAAAAAAAABAPr/AAAAAAAAAAABAPv/AAAAAAAAAAACAPv/AAAAAAAAAAACAPr/AAAAAAAAAAD8/wEAAAABAAEAAAD8/wAAAAABAAEAAAD8////AAABAAEAAAD8//7/AAABAAEAAAD8//3/AAABAAEAAAD8//z/AAABAAEAAAD8//v/AAABAAEAAAD8//r/AAABAAEAAAD8//n/AAABAAAAAAD9//n/AAACAAAAAAD+//n/AAACAAAAAAD///n/AAACAAAAAAAAAPn/AAACAAAAAAABAPn/AAACAAAAAAACAPn/AAACAAAAAAADAPn/AAADAAAAAAADAPr/AAADAAEAAAADAPv/AAADAAEAAAADAPz/AAADAAEAAAADAP3/AAADAAEAAAADAP7/AAADAAEAAAADAP//AAADAAEAAAADAAAAAAADAAEAAAADAAEAAAADAAEAAAA=")
+
+[node name="TileMapLayer | decor template" parent="Tilemaps" unique_id=1762042962 instance=ExtResource("5_aqdri")]
+tile_map_data = PackedByteArray("AAD9//r/AAAAAAAAAAACAPr/AAABAAAAAAACAPz/AAABAAMAAAD9//z/AAAAAAMAAAABAPr/AAABAAIAAAA=")
+
+[node name="TileMapLayer | decor template2" parent="Tilemaps" unique_id=1549788477 instance=ExtResource("5_aqdri")]
+tile_map_data = PackedByteArray("AAABAPr/AAACAAAAAAA=")
+
+[node name="foreground" parent="Tilemaps" unique_id=2073150406 instance=ExtResource("4_thxof")]
+z_index = 10
+tile_map_data = PackedByteArray("AAABAAEAAAAEAAAAAAA=")
+
+[node name="BottomCollision" type="StaticBody2D" parent="Tilemaps" unique_id=1932010984]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemaps/BottomCollision" unique_id=638311425]
+position = Vector2(0, 32)
+shape = SubResource("SegmentShape2D_7w20u")
+
+[node name="Door1" parent="." unique_id=148327902 instance=ExtResource("6_nd5di")]
+position = Vector2(24, 17)
+scene_destination = "corridor.tscn"
+destination_door_name = "Door3"
+door_position_in_room = "bottom"
