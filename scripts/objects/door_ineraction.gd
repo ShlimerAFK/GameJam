@@ -15,6 +15,7 @@ func _process(_delta):
 		get_tree().change_scene_to_file("res://scenes/" + scene_destination)
 		Global.player_is_interacting = false
 		Global.next_spawn_door = destination_door_name
+		SceneTransitionController.change_scene(scene_destination, transition_type, duration)
 
 
 func _on_area_entered(area: Area2D) -> void:
