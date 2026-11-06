@@ -37,7 +37,7 @@ tile_map_data = PackedByteArray("AAABAAEAAAAEAAAAAAA=")
 position = Vector2(0, 42)
 shape = SubResource("RectangleShape2D_q7uuk")
 
-[node name="Door1" parent="Tilemaps" unique_id=148327902 instance=ExtResource("6_e1il7")]
+[node name="Door1" parent="." unique_id=148327902 instance=ExtResource("6_e1il7")]
 position = Vector2(24, 17)
 scene_destination = "roomTest2.tscn"
 destination_door_name = "Door1"
