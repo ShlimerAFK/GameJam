@@ -6,8 +6,6 @@ extends Node2D
 func _ready() -> void:
 	var spawn_offset: Vector2
 	
-	print(spawn.global_position)
-	
 	if spawn.door_position_in_room == "top":
 		spawn_offset = Vector2(0, 30)
 	elif spawn.door_position_in_room == "bottom":

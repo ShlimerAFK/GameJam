@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://crcrptu6khfas"]
+
+[ext_resource type="Script" uid="uid://wakopjo34qaw" path="res://scripts/npc/npc_interact.gd" id="1_dkopf"]
+[ext_resource type="Texture2D" uid="uid://bnkh0uduj1666" path="res://sprites/npc/Dan/danIdle.png" id="2_buo1i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_stvbn"]
+size = Vector2(16, 4)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tvji"]
+atlas = ExtResource("2_buo1i")
+region = Rect2(0, 0, 18, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpkrg"]
+atlas = ExtResource("2_buo1i")
+region = Rect2(18, 0, 18, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqhdd"]
+atlas = ExtResource("2_buo1i")
+region = Rect2(36, 0, 18, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1x33"]
+atlas = ExtResource("2_buo1i")
+region = Rect2(54, 0, 18, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmngj"]
+atlas = ExtResource("2_buo1i")
+region = Rect2(72, 0, 18, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3emnh"]
+atlas = ExtResource("2_buo1i")
+region = Rect2(90, 0, 18, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ls78n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tvji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpkrg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqhdd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1x33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tmngj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3emnh")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_08mw1"]
+radius = 17.0
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1711188476]
+script = ExtResource("1_dkopf")
+file_name = "dan.json"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1982143750]
+position = Vector2(-1, -2)
+shape = SubResource("RectangleShape2D_stvbn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1582236490]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_ls78n")
+animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1298616387]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=660286907]
+position = Vector2(-1, -13)
+shape = SubResource("CircleShape2D_08mw1")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

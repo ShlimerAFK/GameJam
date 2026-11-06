@@ -1,6 +1,6 @@
 extends Control
 
-var file_path = "res://data/dialog.json"
+var file_path : String
 
 @onready var dialog_lable: Label = $TextBox/MarginContainer/Label
 @onready var textbox: MarginContainer = $TextBox
@@ -11,8 +11,13 @@ var dialogues := []
 var tween: Tween = null
 var player_is_choosing := false
 var amout_of_choises := 0
+var current_file_name: String
 
-func start_dialog(dialog: String) -> void:
+func start_dialog(dialog: String, file_name: String) -> void:
+	
+	current_file_name = file_name
+	file_path = "res://dialogs/" + current_file_name
+	
 	if not textbox.visible:
 		textbox.visible = true
 	
@@ -28,7 +33,7 @@ func start_new_dialog(index: int):
 	player_is_choosing = false
 	var new_dialog = dialogues[count -1]["options"][index]["dialog"]
 	count = 0
-	start_dialog(new_dialog)
+	start_dialog(new_dialog, current_file_name)
 
 func _process(delta: float) -> void:
 	

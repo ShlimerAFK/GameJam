@@ -2,16 +2,16 @@
 	"dialog_1": [
 		
 		{
-			"speaker": "Bob",
+			"speaker": "Dan",
 			"text" : "Wazzzzzzzzzaaaaaaa"
 		},
 		
 		{
-			"speaker": "Bob",
+			"speaker": "Dan",
 			"text" : "What is poping yoooo"
 		},
 		{
-			"speaker": "Bob",
+			"speaker": "Dan",
 			"text" : "How is your morning going?"
 		},
 		{
@@ -40,7 +40,7 @@
 	
 	"dialog_2": [
 		{
-			"speaker": "Bob",
+			"speaker": "Dan",
 			"text" : "Hello"
 		}
 		
@@ -48,12 +48,12 @@
 	
 	"dialog_3": [
 		{
-			"speaker": "Bob",
+			"speaker": "Dan",
 			"text" : "Nothing much"
 		},
 		
 		{
-			"speaker": "Bob",
+			"speaker": "Dan",
 			"text" : "How about you?"
 		}
 		
@@ -61,12 +61,12 @@
 	
 	"dialog_4": [
 		{
-			"speaker": "Bob",
+			"speaker": "Dan",
 			"text" : "Good morning"
 		},
 		
 		{
-			"speaker": "Bob",
+			"speaker": "Dan",
 			"text" : "How hos your morning been"
 		}
 		
@@ -74,7 +74,7 @@
 	
 	"dialog_5": [
 		{
-			"speaker": "Bob",
+			"speaker": "Dan",
 			"text" : "Bye bye"
 		}
 		
