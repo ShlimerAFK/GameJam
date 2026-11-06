@@ -29,7 +29,13 @@ tile_map_data = PackedByteArray("AAACAP//AAACAAEAAAABAP//AAACAAEAAAAAAP//AAACAAE
 tile_map_data = PackedByteArray("AAD9//r/AAAAAAAAAAACAPr/AAABAAAAAAD9//z/AAAAAAMAAAACAPz/AAABAAMAAAD+//r/AAAAAAEAAAA=")
 
 [node name="TileMapLayer | decor template2" parent="Tilemaps" unique_id=1549788477 instance=ExtResource("5_h5p11")]
-tile_map_data = PackedByteArray("AAABAPr/AAACAAAAAAA=")
+tile_map_data = PackedByteArray("AAABAPr/AAACAAAAAAD9//3/AAAEAAEAAAABAP3/AAAEAAEAAAD///v/AAADAAAAAAA=")
+
+[node name="TileMapLayer | decor template3" parent="Tilemaps" unique_id=1181232244 instance=ExtResource("5_h5p11")]
+tile_map_data = PackedByteArray("AAD9//z/AAAGAAIAAAABAPz/AAAHAAEAAAD+//z/AAAAAAQAAAA=")
+
+[node name="TileMapLayer | decor template4" parent="Tilemaps" unique_id=579364626 instance=ExtResource("5_h5p11")]
+tile_map_data = PackedByteArray("AAD9//3/AAADAAEAAAACAP3/AAADAAEAAAA=")
 
 [node name="foreground" parent="Tilemaps" unique_id=2073150406 instance=ExtResource("4_uf2di")]
 z_index = 10
