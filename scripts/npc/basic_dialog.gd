@@ -89,7 +89,7 @@ func others_speaking(text: String):
 	text = str(dialogues[count]["speaker"]) + ": " + str(dialogues[count]["text"])
 	
 	dialog_lable.text = text
-	animate_lable()
+	animate_lable(text)
 	
 func player_speaking(text: String):
 	amout_of_choises = dialogues[count]["options"].size()
@@ -103,11 +103,12 @@ func player_speaking(text: String):
 	
 	dialog_lable.text = text
 	
-	animate_lable()
+	animate_lable(text)
 
 	
-func animate_lable():
+func animate_lable(text: String):
+	var transition_length = text.length() * 0.05
 	dialog_lable.visible_ratio = 0
 	tween = get_tree().create_tween()
-	tween.tween_property(dialog_lable, "visible_ratio", 1, 1)
+	tween.tween_property(dialog_lable, "visible_ratio", 1, transition_length)
 	
