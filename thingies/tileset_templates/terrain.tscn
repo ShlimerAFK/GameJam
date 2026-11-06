@@ -105,6 +105,6 @@ texture = ExtResource("1_ok1ut")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_6dmwi")
 
-[node name="TileMapLayer" type="TileMapLayer" unique_id=135059640]
+[node name="terrain tilemap" type="TileMapLayer" unique_id=135059640]
 z_index = -1
 tile_set = SubResource("TileSet_q7uuk")

@@ -35,6 +35,10 @@ tile_map_data = PackedByteArray("AAABAPr/AAACAAAAAAD///3/AAAHAAAAAAA=")
 position = Vector2(8, 0)
 tile_map_data = PackedByteArray("AAD///7/AAADAAEAAAD9//v/AAADAAAAAAA=")
 
+[node name="decor tilemap" parent="Tilemaps" unique_id=1156535065 instance=ExtResource("5_1l8wq")]
+position = Vector2(8, 8)
+tile_map_data = PackedByteArray("AAABAPv/AAAEAAAAAAA=")
+
 [node name="foreground" parent="Tilemaps" unique_id=2073150406 instance=ExtResource("4_e1il7")]
 z_index = 10
 tile_map_data = PackedByteArray("AAABAAEAAAAEAAAAAAA=")
