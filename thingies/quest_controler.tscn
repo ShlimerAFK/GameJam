@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dxyfa6nfrhs7n"]
+
+[ext_resource type="Script" uid="uid://bonr6a33axclk" path="res://thingies/quest_controler.gd" id="1_eob5k"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_au8jw"]
+
+[node name="QuestControler" type="Control" unique_id=1605467125]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eob5k")
+
+[node name="TextBox" type="MarginContainer" parent="." unique_id=68504073]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -17.0
+offset_bottom = 39.0
+grow_horizontal = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TextBox" unique_id=1513539424]
+layout_mode = 2
+texture = SubResource("CanvasTexture_au8jw")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="TextBox" unique_id=1366695753]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="QuestsLable" type="Label" parent="TextBox/MarginContainer" unique_id=1448470574]
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
