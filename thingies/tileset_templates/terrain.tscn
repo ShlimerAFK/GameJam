@@ -100,11 +100,18 @@ texture = ExtResource("1_ok1ut")
 0:4/0 = 0
 0:5/0 = 0
 0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:6/size_in_atlas = Vector2i(3, 2)
+4:6/next_alternative_id = 2
+4:6/0 = 0
+4:6/0/texture_origin = Vector2i(-16, 8)
+4:6/1 = 1
+4:6/1/texture_origin = Vector2i(-16, 8)
+4:6/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 40, 8, 40, -8)
 
 [sub_resource type="TileSet" id="TileSet_q7uuk"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_6dmwi")
 
-[node name="terrain tilemap" type="TileMapLayer" unique_id=135059640]
+[node name="Terrain" type="TileMapLayer" unique_id=135059640]
 z_index = -1
 tile_set = SubResource("TileSet_q7uuk")
