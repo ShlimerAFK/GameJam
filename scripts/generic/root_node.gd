@@ -3,6 +3,8 @@ extends Node2D
 @onready var player = $CharacterBody2D
 @onready var spawn = get_node(Global.next_spawn_door)
 # Called when the node enters the scene tree for the first time.
+var sanity_state = GlobalSanity.get_sanity_state()
+
 func _ready() -> void:
 	var spawn_offset: Vector2
 	
@@ -14,3 +16,6 @@ func _ready() -> void:
 		print_debug("Door position not specified. position expected: top or bottom when position name " + str(spawn.door_position_in_room) + " was given")
 	
 	player.global_position = spawn.global_position + spawn_offset
+	
+func display_sanity_state_layers():
+	pass
