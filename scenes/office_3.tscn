@@ -22,27 +22,27 @@ script = ExtResource("1_xo1on")
 [node name="Tilemaps" type="Node2D" parent="." unique_id=1476671647]
 y_sort_enabled = true
 
-[node name="base" parent="Tilemaps" unique_id=135059640 instance=ExtResource("4_thxof")]
+[node name="Base" parent="Tilemaps" unique_id=135059640 instance=ExtResource("4_thxof")]
 tile_map_data = PackedByteArray("AAACAP//AAACAAEAAAABAP//AAACAAEAAAAAAP//AAACAAEAAAD/////AAACAAEAAAD+////AAACAAEAAAD9////AAACAAEAAAD///7/AAACAAEAAAD///3/AAACAAEAAAD//wAAAAACAAEAAAD//wEAAAACAAEAAAD+/wEAAAACAAEAAAD+/wAAAAACAAEAAAD9/wEAAAACAAEAAAD9/wAAAAACAAEAAAD9//7/AAACAAEAAAD9//3/AAACAAEAAAD+//3/AAACAAEAAAD+//7/AAACAAEAAAAAAP3/AAACAAEAAAABAP3/AAACAAEAAAACAP3/AAACAAEAAAACAP7/AAACAAEAAAABAP7/AAACAAEAAAAAAP7/AAACAAEAAAACAAAAAAACAAEAAAABAAAAAAACAAEAAAAAAAAAAAACAAEAAAAAAAEAAAACAAEAAAABAAEAAAACAAEAAAACAAEAAAACAAEAAAD9//z/AAAAAAEAAAD+//z/AAAAAAEAAAD///z/AAAAAAEAAAAAAPz/AAAAAAEAAAABAPz/AAAAAAEAAAACAPz/AAAAAAEAAAD9//v/AAAAAAAAAAD9//r/AAAAAAAAAAD+//r/AAAAAAAAAAD+//v/AAAAAAAAAAD///v/AAAAAAAAAAD///r/AAAAAAAAAAAAAPv/AAAAAAAAAAAAAPr/AAAAAAAAAAABAPr/AAAAAAAAAAABAPv/AAAAAAAAAAACAPv/AAAAAAAAAAACAPr/AAAAAAAAAAD8/wEAAAABAAEAAAD8/wAAAAABAAEAAAD8////AAABAAEAAAD8//7/AAABAAEAAAD8//3/AAABAAEAAAD8//z/AAABAAEAAAD8//v/AAABAAEAAAD8//r/AAABAAEAAAD8//n/AAABAAAAAAD9//n/AAACAAAAAAD+//n/AAACAAAAAAD///n/AAACAAAAAAAAAPn/AAACAAAAAAABAPn/AAACAAAAAAACAPn/AAACAAAAAAADAPn/AAADAAAAAAADAPr/AAADAAEAAAADAPv/AAADAAEAAAADAPz/AAADAAEAAAADAP3/AAADAAEAAAADAP7/AAADAAEAAAADAP//AAADAAEAAAADAAAAAAADAAEAAAADAAEAAAADAAEAAAA=")
 
-[node name="TileMapLayer | decor template" parent="Tilemaps" unique_id=1762042962 instance=ExtResource("5_aqdri")]
+[node name="Decor1" parent="Tilemaps" unique_id=1762042962 instance=ExtResource("5_aqdri")]
 tile_map_data = PackedByteArray("AAD9//r/AAAAAAAAAAACAPr/AAABAAAAAAACAPz/AAABAAMAAAD9//z/AAAAAAMAAAABAPr/AAABAAIAAAA=")
 
-[node name="TileMapLayer | decor template2" parent="Tilemaps" unique_id=1549788477 instance=ExtResource("5_aqdri")]
+[node name="Decor2" parent="Tilemaps" unique_id=1549788477 instance=ExtResource("5_aqdri")]
 tile_map_data = PackedByteArray("AAABAPr/AAACAAAAAAAAAP3/AAAEAAEAAAA=")
 
-[node name="TileMapLayer | decor template3" parent="Tilemaps" unique_id=1963765163 instance=ExtResource("5_aqdri")]
+[node name="Decor3" parent="Tilemaps" unique_id=1963765163 instance=ExtResource("5_aqdri")]
 tile_map_data = PackedByteArray("AAAAAPz/AAAHAAIAAAA=")
 
-[node name="TileMapLayer | decor template4" parent="Tilemaps" unique_id=1903760552 instance=ExtResource("5_aqdri")]
+[node name="Decor4" parent="Tilemaps" unique_id=1903760552 instance=ExtResource("5_aqdri")]
 position = Vector2(8, 0)
 tile_map_data = PackedByteArray("AAAAAP3/AAADAAEAAAD///v/AAADAAAAAAA=")
 
-[node name="decor tilemap" parent="Tilemaps" unique_id=1226651577 instance=ExtResource("5_aqdri")]
+[node name="Decor5" parent="Tilemaps" unique_id=1226651577 instance=ExtResource("5_aqdri")]
 position = Vector2(0, 8)
 tile_map_data = PackedByteArray("AAABAPv/AAAEAAMAAAACAPz/AAABAAQAAAA=")
 
-[node name="foreground" parent="Tilemaps" unique_id=2073150406 instance=ExtResource("4_thxof")]
+[node name="Foreground" parent="Tilemaps" unique_id=2073150406 instance=ExtResource("4_thxof")]
 z_index = 10
 tile_map_data = PackedByteArray("AAABAAEAAAAEAAAAAAA=")
 

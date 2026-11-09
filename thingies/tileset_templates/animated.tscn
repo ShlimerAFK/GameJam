@@ -31,6 +31,6 @@ texture = ExtResource("1_eeqye")
 [sub_resource type="TileSet" id="TileSet_q7uuk"]
 sources/0 = SubResource("TileSetAtlasSource_rr77f")
 
-[node name="animated tilemap" type="TileMapLayer" unique_id=1935734834]
+[node name="Animated" type="TileMapLayer" unique_id=1935734834]
 y_sort_enabled = true
 tile_set = SubResource("TileSet_q7uuk")
