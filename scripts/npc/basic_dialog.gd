@@ -3,6 +3,7 @@ extends Control
 var file_path : String
 
 @onready var dialog_lable: Label = $TextBox/MarginContainer/Label
+@onready var quest_controler := $"../QuestControler"
 @onready var textbox: MarginContainer = $TextBox
 
 
@@ -91,6 +92,10 @@ func others_speaking(text: String):
 	dialog_lable.text = text
 	animate_lable(text)
 	
+	if dialogues[count].has("quest_name"):
+		var quest = Global.get_quest(dialogues[count]["quest_name"])
+		quest_controler.add_quest(quest)
+	
 func player_speaking(text: String):
 	amout_of_choises = dialogues[count]["options"].size()
 	
@@ -107,7 +112,7 @@ func player_speaking(text: String):
 
 	
 func animate_lable(text: String):
-	var transition_length = text.length() * 0.05
+	var transition_length = text.length() * 0.03
 	dialog_lable.visible_ratio = 0
 	tween = get_tree().create_tween()
 	tween.tween_property(dialog_lable, "visible_ratio", 1, transition_length)

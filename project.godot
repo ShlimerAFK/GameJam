@@ -23,6 +23,7 @@ buses/default_bus_layout="uid://dvfwapqiqvh8b"
 
 Global="*uid://b5qmkxynhy7dl"
 SceneTransitionController="*uid://do6s0qu561ydx"
+QuestGlobal="*uid://0s0sf3h887as"
 
 [display]
 
