@@ -30,10 +30,10 @@ tile_map_data = PackedByteArray("AAACAP//AAACAAEAAAABAP//AAACAAEAAAAAAP//AAACAAE
 tile_map_data = PackedByteArray("AAD9//r/AAAAAAAAAAACAPr/AAABAAAAAAD9//z/AAAAAAMAAAACAPz/AAABAAMAAAD+//r/AAAAAAEAAAD///v/AAABAAIAAAA=")
 
 [node name="Decor2" parent="Tilemaps" unique_id=1549788477 instance=ExtResource("5_h5p11")]
-tile_map_data = PackedByteArray("AAABAPr/AAACAAAAAAD9//3/AAAEAAEAAAABAP3/AAAEAAEAAAD///v/AAADAAAAAAA=")
+tile_map_data = PackedByteArray("AAABAPr/AAACAAAAAAD9//3/AAAEAAEAAAABAP3/AAAEAAEAAAD///v/AAADAAAAAAD+/wEAAAACAAQAAAD//wEAAAAEAAQAAAA=")
 
 [node name="Decor3" parent="Tilemaps" unique_id=1181232244 instance=ExtResource("5_h5p11")]
-tile_map_data = PackedByteArray("AAD9//z/AAAGAAIAAAD+//z/AAAAAAQAAAA=")
+tile_map_data = PackedByteArray("AAD9//z/AAAGAAIAAAD+//z/AAAAAAQAAAABAPz/AAAFAAQAAAA=")
 
 [node name="Decor4" parent="Tilemaps" unique_id=1676609516 instance=ExtResource("5_h5p11")]
 position = Vector2(0, 8)
