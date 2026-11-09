@@ -6,7 +6,7 @@ class_name MovementState
 
 var speed := 5000
 
-var animations := ["walk_down", "walk_up", "walk_side"]
+var animations : PackedStringArray
 
 signal changed_direction(direction: String)
 
