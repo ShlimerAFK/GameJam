@@ -3,6 +3,8 @@ extends Node
 var player_is_interacting := false
 var next_spawn_door := "Door1"
 
+# QUESTS _________________________________________
+
 var quests := [
 	
 	{
@@ -10,9 +12,8 @@ var quests := [
 		"text": "Get dan a cup of coffie",
 		"quest_is_active": false,
 		"quest_is_done": false
-	}
-	
-]	
+	}	
+]
 
 func get_quest(quest_name: String):
 
