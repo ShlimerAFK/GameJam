@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://douyv2kqqv15h"]
+
+[ext_resource type="Texture2D" uid="uid://83qtbkupc8t0" path="res://sprites/tilesets/animated.png" id="1_eeqye"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rr77f"]
+texture = ExtResource("1_eeqye")
+0:0/animation_columns = 8
+0:0/animation_speed = 16.0
+0:0/animation_mode = 1
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/0 = 0
+0:1/animation_columns = 7
+0:1/animation_speed = 12.0
+0:1/animation_frame_0/duration = 1.0
+0:1/animation_frame_1/duration = 1.0
+0:1/animation_frame_2/duration = 1.0
+0:1/animation_frame_3/duration = 1.0
+0:1/animation_frame_4/duration = 1.0
+0:1/animation_frame_5/duration = 1.0
+0:1/animation_frame_6/duration = 1.0
+0:1/0 = 0
+0:1/0/y_sort_origin = 8
+
+[sub_resource type="TileSet" id="TileSet_q7uuk"]
+sources/0 = SubResource("TileSetAtlasSource_rr77f")
+
+[node name="animated tilemap" type="TileMapLayer" unique_id=1935734834]
+y_sort_enabled = true
+tile_set = SubResource("TileSet_q7uuk")
