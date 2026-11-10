@@ -1,0 +1,51 @@
+[gd_scene format=4 uid="uid://dowal105gaqaq"]
+
+[ext_resource type="Script" uid="uid://dsh0fg115vvhe" path="res://scripts/generic/root_node.gd" id="1_3sts5"]
+[ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://thingies/player.tscn" id="2_48ey2"]
+[ext_resource type="PackedScene" uid="uid://cc1x44ypsamki" path="res://thingies/gui.tscn" id="3_ofdbp"]
+[ext_resource type="PackedScene" uid="uid://jroxlsrexcqi" path="res://thingies/tileset_templates/terrain.tscn" id="4_vvx4t"]
+[ext_resource type="PackedScene" uid="uid://cchsb3liba1f8" path="res://thingies/tileset_templates/decor.tscn" id="5_sbatj"]
+[ext_resource type="PackedScene" uid="uid://bs46i8y6tukst" path="res://thingies/door_area.tscn" id="6_mr5hx"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ok1ut"]
+a = Vector2(-80, 0)
+b = Vector2(80, 0)
+
+[node name="Node2D" type="Node2D" unique_id=350274399]
+y_sort_enabled = true
+script = ExtResource("1_3sts5")
+
+[node name="CharacterBody2D" parent="." unique_id=629992924 instance=ExtResource("2_48ey2")]
+
+[node name="GUI" parent="." unique_id=910458424 instance=ExtResource("3_ofdbp")]
+
+[node name="Tilemaps" type="Node2D" parent="." unique_id=1476671647]
+y_sort_enabled = true
+
+[node name="Base" parent="Tilemaps" unique_id=135059640 instance=ExtResource("4_vvx4t")]
+tile_map_data = PackedByteArray("AAABAP//AAACAAUAAAAAAP//AAACAAUAAAD/////AAACAAUAAAD+////AAACAAUAAAD9////AAACAAUAAAD///7/AAACAAUAAAD///3/AAACAAUAAAD//wAAAAACAAUAAAD//wEAAAACAAUAAAD+/wEAAAACAAUAAAD+/wAAAAACAAUAAAD9/wEAAAACAAUAAAD9/wAAAAACAAUAAAD9//7/AAACAAUAAAD9//3/AAACAAUAAAD+//3/AAACAAUAAAD+//7/AAACAAUAAAAAAP3/AAACAAUAAAAAAP7/AAACAAUAAAABAAAAAAACAAUAAAAAAAAAAAACAAUAAAAAAAEAAAACAAUAAAABAAEAAAACAAUAAAABAP3/AAACAAUAAAABAP7/AAACAAUAAAACAP7/AAACAAUAAAACAP3/AAACAAUAAAACAP//AAACAAUAAAACAAAAAAACAAUAAAACAAEAAAACAAUAAAD8/wEAAAACAAUAAAD8/wAAAAACAAUAAAD8//3/AAACAAUAAAD8//7/AAACAAUAAAD8////AAACAAUAAAADAAEAAAACAAUAAAADAAAAAAACAAUAAAADAP//AAACAAUAAAADAP7/AAACAAUAAAADAP3/AAACAAUAAAAEAP3/AAACAAUAAAAEAP7/AAACAAUAAAAEAP//AAACAAUAAAAEAAAAAAACAAUAAAAEAAEAAAACAAUAAAD7//3/AAACAAUAAAD7//7/AAACAAUAAAD7////AAACAAUAAAD7/wAAAAACAAUAAAD7/wEAAAACAAUAAAD8//z/AAAFAAQAAQACAPz/AAAFAAYAAQD7//z/AAAAAAMAAAD+//z/AAAAAAMAAAD///z/AAAAAAMAAAAAAPz/AAAAAAMAAAABAPz/AAAAAAMAAAAEAPz/AAAAAAMAAAAEAPv/AAAAAAIAAAAEAPr/AAAAAAIAAAADAPr/AAAAAAIAAAACAPr/AAAAAAIAAAABAPr/AAAAAAIAAAABAPv/AAAAAAIAAAAAAPv/AAAAAAIAAAAAAPr/AAAAAAIAAAD///r/AAAAAAIAAAD///v/AAAAAAIAAAD+//r/AAAAAAIAAAD+//v/AAAAAAIAAAD9//r/AAAAAAIAAAD8//r/AAAAAAIAAAD7//r/AAAAAAIAAAD7//v/AAAAAAIAAAAFAPn/AAADAAQAAAAEAPn/AAACAAQAAAADAPn/AAACAAQAAAACAPn/AAACAAQAAAABAPn/AAACAAQAAAAAAPn/AAACAAQAAAD///n/AAACAAQAAAD+//n/AAACAAQAAAD9//n/AAACAAQAAAD8//n/AAACAAQAAAD7//n/AAACAAQAAAD6//z/AAABAAUAAAD6//3/AAABAAUAAAD6//7/AAABAAUAAAD6/wAAAAABAAUAAAD6/wEAAAABAAUAAAD6////AAABAAUAAAD6//v/AAABAAUAAAD6//r/AAABAAUAAAD6//n/AAABAAQAAAAFAAEAAAADAAUAAAAFAAAAAAADAAUAAAAFAP//AAADAAUAAAAFAP7/AAADAAUAAAAFAP3/AAADAAUAAAAFAPz/AAADAAUAAAAFAPv/AAADAAUAAAAFAPr/AAADAAUAAAA=")
+
+[node name="ElevatorBtn" parent="Tilemaps" unique_id=767463583 instance=ExtResource("4_vvx4t")]
+tile_map_data = PackedByteArray("AAABAPz/AAAEAAYAAAA=")
+
+[node name="Decor" parent="Tilemaps" unique_id=1762042962 instance=ExtResource("5_sbatj")]
+tile_map_data = PackedByteArray("AAD///3/AAAGAAUAAAAAAP3/AAAHAAUAAAAEAP3/AAAIAAUAAAD7//3/AAACAAQAAAD7/wEAAAADAAQAAAAEAPr/AAABAAAAAAD7//r/AAAAAAAAAAD///r/AAAAAAEAAAABAPr/AAABAAEAAAA=")
+
+[node name="Decor2" parent="Tilemaps" unique_id=595080004 instance=ExtResource("5_sbatj")]
+position = Vector2(0, 8)
+tile_map_data = PackedByteArray("AAAAAPv/AAAFAAMAAAD+//v/AAACAAMAAAA=")
+
+[node name="Decor3" parent="Tilemaps" unique_id=1462928878 instance=ExtResource("5_sbatj")]
+tile_map_data = PackedByteArray("AAAEAPr/AAACAAAAAAD///v/AAADAAAAAAAEAPz/AAAAAAQAAAA=")
+
+[node name="BottomCollision" type="StaticBody2D" parent="Tilemaps" unique_id=1932010984]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemaps/BottomCollision" unique_id=1555419080]
+position = Vector2(0, 32)
+shape = SubResource("SegmentShape2D_ok1ut")
+
+[node name="Door1" parent="." unique_id=148327902 instance=ExtResource("6_mr5hx")]
+position = Vector2(48, -64)
+scene_destination = "corridor.tscn"
+destination_door_name = "Door5"
+door_position_in_room = "top"
