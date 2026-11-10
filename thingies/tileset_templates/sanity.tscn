@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bmt6sgusf1o0h"]
+
+[ext_resource type="Texture2D" uid="uid://dc36jo0uinwlk" path="res://sprites/tilesets/sanity_tileset.png" id="1_5bcby"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r5hq0"]
+texture = ExtResource("1_5bcby")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3l2kl"]
+sources/0 = SubResource("TileSetAtlasSource_r5hq0")
+
+[node name="TileMapLayer" type="TileMapLayer" unique_id=1599914462]
+tile_set = SubResource("TileSet_3l2kl")
