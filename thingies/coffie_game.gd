@@ -5,6 +5,7 @@ extends MiniGame
 func _ready() -> void:
 	instructions = "Press space to fill your cup of coffie"
 	main_text = "Coffie"
+	completes_quest = "coffie"
 	
 func play_game():
 	print("playing game")

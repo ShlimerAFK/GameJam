@@ -6,6 +6,7 @@ var instructions : String
 var main_text : String
 
 var player_is_using_minigame := false
+var completes_quest : String
 
 @onready var mini_game_gui = $"../GUI/MinigameControler"
 @onready var minigame_screen = $"../GUI/MinigameControler/MarginContainer"
