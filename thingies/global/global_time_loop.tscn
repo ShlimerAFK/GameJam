@@ -5,6 +5,11 @@
 [node name="TimeLoop" type="Node2D" unique_id=748030097]
 script = ExtResource("1_7k0eq")
 
-[node name="Timer" type="Timer" parent="." unique_id=1774830442]
+[node name="LoopTimer" type="Timer" parent="." unique_id=1774830442]
+one_shot = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="NarrTimer" type="Timer" parent="." unique_id=1475464896]
+one_shot = true
+
+[connection signal="timeout" from="LoopTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="NarrTimer" to="." method="_on_narr_timer_timeout"]

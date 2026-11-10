@@ -13,7 +13,7 @@ extends Interactable
 func _process(_delta):
 	if player_has_entered == true and Input.is_action_just_pressed("interact") and not Global.player_is_interacting:
 		get_tree().change_scene_to_file("res://scenes/" + scene_destination)
-		Global.player_is_interacting = false
+		Global.player_is_interacting = true
 		Global.next_spawn_door = destination_door_name
 		SceneTransitionController.change_scene(scene_destination, transition_type, duration)
 

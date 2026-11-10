@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://ni2525ttglq6"]
+
+[ext_resource type="Script" uid="uid://bkrb55n3buhnh" path="res://thingies/narration.gd" id="1_8lcec"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_jfv3o"]
+
+[node name="NarrationNode" type="Control" unique_id=530113667]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -480.0
+offset_right = 320.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+script = ExtResource("1_8lcec")
+
+[node name="TextBox" type="MarginContainer" parent="." unique_id=197041775]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -8.5
+offset_top = -49.0
+offset_right = 8.5
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TextBox" unique_id=2018025404]
+layout_mode = 2
+texture = SubResource("CanvasTexture_jfv3o")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="TextBox" unique_id=158018026]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="TextBox/MarginContainer" unique_id=646130311]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1

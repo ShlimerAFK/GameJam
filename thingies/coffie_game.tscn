@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://clkfl7i13pmfl"]
+
+[ext_resource type="Script" uid="uid://1u6akowklx3o" path="res://thingies/coffie_game.gd" id="1_hqdru"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0ualb"]
+radius = 17.117243
+
+[node name="Area2D" type="Area2D" unique_id=1501224406]
+script = ExtResource("1_hqdru")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=208848592]
+shape = SubResource("CircleShape2D_0ualb")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

@@ -15,6 +15,7 @@ b = Vector2(48, 0)
 [node name="Node2D" type="Node2D" unique_id=350274399]
 y_sort_enabled = true
 script = ExtResource("1_3e0pf")
+room_plays_narration = true
 
 [node name="CharacterBody2D" parent="." unique_id=629992924 instance=ExtResource("3_3e0pf")]
 
