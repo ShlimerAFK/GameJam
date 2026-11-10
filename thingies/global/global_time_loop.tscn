@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://rgqr52kjnw0j"]
+
+[ext_resource type="Script" uid="uid://b60xh324abogc" path="res://scripts/global/global_timer.gd" id="1_7k0eq"]
+
+[node name="TimeLoop" type="Node2D" unique_id=748030097]
+script = ExtResource("1_7k0eq")
+
+[node name="Timer" type="Timer" parent="." unique_id=1774830442]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
