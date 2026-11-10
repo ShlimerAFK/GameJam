@@ -2,6 +2,8 @@ extends Node
 
 var sanity := 100
 
+var sanity_states := 6
+
 func increase_sanity(value: int):
 	if sanity + value > 100:
 		sanity = 100

@@ -1,7 +1,7 @@
 extends Node
 
 @onready var timer = $Timer
-var loop_length := 5
+var loop_length := 10
 # Called when the node enters the scene tree for the first time.
 
 func start_time_loop_timer():

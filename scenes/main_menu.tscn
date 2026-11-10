@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cs714u8en4s0l"]
 
 [ext_resource type="Script" uid="uid://c7htdav55awaq" path="res://scenes/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://dd1b341pvqgb0" path="res://sprites/menu/menu_test.png" id="2_ekxnf"]
 
 [node name="Main menu" type="Node2D" unique_id=685438873]
 script = ExtResource("1_l6cm7")
@@ -11,6 +12,22 @@ anchors_preset = 0
 offset_right = 1924.0
 offset_bottom = 1081.0
 
+[node name="NinePatchRect" type="NinePatchRect" parent="ButtonManeger" unique_id=406992749]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.75
+offset_top = -225.0
+offset_right = 56.25
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_ekxnf")
+
 [node name="MarginContainer" type="MarginContainer" parent="ButtonManeger" unique_id=475628451]
 custom_minimum_size = Vector2(200, 300)
 layout_mode = 1
@@ -19,10 +36,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -100.0
+offset_top = -150.0
+offset_right = 100.0
+offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
 
