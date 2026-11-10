@@ -99,5 +99,5 @@ door_position_in_room = "top"
 [node name="StaticBody2D" parent="." unique_id=1711188476 instance=ExtResource("7_p4o86")]
 position = Vector2(-81, -76)
 
-[node name="Area2D" parent="." unique_id=1501224406 instance=ExtResource("10_hwmdj")]
-position = Vector2(115, -118)
+[node name="CoffieGame" parent="." unique_id=1501224406 instance=ExtResource("10_hwmdj")]
+position = Vector2(112, -116)

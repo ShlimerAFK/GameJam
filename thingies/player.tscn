@@ -10,7 +10,6 @@
 [ext_resource type="Script" uid="uid://dnbl05w8p0q1" path="res://scripts/player/runState.gd" id="3_ltg3l"]
 [ext_resource type="Texture2D" uid="uid://db3yghhj3upxd" path="res://sprites/player/playerUp/playerUWalk.png" id="4_bm45k"]
 [ext_resource type="Script" uid="uid://cxptm6csl73o2" path="res://scripts/player/walkState.gd" id="4_ybvl4"]
-[ext_resource type="PackedScene" uid="uid://ci8auqj37jge7" path="res://thingies/canvas_layer.tscn" id="8_5t78w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bphqr"]
 atlas = ExtResource("1_lp3ep")
@@ -405,8 +404,6 @@ script = ExtResource("4_ybvl4")
 metadata/_custom_type_script = "uid://cxptm6csl73o2"
 
 [node name="IdleTimer" type="Timer" parent="." unique_id=1933726966]
-
-[node name="CanvasLayer" parent="." unique_id=282255516 instance=ExtResource("8_5t78w")]
 
 [connection signal="changed_direction" from="StateMachine/RunState" to="StateMachine/IdleState" method="_on_run_state_changed_direction"]
 [connection signal="changed_direction" from="StateMachine/WalkState" to="StateMachine/IdleState" method="_on_walk_state_changed_direction"]

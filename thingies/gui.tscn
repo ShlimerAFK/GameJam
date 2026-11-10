@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dvlif1k0q0p3v" path="res://scenes/interact_text.tscn" id="3_8xa08"]
 [ext_resource type="PackedScene" uid="uid://dxyfa6nfrhs7n" path="res://thingies/quest_controler.tscn" id="4_7ohqj"]
 [ext_resource type="PackedScene" uid="uid://ni2525ttglq6" path="res://thingies/narration.tscn" id="5_dmn7j"]
+[ext_resource type="PackedScene" uid="uid://b7uffv017svji" path="res://thingies/minigame_gui.tscn" id="6_sqvcj"]
 
 [node name="GUI" type="CanvasLayer" unique_id=910458424]
 script = ExtResource("1_834qp")
@@ -18,3 +19,5 @@ offset_bottom = 1082.0
 [node name="QuestControler" parent="." unique_id=1605467125 instance=ExtResource("4_7ohqj")]
 
 [node name="NarrationNode" parent="." unique_id=530113667 instance=ExtResource("5_dmn7j")]
+
+[node name="MinigameControler" parent="." unique_id=1104580804 instance=ExtResource("6_sqvcj")]
