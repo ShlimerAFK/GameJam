@@ -23,9 +23,6 @@ b = Vector2(48, 0)
 y_sort_enabled = true
 script = ExtResource("1_7w20u")
 
-[node name="Dan" parent="." unique_id=1711188476 instance=ExtResource("2_w32gw")]
-position = Vector2(97, 4)
-
 [node name="CharacterBody2D" parent="." unique_id=629992924 instance=ExtResource("3_7w20u")]
 
 [node name="GUI" parent="." unique_id=910458424 instance=ExtResource("2_mus4g")]
@@ -141,5 +138,8 @@ scene_destination = "elevator_floor.tscn"
 destination_door_name = "Door1"
 door_position_in_room = "bottom"
 
+[node name="Dan" parent="." unique_id=1711188476 instance=ExtResource("2_w32gw")]
+position = Vector2(97, 4)
+
 [node name="Carl" parent="." unique_id=368403260 instance=ExtResource("9_uiklb")]
-position = Vector2(156, 7)
+position = Vector2(53, 26)
