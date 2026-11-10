@@ -41,3 +41,7 @@ func get_active_quests():
 			active_quests.append(quests[i])
 			
 	return active_quests
+
+func reset_active_quests():
+	for i in range(quests.size()):
+		quests[i].quest_is_active = false

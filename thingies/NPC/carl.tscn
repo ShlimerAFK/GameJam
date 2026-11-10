@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://csmc7qeleky5o"]
+
+[ext_resource type="Script" uid="uid://wakopjo34qaw" path="res://scripts/npc/npc_interact.gd" id="1_mxrdr"]
+[ext_resource type="Texture2D" uid="uid://cyaeixvg5f05v" path="res://sprites/npc/Carl/carlIdle.png" id="2_42lsx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pclvj"]
+size = Vector2(13, 5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilgfo"]
+atlas = ExtResource("2_42lsx")
+region = Rect2(0, 0, 18, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8w4l"]
+atlas = ExtResource("2_42lsx")
+region = Rect2(18, 0, 18, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfkqc"]
+atlas = ExtResource("2_42lsx")
+region = Rect2(36, 0, 18, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0wix"]
+atlas = ExtResource("2_42lsx")
+region = Rect2(54, 0, 18, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_guss0"]
+atlas = ExtResource("2_42lsx")
+region = Rect2(72, 0, 18, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxvfa"]
+atlas = ExtResource("2_42lsx")
+region = Rect2(90, 0, 18, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vnchh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilgfo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8w4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfkqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0wix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_guss0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxvfa")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lfbbf"]
+radius = 15.0
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=368403260]
+script = ExtResource("1_mxrdr")
+file_name = "carl.json"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1981964910]
+position = Vector2(-0.5, -2.5)
+shape = SubResource("RectangleShape2D_pclvj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=916565022]
+position = Vector2(1, -12)
+sprite_frames = SubResource("SpriteFrames_vnchh")
+animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=677506205]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=880821037]
+position = Vector2(0, -11)
+shape = SubResource("CircleShape2D_lfbbf")
