@@ -93,3 +93,9 @@ position = Vector2(304, 146)
 scene_destination = "cafeteria.tscn"
 destination_door_name = "Door1"
 door_position_in_room = "bottom"
+
+[node name="Door5" parent="." unique_id=1036629898 instance=ExtResource("5_7w20u")]
+position = Vector2(-192, 32)
+scene_destination = "elevator_floor.tscn"
+destination_door_name = "Door1"
+door_position_in_room = "bottom"
