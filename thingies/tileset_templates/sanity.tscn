@@ -14,5 +14,5 @@ texture = ExtResource("1_5bcby")
 [sub_resource type="TileSet" id="TileSet_3l2kl"]
 sources/0 = SubResource("TileSetAtlasSource_r5hq0")
 
-[node name="TileMapLayer" type="TileMapLayer" unique_id=1599914462]
+[node name="Sanity" type="TileMapLayer" unique_id=1599914462]
 tile_set = SubResource("TileSet_3l2kl")

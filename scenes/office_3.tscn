@@ -30,6 +30,7 @@ position = Vector2(0, 32)
 shape = SubResource("SegmentShape2D_7w20u")
 
 [node name="Sanity1" type="Node2D" parent="Tilemaps" unique_id=1032251219]
+y_sort_enabled = true
 
 [node name="Base" parent="Tilemaps/Sanity1" unique_id=135059640 instance=ExtResource("4_thxof")]
 tile_map_data = PackedByteArray("AAACAP//AAACAAEAAAABAP//AAACAAEAAAAAAP//AAACAAEAAAD/////AAACAAEAAAD+////AAACAAEAAAD9////AAACAAEAAAD///7/AAACAAEAAAD///3/AAACAAEAAAD//wAAAAACAAEAAAD//wEAAAACAAEAAAD+/wEAAAACAAEAAAD+/wAAAAACAAEAAAD9/wEAAAACAAEAAAD9/wAAAAACAAEAAAD9//7/AAACAAEAAAD9//3/AAACAAEAAAD+//3/AAACAAEAAAD+//7/AAACAAEAAAAAAP3/AAACAAEAAAABAP3/AAACAAEAAAACAP3/AAACAAEAAAACAP7/AAACAAEAAAABAP7/AAACAAEAAAAAAP7/AAACAAEAAAACAAAAAAACAAEAAAABAAAAAAACAAEAAAAAAAAAAAACAAEAAAAAAAEAAAACAAEAAAABAAEAAAACAAEAAAACAAEAAAACAAEAAAD9//z/AAAAAAEAAAD+//z/AAAAAAEAAAD///z/AAAAAAEAAAAAAPz/AAAAAAEAAAABAPz/AAAAAAEAAAACAPz/AAAAAAEAAAD9//v/AAAAAAAAAAD9//r/AAAAAAAAAAD+//r/AAAAAAAAAAD+//v/AAAAAAAAAAD///v/AAAAAAAAAAD///r/AAAAAAAAAAAAAPv/AAAAAAAAAAAAAPr/AAAAAAAAAAABAPr/AAAAAAAAAAABAPv/AAAAAAAAAAACAPv/AAAAAAAAAAACAPr/AAAAAAAAAAD8/wEAAAABAAEAAAD8/wAAAAABAAEAAAD8////AAABAAEAAAD8//7/AAABAAEAAAD8//3/AAABAAEAAAD8//z/AAABAAEAAAD8//v/AAABAAEAAAD8//r/AAABAAEAAAD8//n/AAABAAAAAAD9//n/AAACAAAAAAD+//n/AAACAAAAAAD///n/AAACAAAAAAAAAPn/AAACAAAAAAABAPn/AAACAAAAAAACAPn/AAACAAAAAAADAPn/AAADAAAAAAADAPr/AAADAAEAAAADAPv/AAADAAEAAAADAPz/AAADAAEAAAADAP3/AAADAAEAAAADAP7/AAADAAEAAAADAP//AAADAAEAAAADAAAAAAADAAEAAAADAAEAAAADAAEAAAA=")
@@ -57,32 +58,37 @@ tile_map_data = PackedByteArray("AAABAAEAAAAEAAAAAAA=")
 
 [node name="Sanity2" type="Node2D" parent="Tilemaps" unique_id=506060921]
 visible = false
+y_sort_enabled = true
 
-[node name="TileMapLayer" parent="Tilemaps/Sanity2" unique_id=1599914462 instance=ExtResource("6_rtwqf")]
+[node name="Temp" parent="Tilemaps/Sanity2" unique_id=1599914462 instance=ExtResource("6_rtwqf")]
 tile_map_data = PackedByteArray("AAD7/wAAAAABAAAAAAA=")
 
 [node name="Sanity3" type="Node2D" parent="Tilemaps" unique_id=70515775]
 visible = false
+y_sort_enabled = true
 
-[node name="TileMapLayer" parent="Tilemaps/Sanity3" unique_id=278556220 instance=ExtResource("6_rtwqf")]
+[node name="Temp" parent="Tilemaps/Sanity3" unique_id=278556220 instance=ExtResource("6_rtwqf")]
 tile_map_data = PackedByteArray("AAD8/wAAAAACAAAAAAA=")
 
 [node name="Sanity4" type="Node2D" parent="Tilemaps" unique_id=1124079130]
 visible = false
+y_sort_enabled = true
 
-[node name="TileMapLayer" parent="Tilemaps/Sanity4" unique_id=345641332 instance=ExtResource("6_rtwqf")]
+[node name="Temp" parent="Tilemaps/Sanity4" unique_id=345641332 instance=ExtResource("6_rtwqf")]
 tile_map_data = PackedByteArray("AAD9/wAAAAADAAAAAAA=")
 
 [node name="Sanity5" type="Node2D" parent="Tilemaps" unique_id=1881764444]
 visible = false
+y_sort_enabled = true
 
-[node name="TileMapLayer" parent="Tilemaps/Sanity5" unique_id=687362660 instance=ExtResource("6_rtwqf")]
+[node name="Temp" parent="Tilemaps/Sanity5" unique_id=687362660 instance=ExtResource("6_rtwqf")]
 tile_map_data = PackedByteArray("AAD+/wAAAAAEAAAAAAA=")
 
 [node name="Sanity6" type="Node2D" parent="Tilemaps" unique_id=970914074]
 visible = false
+y_sort_enabled = true
 
-[node name="TileMapLayer" parent="Tilemaps/Sanity6" unique_id=766909834 instance=ExtResource("6_rtwqf")]
+[node name="Temp" parent="Tilemaps/Sanity6" unique_id=766909834 instance=ExtResource("6_rtwqf")]
 tile_map_data = PackedByteArray("AAD//wAAAAAFAAAAAAA=")
 
 [node name="Door1" parent="." unique_id=148327902 instance=ExtResource("6_nd5di")]

@@ -19,7 +19,7 @@ b = Vector2(256, 0)
 a = Vector2(-48, 0)
 b = Vector2(48, 0)
 
-[node name="Node2D" type="Node2D" unique_id=269490628]
+[node name="Node2D2" type="Node2D" unique_id=269490628]
 y_sort_enabled = true
 script = ExtResource("1_7w20u")
 
@@ -75,37 +75,37 @@ z_index = 10
 position = Vector2(0, 1)
 tile_map_data = PackedByteArray("AAASAAkAAAAFAAIAAADz/wIAAAAFAAYAAAA=")
 
-[node name="TileMapLayer" parent="Tilemaps/Sanity1" unique_id=1599914462 instance=ExtResource("7_wctbt")]
+[node name="Temp" parent="Tilemaps/Sanity1" unique_id=1599914462 instance=ExtResource("7_wctbt")]
 tile_map_data = PackedByteArray("AAD6/wAAAAAAAAAAAAA=")
 
 [node name="Sanity2" type="Node2D" parent="Tilemaps" unique_id=523314284]
 visible = false
 
-[node name="TileMapLayer" parent="Tilemaps/Sanity2" unique_id=348306473 instance=ExtResource("7_wctbt")]
+[node name="Temp" parent="Tilemaps/Sanity2" unique_id=348306473 instance=ExtResource("7_wctbt")]
 tile_map_data = PackedByteArray("AAD7/wAAAAABAAAAAAA=")
 
 [node name="Sanity3" type="Node2D" parent="Tilemaps" unique_id=602738119]
 visible = false
 
-[node name="TileMapLayer" parent="Tilemaps/Sanity3" unique_id=899513024 instance=ExtResource("7_wctbt")]
+[node name="Temp" parent="Tilemaps/Sanity3" unique_id=899513024 instance=ExtResource("7_wctbt")]
 tile_map_data = PackedByteArray("AAD8/wAAAAACAAAAAAA=")
 
 [node name="Sanity4" type="Node2D" parent="Tilemaps" unique_id=1539016440]
 visible = false
 
-[node name="TileMapLayer" parent="Tilemaps/Sanity4" unique_id=536528904 instance=ExtResource("7_wctbt")]
+[node name="Temp" parent="Tilemaps/Sanity4" unique_id=536528904 instance=ExtResource("7_wctbt")]
 tile_map_data = PackedByteArray("AAD9/wAAAAADAAAAAAA=")
 
 [node name="Sanity5" type="Node2D" parent="Tilemaps" unique_id=1403454290]
 visible = false
 
-[node name="TileMapLayer" parent="Tilemaps/Sanity5" unique_id=1809019293 instance=ExtResource("7_wctbt")]
+[node name="Temp" parent="Tilemaps/Sanity5" unique_id=1809019293 instance=ExtResource("7_wctbt")]
 tile_map_data = PackedByteArray("AAD+/wAAAAAEAAAAAAA=")
 
 [node name="Sanity6" type="Node2D" parent="Tilemaps" unique_id=173338491]
 visible = false
 
-[node name="TileMapLayer" parent="Tilemaps/Sanity6" unique_id=2121624283 instance=ExtResource("7_wctbt")]
+[node name="Temp" parent="Tilemaps/Sanity6" unique_id=2121624283 instance=ExtResource("7_wctbt")]
 tile_map_data = PackedByteArray("AAD//wAAAAAFAAAAAAA=")
 
 [node name="Door1" parent="." unique_id=148327902 instance=ExtResource("5_7w20u")]
