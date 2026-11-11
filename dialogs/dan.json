@@ -1,90 +1,75 @@
 {
 	"dialog_1": [
-		
 		{
 			"speaker": "Dan",
-			"text" : "Wazzzzzzzzzaaaaaaa"
+			"text": "Wazzzzzzzzzaaaaaaa"
 		},
 		{
 			"speaker": "You",
-			"options" : [
+			"options": [
 				{
-					"text" : "Hello",
-					"dialog" : "dialog_2"
+					"text": "Hey Dan",
+					"dialog": "dialog_2"
 				},
 				{
-					"text" : "Do yo know the code to the bosses office?",
-					"dialog" : "dialog_3"
+					"text": "Do you know the code to the bosses office?",
+					"dialog": "dialog_3"
 				},
 				{
-					"text" : "Good morning",
-					"dialog" : "dialog_4"
+					"text": "I'm quiting",
+					"dialog": "dialog_4"
 				},
 				{
-					"text" : "Bye",
-					"dialog" : "dialog_5"
+					"text": "Bye Dan",
+					"dialog": "dialog_5"
 				},
 				{
-					"text" : "I have your coffee",
-					"dialog" : "dialog_6",
-					"needs_quest" : "coffee",
-					"needs_item" : "coffee"
+					"text": "I have your coffee",
+					"dialog": "dialog_6",
+					"needs_quest": "coffee",
+					"needs_item": "coffee"
 				}
-				
 			]
 		}
 	],
-	
 	"dialog_2": [
 		{
 			"speaker": "Dan",
-			"text" : "Hello"
+			"text": "Hello Bob, you look tired, not getting enough sleep are you?"
 		}
-		
 	],
-	
 	"dialog_3": [
 		{
 			"speaker": "Dan",
-			"text" : "I know one"
+			"text": "I don't know the code but i do got info about the code.."
 		},
-		
 		{
 			"speaker": "Dan",
-			"text" : "If you give me a cup of coffee i can tell you one of the nummbers",
-			"quest_name": "coffee"
+			"text": "If you give me a cup of coffee then i will tell you one of the numbers",
+			"quest_name": "coffie"
 		}
-		
 	],
-	
 	"dialog_4": [
 		{
 			"speaker": "Dan",
-			"text" : "Good morning"
+			"text": "Oh really? well i hope you the best"
 		},
-		
 		{
 			"speaker": "Dan",
-			"text" : "How hos your morning been"
+			"text": "Remember to talk to the boss, ok?"
 		}
-		
 	],
-	
 	"dialog_5": [
 		{
 			"speaker": "Dan",
-			"text" : "Bye bye"
+			"text": "Bye bye"
 		},
-		
 	],
-	
 	"dialog_6": [
 		{
 			"speaker": "Dan",
-			"text" : "Thank you!",
+			"text": "Thank you!",
 			"completes_quest": "coffee"
 		},
-		
 	]
-	
 }

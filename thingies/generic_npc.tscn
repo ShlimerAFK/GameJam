@@ -21,6 +21,7 @@ animations = [{
 radius = 15.0
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=936663778]
+y_sort_enabled = true
 script = ExtResource("1_t6imf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=344392392]

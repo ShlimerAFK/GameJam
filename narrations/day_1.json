@@ -3,23 +3,34 @@
 		
 		{
 			"speaker": "You",
-			"text" : "Ahhh"
+			"text" : "..."
 		},
 		{
 			"speaker": "You",
-			"text" : "Finally fryday"
+			"text" : "The boss cut my pay"
+		},
+		{
+			"speaker": "You",
+			"text" : "Again...."
+		},
+		
+		{
+			"speaker": "You",
+			"text" : "a 12 hour shift earning less then a fast food worker..."
+		},
+		
+		{
+			"speaker": "You",
+			"text" : "i'm too tired for this, can't i be treated like a human for once"
+		},
+		{
+			"speaker": "You",
+			"text" : "Screw this shit, I quit"
 		}
 	],
 	
 	"narr_2": [
 		
-		{
-			"speaker": "You",
-			"text" : "Finnaly"
-		},
-		{
-			"speaker": "You",
-			"text" : "Its almost time to go home!"
-		}
+
 	]
 }
