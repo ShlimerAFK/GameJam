@@ -49,6 +49,7 @@ tile_map_data = PackedByteArray("AAAAAPv/AAAFAAMAAAD+//v/AAACAAMAAAA=")
 tile_map_data = PackedByteArray("AAAEAPr/AAACAAAAAAD///v/AAADAAAAAAAEAPz/AAAAAAQAAAA=")
 
 [node name="Sanity2" type="Node2D" parent="Tilemaps" unique_id=1618327479]
+visible = false
 y_sort_enabled = true
 
 [node name="Sanity" parent="Tilemaps/Sanity2" unique_id=1599914462 instance=ExtResource("6_48ey2")]
@@ -63,6 +64,7 @@ position = Vector2(0, 8)
 tile_map_data = PackedByteArray("AAAAAPv/AAAEAAEAAAA=")
 
 [node name="Sanity3" type="Node2D" parent="Tilemaps" unique_id=544035414]
+visible = false
 y_sort_enabled = true
 
 [node name="Sanity" parent="Tilemaps/Sanity3" unique_id=719858541 instance=ExtResource("6_48ey2")]
@@ -77,6 +79,7 @@ position = Vector2(8, 0)
 tile_map_data = PackedByteArray("AAADAAEAAAAGAAEAAAD9//r/AAAGAAAAAAA=")
 
 [node name="Sanity4" type="Node2D" parent="Tilemaps" unique_id=151422176]
+visible = false
 y_sort_enabled = true
 
 [node name="Sanity" parent="Tilemaps/Sanity4" unique_id=352207775 instance=ExtResource("6_48ey2")]
@@ -101,6 +104,7 @@ tile_map_data = PackedByteArray("AAADAAEAAAAHAAEAAAD9//r/AAAHAAAAAAD7////AAAGAAI
 tile_map_data = PackedByteArray("AAD7//3/AAAFAAQAAAA=")
 
 [node name="Sanity5" type="Node2D" parent="Tilemaps" unique_id=1238111331]
+visible = false
 y_sort_enabled = true
 
 [node name="Sanity" parent="Tilemaps/Sanity5" unique_id=246075238 instance=ExtResource("6_48ey2")]
@@ -123,8 +127,29 @@ tile_map_data = PackedByteArray("AAADAAEAAAAIAAEAAAD7////AAAHAAIAAAD9//r/AAAIAAA
 visible = false
 y_sort_enabled = true
 
-[node name="Temp" parent="Tilemaps/Sanity6" unique_id=172746114 instance=ExtResource("6_48ey2")]
-tile_map_data = PackedByteArray("AAD//wAAAAAFAAAAAAA=")
+[node name="Sanity" parent="Tilemaps/Sanity6" unique_id=172746114 instance=ExtResource("6_48ey2")]
+z_index = -1
+tile_map_data = PackedByteArray("AAD+/wAAAAACAAgAAgD7//7/AAAAAAkAAAD//wAAAAAEAAIAAAD9////AAAAAAMAAAD9//3/AAABAAMAAAAAAPz/AAABAAMAAAD7//r/AAACAAIAAAAAAPv/AAAEAAIAAAAEAP3/AAADAAIAAAAAAAEAAAAFAAIAAAAEAP//AAADAAMAAAA=")
+
+[node name="Sanity2" parent="Tilemaps/Sanity6" unique_id=1015060753 instance=ExtResource("6_48ey2")]
+z_index = -1
+position = Vector2(8, 0)
+tile_map_data = PackedByteArray("AAACAP7/AAAAAAgAAAA=")
+
+[node name="Decor" parent="Tilemaps/Sanity6" unique_id=1497575852 instance=ExtResource("5_sbatj")]
+z_index = -1
+tile_map_data = PackedByteArray("AAD+//z/AAAAAAMAAAABAPz/AAABAAMAAAD7//z/AAABAAMAAAAEAPz/AAAAAAMAAAA=")
+
+[node name="Sanity3" parent="Tilemaps/Sanity6" unique_id=1134539054 instance=ExtResource("6_48ey2")]
+tile_map_data = PackedByteArray("AAACAP//AAAHAAAAAAAEAAAAAAAHAAEAAAD7//7/AAAGAAEAAAAEAPv/AAAGAAIAAAACAPr/AAAGAAAAAAA=")
+
+[node name="Sanity4" parent="Tilemaps/Sanity6" unique_id=1525026625 instance=ExtResource("6_48ey2")]
+position = Vector2(8, 0)
+tile_map_data = PackedByteArray("AAADAAEAAAALAAEAAAD7////AAAIAAIAAAD9//r/AAALAAAAAAA=")
+
+[node name="Sanity5" parent="Tilemaps/Sanity6" unique_id=38136695 instance=ExtResource("6_48ey2")]
+position = Vector2(8, 8)
+tile_map_data = PackedByteArray("AAD7//r/AAAGAAAAAAD8/wAAAAAGAAIAAAADAP7/AAAGAAAAAAA=")
 
 [node name="Door1" parent="." unique_id=148327902 instance=ExtResource("6_mr5hx")]
 position = Vector2(48, -64)
