@@ -20,8 +20,8 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -679.0
 offset_top = -351.5
-offset_right = 679.0
-offset_bottom = 351.5
+offset_right = 681.0
+offset_bottom = 348.5
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -79,6 +79,54 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -679.5
 offset_top = -408.5
-offset_right = 679.5
+offset_right = 680.5
 grow_horizontal = 2
 grow_vertical = 0
+
+[node name="Button1" type="Button" parent="MarginContainer/NinePatchRect/MiniGame" unique_id=1445864795]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 180.0
+offset_top = -50.0
+offset_right = 380.0
+offset_bottom = 50.0
+grow_vertical = 2
+text = "1"
+
+[node name="Button2" type="Button" parent="MarginContainer/NinePatchRect/MiniGame" unique_id=1312703778]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 430.0
+offset_top = -50.0
+offset_right = 630.0
+offset_bottom = 50.0
+grow_vertical = 2
+text = "2"
+
+[node name="Button3" type="Button" parent="MarginContainer/NinePatchRect/MiniGame" unique_id=1048224251]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 680.0
+offset_top = -50.0
+offset_right = 880.0
+offset_bottom = 50.0
+grow_vertical = 2
+text = "3"
+
+[node name="Button4" type="Button" parent="MarginContainer/NinePatchRect/MiniGame" unique_id=1133398572]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 930.0
+offset_top = -50.0
+offset_right = 1130.0
+offset_bottom = 50.0
+grow_vertical = 2
+text = "4"

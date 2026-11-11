@@ -17,6 +17,7 @@ offset_right = 320.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 4
+mouse_filter = 2
 script = ExtResource("1_l3d60")
 
 [node name="TextBox" type="MarginContainer" parent="." unique_id=197041775]
