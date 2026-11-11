@@ -41,6 +41,7 @@ position = Vector2(304, 160)
 shape = SubResource("SegmentShape2D_q7uuk")
 
 [node name="Sanity1" type="Node2D" parent="Tilemaps" unique_id=444804237]
+y_sort_enabled = true
 
 [node name="Base" parent="Tilemaps/Sanity1" unique_id=135059640 instance=ExtResource("4_mus4g")]
 y_sort_enabled = true

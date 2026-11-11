@@ -60,6 +60,7 @@ animations = [{
 radius = 15.0
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=368403260]
+y_sort_enabled = true
 script = ExtResource("1_mxrdr")
 file_name = "carl.json"
 

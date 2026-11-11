@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bnkh0uduj1666" path="res://sprites/npc/Dan/danIdle.png" id="2_buo1i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_stvbn"]
-size = Vector2(16, 4)
+size = Vector2(16, 7)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1tvji"]
 atlas = ExtResource("2_buo1i")
@@ -60,11 +60,12 @@ animations = [{
 radius = 17.0
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=1711188476]
+y_sort_enabled = true
 script = ExtResource("1_dkopf")
 file_name = "dan.json"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1982143750]
-position = Vector2(-1, -2)
+position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_stvbn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1582236490]

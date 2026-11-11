@@ -13,7 +13,7 @@
 					"dialog" : "dialog_2"
 				},
 				{
-					"text" : "Do yo know the code to the bosses office?",
+					"text" : "Do you know the code to the bosses office?",
 					"dialog" : "dialog_3"
 				},
 				{
@@ -45,7 +45,7 @@
 		
 		{
 			"speaker": "Dan",
-			"text" : "If you give me a cup of coffie i can tell you one of the nummbers",
+			"text" : "If you give me a cup of coffee then i can tell you one of the numbers",
 			"quest_name": "coffie"
 		}
 		
@@ -59,7 +59,7 @@
 		
 		{
 			"speaker": "Dan",
-			"text" : "How hos your morning been"
+			"text" : "How has your morning been"
 		}
 		
 	],
