@@ -4,6 +4,7 @@
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rr77f"]
 texture = ExtResource("1_eeqye")
+0:0/next_alternative_id = 2
 0:0/animation_columns = 8
 0:0/animation_speed = 16.0
 0:0/animation_mode = 1
