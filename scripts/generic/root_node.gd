@@ -5,6 +5,7 @@ extends Node2D
 @onready var player = $CharacterBody2D
 @onready var spawn = get_node(Global.next_spawn_door)
 @onready var narration = $GUI/NarrationNode
+@onready var inventory = $GUI/InventoryText
 # Called when the node enters the scene tree for the first time.
 
 @onready var sanity_layers := [$Tilemaps/Sanity1, $Tilemaps/Sanity2, $Tilemaps/Sanity3, $Tilemaps/Sanity4, $Tilemaps/Sanity5, $Tilemaps/Sanity6] 
@@ -28,6 +29,7 @@ func _ready() -> void:
 	Global.player_is_interacting = false
 	
 	display_sanity_state_layers()
+	inventory.print_inventory(Global.inventory)
 	
 	if room_plays_narration and GlobalTimeLoop.has_narrated == false:
 		play_narration("narr_1")

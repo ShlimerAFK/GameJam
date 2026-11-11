@@ -9,13 +9,14 @@ var inventory := []
 signal inventory_changed(Arrey)
 
 func add_item_to_inventory(item: String):
-	var has_item_in_inventory = false
-	for i in range(inventory.size()):
-		if inventory[i] == item:
-			has_item_in_inventory = true
-	
-	if not has_item_in_inventory:
-		inventory.append(item)
+	#var has_item_in_inventory = false
+	#for i in range(inventory.size()):
+		#if inventory[i] == item:
+			#has_item_in_inventory = true
+	#
+	#if not has_item_in_inventory:
+	inventory = []
+	inventory.append(item)
 	
 	inventory_changed.emit(inventory)
 	
