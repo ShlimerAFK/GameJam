@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cunb0unoapsp4"]
+
+[ext_resource type="Script" uid="uid://ccwbljr7qu7xp" path="res://thingies/inventory_text.gd" id="1_0xt4g"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ilhlf"]
+
+[node name="InventoryText" type="Control" unique_id=957070641]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_0xt4g")
+
+[node name="TextBox" type="MarginContainer" parent="." unique_id=454302872]
+visible = false
+layout_mode = 1
+offset_right = 17.0
+offset_bottom = 39.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TextBox" unique_id=1420083973]
+layout_mode = 2
+texture = SubResource("CanvasTexture_ilhlf")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="TextBox" unique_id=1134531371]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="TextBox/MarginContainer" unique_id=401728608]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
