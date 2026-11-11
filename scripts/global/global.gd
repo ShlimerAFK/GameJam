@@ -2,6 +2,23 @@ extends Node
 
 var player_is_interacting := false
 var next_spawn_door := "Door1"
+var inventory := []
+
+
+# Inventory
+signal inventory_changed(Arrey)
+
+func add_item_to_inventory(item: String):
+	var has_item_in_inventory = false
+	for i in range(inventory.size()):
+		if inventory[i] == item:
+			has_item_in_inventory = true
+	
+	if not has_item_in_inventory:
+		inventory.append(item)
+	
+	inventory_changed.emit(inventory)
+	
 
 # QUESTS _________________________________________
 
