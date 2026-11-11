@@ -18,9 +18,14 @@
 			"speaker": "You",
 			"text" : "a 12 hour shift earning less then a fast food worker..."
 		},
+		
 		{
 			"speaker": "You",
-			"text" : "Screw this shit, i gotta quit"
+			"text" : "i'm too tired for this, can't i be treated like a human for once"
+		},
+		{
+			"speaker": "You",
+			"text" : "Screw this shit, I quit"
 		}
 	],
 	

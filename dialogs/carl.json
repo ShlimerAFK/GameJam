@@ -1,9 +1,16 @@
 {
 	"dialog_1": [
 		
+		
+		
+		
 		{
 			"speaker": "Carl",
 			"text" : "..."
+		},
+		{
+			"speaker": "Carl",
+			"text" : "Oh, you're quiting? lucky"
 		}
 	]
 }
