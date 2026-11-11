@@ -6,8 +6,7 @@ extends Interactable
 # example: Door1
 @export var door_position_in_room: String
 # example: top, bottom
-@export var transition_type: String
-@export var duration: float
+
 
 
 
@@ -16,7 +15,7 @@ func _process(_delta):
 		get_tree().change_scene_to_file("res://scenes/" + scene_destination)
 		Global.player_is_interacting = true
 		Global.next_spawn_door = destination_door_name
-		SceneTransitionController.change_scene(scene_destination, transition_type, duration)
+		
 		
 
 
