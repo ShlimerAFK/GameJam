@@ -35,7 +35,7 @@ func _process(delta: float) -> void:
 		play_text_animation()
 		count += 1
 		
-	elif Input.is_action_just_pressed("scroll_dialog") and count == len(dialogues):
+	elif Input.is_action_just_pressed("scroll_dialog") and count == len(dialogues) and textbox.visible == true:
 		textbox.visible = false
 		Global.player_is_interacting = false
 		count = 0

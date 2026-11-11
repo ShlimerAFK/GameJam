@@ -1,6 +1,6 @@
 extends Node
 
-var player_is_interacting := false
+var player_is_interacting : bool
 var next_spawn_door := "Door1"
 var inventory := []
 
@@ -9,25 +9,32 @@ var inventory := []
 signal inventory_changed(Arrey)
 
 func add_item_to_inventory(item: String):
-	#var has_item_in_inventory = false
-	#for i in range(inventory.size()):
-		#if inventory[i] == item:
-			#has_item_in_inventory = true
-	#
-	#if not has_item_in_inventory:
 	inventory = []
 	inventory.append(item)
 	
 	inventory_changed.emit(inventory)
 	
-
+func check_if_player_has_item(input_item: String) -> bool:
+	var item = input_item.to_lower()
+	var has_item_in_inventory = false
+	for i in range(inventory.size()):
+		if inventory[i].to_lower() == item:
+			has_item_in_inventory = true
+	
+	if has_item_in_inventory:
+		return true
+	else:
+		return false
+	
+func clear_inventory():
+	inventory = []
 # QUESTS _________________________________________
 
 var quests := [
 	
 	{
-		"name": "coffie",
-		"text": "Get dan a cup of coffie",
+		"name": "coffee",
+		"text": "Get dan a cup of coffee",
 		"quest_is_active": false,
 		"quest_is_done": false
 	}	
@@ -36,7 +43,7 @@ var quests := [
 func get_quest(quest_name: String):
 
 	for i in range(quests.size()):
-		if quests[i].name == quest_name:
+		if quests[i].name.to_lower() == quest_name.to_lower():
 			return quests[i]
 		
 		else:
@@ -48,7 +55,7 @@ func activate_quest(input_quest: Dictionary):
 	
 	var quest = get_quest(input_quest.name)
 	
-	if quest.quest_is_active == false:
+	if quest.quest_is_active == false and quest.quest_is_done == false:
 		quest.quest_is_active = true
 
 
@@ -63,3 +70,19 @@ func get_active_quests():
 func reset_active_quests():
 	for i in range(quests.size()):
 		quests[i].quest_is_active = false
+		
+func check_if_quest_is_activated(name: String) -> bool:
+	var quest = get_quest(name)
+	
+	if quest.quest_is_active:
+		return true
+	else: 
+		return false
+
+func complete_quest(name: String):
+	var quest = get_quest(name)
+	quest.quest_is_done = true
+	quest.quest_is_active = false
+
+func _process(delta: float) -> void:
+	print(player_is_interacting)

@@ -98,8 +98,6 @@ tile_map_data = PackedByteArray("AAD//wAAAAAFAAAAAAA=")
 position = Vector2(48, -144)
 scene_destination = "corridor.tscn"
 destination_door_name = "Door4"
-transition_type = ""
-duration = 0.0
 door_position_in_room = "top"
 
 [node name="StaticBody2D" parent="." unique_id=1711188476 instance=ExtResource("7_p4o86")]

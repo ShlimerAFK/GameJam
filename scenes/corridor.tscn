@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dsh0fg115vvhe" path="res://scripts/generic/root_node.gd" id="1_7w20u"]
 [ext_resource type="PackedScene" uid="uid://cc1x44ypsamki" path="res://thingies/gui.tscn" id="2_mus4g"]
-[ext_resource type="PackedScene" uid="uid://crcrptu6khfas" path="res://thingies/NPC/dan.tscn" id="2_w32gw"]
 [ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://thingies/player.tscn" id="3_7w20u"]
 [ext_resource type="PackedScene" uid="uid://jroxlsrexcqi" path="res://thingies/tileset_templates/terrain.tscn" id="4_mus4g"]
 [ext_resource type="PackedScene" uid="uid://bs46i8y6tukst" path="res://thingies/door_area.tscn" id="5_7w20u"]
@@ -10,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://douyv2kqqv15h" path="res://thingies/tileset_templates/animated.tscn" id="6_pblcb"]
 [ext_resource type="PackedScene" uid="uid://bmt6sgusf1o0h" path="res://thingies/tileset_templates/sanity.tscn" id="7_wctbt"]
 [ext_resource type="PackedScene" uid="uid://csmc7qeleky5o" path="res://thingies/NPC/carl.tscn" id="9_uiklb"]
+[ext_resource type="PackedScene" uid="uid://dxws188rknph" path="res://thingies/NPC/janet.tscn" id="10_w32gw"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_e1il7"]
 a = Vector2(-256, 0)
@@ -138,8 +138,7 @@ scene_destination = "elevator_floor.tscn"
 destination_door_name = "Door1"
 door_position_in_room = "bottom"
 
-[node name="Dan" parent="." unique_id=1711188476 instance=ExtResource("2_w32gw")]
-position = Vector2(97, 4)
-
 [node name="Carl" parent="." unique_id=368403260 instance=ExtResource("9_uiklb")]
 position = Vector2(53, 26)
+
+[node name="Janet" parent="." unique_id=256800973 instance=ExtResource("10_w32gw")]

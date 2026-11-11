@@ -26,7 +26,6 @@ func _ready() -> void:
 		print_debug("Door position not specified. position expected: top or bottom when position name " + str(spawn.door_position_in_room) + " was given")
 	
 	player.global_position = spawn.global_position + spawn_offset
-	Global.player_is_interacting = false
 	
 	display_sanity_state_layers()
 	inventory.print_inventory(Global.inventory)

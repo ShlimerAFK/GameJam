@@ -23,6 +23,12 @@
 				{
 					"text" : "Bye",
 					"dialog" : "dialog_5"
+				},
+				{
+					"text" : "I have your coffee",
+					"dialog" : "dialog_6",
+					"needs_quest" : "coffee",
+					"needs_item" : "coffee"
 				}
 				
 			]
@@ -45,8 +51,8 @@
 		
 		{
 			"speaker": "Dan",
-			"text" : "If you give me a cup of coffie i can tell you one of the nummbers",
-			"quest_name": "coffie"
+			"text" : "If you give me a cup of coffee i can tell you one of the nummbers",
+			"quest_name": "coffee"
 		}
 		
 	],
@@ -68,7 +74,16 @@
 		{
 			"speaker": "Dan",
 			"text" : "Bye bye"
-		}
+		},
+		
+	],
+	
+	"dialog_6": [
+		{
+			"speaker": "Dan",
+			"text" : "Thank you!",
+			"completes_quest": "coffee"
+		},
 		
 	]
 	

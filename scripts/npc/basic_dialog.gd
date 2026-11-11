@@ -4,6 +4,7 @@ var file_path : String
 
 @onready var dialog_lable: Label = $TextBox/MarginContainer/Label
 @onready var quest_controler := $"../QuestControler"
+@onready var inventory_controler := $"../InventoryText"
 @onready var textbox: MarginContainer = $TextBox
 
 
@@ -75,6 +76,7 @@ func read_json_data(filepath):
 	return json.get_data()
 
 func play_text_animation():
+	
 	var text: String
 	
 	if tween:
@@ -96,14 +98,40 @@ func others_speaking(text: String):
 		var quest = Global.get_quest(dialogues[count]["quest_name"])
 		quest_controler.add_quest(quest)
 	
+	if dialogues[count].has("completes_quest"):
+		print("COMPLEAT")
+		Global.complete_quest(dialogues[count]["completes_quest"])
+		quest_controler.display_active_quests()
+		Global.clear_inventory()
+		inventory_controler.print_inventory(Global.inventory)
+	
 func player_speaking(text: String):
-	amout_of_choises = dialogues[count]["options"].size()
+	var has_item: bool
+	var has_quest: bool
+	
+	amout_of_choises = 0
+
+	for i in range(dialogues[count]["options"].size()):
+		has_item = false
+		has_quest = false
+		
+		if dialogues[count]["options"][i].has("needs_quest") or dialogues[count]["options"][i].has("needs_item"):
+			
+			if dialogues[count]["options"][i].has("needs_quest"):
+				has_quest = Global.check_if_quest_is_activated(dialogues[count]["options"][i]["needs_quest"])
+			if dialogues[count]["options"][i].has("needs_item"):
+				has_item = Global.check_if_player_has_item(dialogues[count]["options"][i]["needs_item"])
+			
+			if has_quest and has_item:
+				amout_of_choises += 1
+		else:
+			amout_of_choises += 1
 	
 	for i in range (amout_of_choises):
 		text += str(i +1) + ". "
 		text += str(dialogues[count]["options"][i]["text"])
 		
-		if not i == dialogues[count]["options"].size() - 1:
+		if not i == amout_of_choises - 1:
 			text += "\n"
 	
 	dialog_lable.text = text
@@ -112,7 +140,7 @@ func player_speaking(text: String):
 
 	
 func animate_lable(text: String):
-	var transition_length = text.length() * 0.03
+	var transition_length = text.length() * 0.02
 	dialog_lable.visible_ratio = 0
 	tween = get_tree().create_tween()
 	tween.tween_property(dialog_lable, "visible_ratio", 1, transition_length)

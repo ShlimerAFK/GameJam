@@ -11,6 +11,7 @@ func _ready() -> void:
 	display_active_quests()
 	
 func add_quest(input_quest: Dictionary):
+	
 	var quest = Global.get_quest(input_quest["name"])
 	if quest.quest_is_active == false:
 		Global.activate_quest(quest)
@@ -18,11 +19,14 @@ func add_quest(input_quest: Dictionary):
 		display_active_quests()
 	
 func display_active_quests():
+	text = ""
 	
 	var active_quests = Global.get_active_quests()
 	
 	if text_box.visible == false and active_quests.size() > 0:
 		text_box.visible = true
+	else:
+		text_box.visible = false
 	
 	for i in range(active_quests.size()):
 		text += active_quests[i].text

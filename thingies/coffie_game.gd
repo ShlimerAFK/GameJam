@@ -3,10 +3,10 @@ extends MiniGame
 # Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
-	instructions = "Press space to fill your cup of coffie"
-	main_text = "Coffie"
-	completes_quest = "coffie"
-	button_text = ["Coffie", "Te", "Hot chokolet", "Decaf"]
+	instructions = "Press space to fill your cup of coffee"
+	main_text = "Coffee"
+	completes_quest = "coffee"
+	button_text = ["Coffee", "Te", "Hot chokolet", "Decaf"]
 	
 func play_game():
 	print("playing game")
