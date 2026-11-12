@@ -58,7 +58,7 @@ func _process(delta: float) -> void:
 	elif Input.is_action_just_pressed("5") and amout_of_choises >= 5 and player_is_choosing:
 		start_new_dialog(4)
 		
-	elif Input.is_action_just_pressed("scroll_dialog") and count == len(dialogues) and player_is_choosing == false:
+	elif Input.is_action_just_pressed("scroll_dialog") and count == len(dialogues) and player_is_choosing == false and textbox.visible == true:
 		textbox.visible = false
 		Global.player_is_interacting = false
 		count = 0

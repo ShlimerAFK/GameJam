@@ -13,6 +13,7 @@ var current_file_name: String
 
 func start_narration(dialog: String, file_name: String) -> void:
 	
+	Global.player_is_interacting = true
 	
 	current_file_name = file_name
 	file_path = "res://narrations/" + current_file_name
