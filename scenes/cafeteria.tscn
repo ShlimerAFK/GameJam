@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://douyv2kqqv15h" path="res://thingies/tileset_templates/animated.tscn" id="5_p4o86"]
 [ext_resource type="PackedScene" uid="uid://cchsb3liba1f8" path="res://thingies/tileset_templates/decor.tscn" id="5_rrnwm"]
 [ext_resource type="PackedScene" uid="uid://bmt6sgusf1o0h" path="res://thingies/tileset_templates/sanity.tscn" id="7_fd8ba"]
-[ext_resource type="PackedScene" uid="uid://crcrptu6khfas" path="res://thingies/NPC/dan.tscn" id="7_p4o86"]
 [ext_resource type="PackedScene" uid="uid://clkfl7i13pmfl" path="res://thingies/coffie_game_area.tscn" id="10_hwmdj"]
+[ext_resource type="PackedScene" uid="uid://dxws188rknph" path="res://thingies/NPC/janet.tscn" id="10_lxt4k"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_p4o86"]
 a = Vector2(128, 0)
@@ -162,8 +162,8 @@ scene_destination = "corridor.tscn"
 destination_door_name = "Door4"
 door_position_in_room = "top"
 
-[node name="StaticBody2D" parent="." unique_id=1711188476 instance=ExtResource("7_p4o86")]
-position = Vector2(-81, -76)
-
 [node name="CoffieGame" parent="." unique_id=1501224406 instance=ExtResource("10_hwmdj")]
 position = Vector2(112, -116)
+
+[node name="Janet" parent="." unique_id=256800973 instance=ExtResource("10_lxt4k")]
+position = Vector2(-76, -76)

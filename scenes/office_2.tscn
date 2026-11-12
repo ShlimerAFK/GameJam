@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://douyv2kqqv15h" path="res://thingies/tileset_templates/animated.tscn" id="6_6xfhw"]
 [ext_resource type="PackedScene" uid="uid://bs46i8y6tukst" path="res://thingies/door_area.tscn" id="6_7oa03"]
 [ext_resource type="PackedScene" uid="uid://bmt6sgusf1o0h" path="res://thingies/tileset_templates/sanity.tscn" id="7_tkapk"]
+[ext_resource type="PackedScene" uid="uid://crcrptu6khfas" path="res://thingies/NPC/dan.tscn" id="9_uf2di"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_7w20u"]
 a = Vector2(-48, 0)
@@ -155,3 +156,6 @@ position = Vector2(24, 17)
 scene_destination = "corridor.tscn"
 destination_door_name = "Door2"
 door_position_in_room = "bottom"
+
+[node name="Dan" parent="." unique_id=1711188476 instance=ExtResource("9_uf2di")]
+position = Vector2(-25, -7)
