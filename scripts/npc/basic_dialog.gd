@@ -97,6 +97,7 @@ func others_speaking(text: String):
 	if dialogues[count].has("quest_name"):
 		var quest = Global.get_quest(dialogues[count]["quest_name"])
 		quest_controler.add_quest(quest)
+		
 	
 	if dialogues[count].has("completes_quest"):
 		print("COMPLEAT")
@@ -108,31 +109,45 @@ func others_speaking(text: String):
 func player_speaking(text: String):
 	var has_item: bool
 	var has_quest: bool
+	var has_task: bool
 	
 	amout_of_choises = 0
 
 	for i in range(dialogues[count]["options"].size()):
 		has_item = false
 		has_quest = false
-		
+		has_task = false
 		
 		if dialogues[count]["options"][i].has("needs_quest"):
-				has_quest = Global.check_if_quest_is_activated(dialogues[count]["options"][i]["needs_quest"])
+			has_quest = Global.check_if_quest_is_activated(dialogues[count]["options"][i]["needs_quest"])
 				
 		if dialogues[count]["options"][i].has("needs_item"):
-				has_item = Global.check_if_player_has_item(dialogues[count]["options"][i]["needs_item"])
+			has_item = Global.check_if_player_has_item(dialogues[count]["options"][i]["needs_item"])
+		
+		if dialogues[count]["options"][i].has("needs_task"):
+			has_task = Global.check_if_player_has_completed_task(dialogues[count]["options"][i]["needs_task"])
 		
 		if dialogues[count]["options"][i].has("needs_quest") and dialogues[count]["options"][i].has("needs_item"):
 			
 			if has_quest and has_item:
 				amout_of_choises += 1
-		
+				
+		elif dialogues[count]["options"][i].has("needs_quest") and dialogues[count]["options"][i].has("needs_task"):
+			
+			if has_quest and has_task:
+				amout_of_choises += 1
+				
 		elif dialogues[count]["options"][i].has("needs_quest"):
 			
 			if has_quest:
 				amout_of_choises += 1
 		
 		elif dialogues[count]["options"][i].has("needs_item"):
+			
+			if has_item:
+				amout_of_choises += 1
+		
+		elif dialogues[count]["options"][i].has("needs_task"):
 			
 			if has_item:
 				amout_of_choises += 1

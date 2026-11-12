@@ -14,20 +14,27 @@
 			"speaker": "You",
 			"options" : [
 				{
-					"text" : "Hello",
+					"text" : "dialog option 1",
 					"dialog" : "dialog_2"
 				},
 				{
-					"text" : "What is up",
+					"text" : "dialog option 2",
 					"dialog" : "dialog_3"
 				},
 				{
-					"text" : "Good morning",
+					"text" : "dialog option 3",
 					"dialog" : "dialog_4"
 				},
 				{
-					"text" : "Bye",
-					"dialog" : "dialog_5"
+					"text" : "start quest",
+					"dialog" : "dialog_5",
+					"needs_quest" : "padlock"
+				},
+				{
+					"text" : "complete quest",
+					"dialog" : "dialog_6",
+					"needs_quest" : "vending machine",
+					"needs_task" : "vending machine"
 				}
 				
 			]
@@ -71,7 +78,16 @@
 	"dialog_5": [
 		{
 			"speaker": "Janet",
-			"text" : "Bye bye"
+			"text" : "quest",
+			"quest_name" : "vending machine"
+		}
+		
+	],
+	"dialog_6": [
+		{
+			"speaker": "Janet",
+			"text" : "quest compleated",
+			"completes_quest": "vending machine"
 		}
 		
 	]

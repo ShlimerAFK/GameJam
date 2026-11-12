@@ -2,11 +2,29 @@ extends Node
 
 var player_is_interacting : bool
 var next_spawn_door := "Door1"
-var inventory := []
 
+
+# Tasks
+var completed_tasks := []
+
+func add_competed_task(task_name: String):
+	completed_tasks.append(task_name)
+	
+func check_if_player_has_completed_task(task_name: String) -> bool:
+	var task = task_name.to_lower()
+	var has_completed_task = false
+	for i in range(completed_tasks.size()):
+		if completed_tasks[i].to_lower() == task:
+			has_completed_task = true
+	
+	print(completed_tasks)
+	
+	return has_completed_task
+		
 
 # Inventory
 signal inventory_changed(Arrey)
+var inventory := []
 
 func add_item_to_inventory(item: String):
 	inventory = []
@@ -30,6 +48,7 @@ func clear_inventory():
 	inventory = []
 # QUESTS _________________________________________
 
+
 var quests := [
 	
 	{
@@ -43,7 +62,32 @@ var quests := [
 		"text": "Find the code to the padlock",
 		"quest_is_active": false,
 		"quest_is_done": false
-	}	
+	},
+	{
+		"name": "vending machine",
+		"text": "Finx the vending machine",
+		"quest_is_active": false,
+		"quest_is_done": false
+	},
+	{
+		"name": "popup",
+		"text": "Remove Todds popups",
+		"quest_is_active": false,
+		"quest_is_done": false
+	},
+	{
+		"name": "papers",
+		"text": "Get Jim's papers from his desk",
+		"quest_is_active": false,
+		"quest_is_done": false
+	}
+	,
+	{
+		"name": "document",
+		"text": "Write Stephanie's document",
+		"quest_is_active": false,
+		"quest_is_done": false
+	}
 ]
 
 func get_quest(quest_name: String):
