@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cchsb3liba1f8" path="res://thingies/tileset_templates/decor.tscn" id="5_sbatj"]
 [ext_resource type="PackedScene" uid="uid://bmt6sgusf1o0h" path="res://thingies/tileset_templates/sanity.tscn" id="6_48ey2"]
 [ext_resource type="PackedScene" uid="uid://bs46i8y6tukst" path="res://thingies/door_area.tscn" id="6_mr5hx"]
+[ext_resource type="PackedScene" uid="uid://eabk4v5p752v" path="res://thingies/pad_lock_area.tscn" id="8_ofdbp"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ok1ut"]
 a = Vector2(-80, 0)
@@ -156,3 +157,6 @@ position = Vector2(48, -64)
 scene_destination = "corridor.tscn"
 destination_door_name = "Door5"
 door_position_in_room = "top"
+
+[node name="PadlockArea" parent="." unique_id=1188670431 instance=ExtResource("8_ofdbp")]
+position = Vector2(-48, -61)

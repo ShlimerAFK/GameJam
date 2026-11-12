@@ -83,6 +83,3 @@ func complete_quest(name: String):
 	var quest = get_quest(name)
 	quest.quest_is_done = true
 	quest.quest_is_active = false
-
-func _process(delta: float) -> void:
-	print(player_is_interacting)

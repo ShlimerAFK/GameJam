@@ -1,0 +1,33 @@
+{
+	"ending_1": [
+		
+		{
+			"speaker": "You",
+			"text" : "..."
+		},
+		{
+			"speaker": "You",
+			"text" : "Boss..."
+		},
+		{
+			"speaker": "You",
+			"text" : "I quit"
+		}
+	],
+	
+	"ending_2": [
+				{
+			"speaker": "You",
+			"text" : "..."
+		},
+		{
+			"speaker": "You",
+			"text" : "Boss..."
+		},
+		{
+			"speaker": "You",
+			"text" : "Boss?"
+		}
+
+	]
+}

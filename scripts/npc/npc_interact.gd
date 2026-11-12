@@ -13,11 +13,9 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact") and player_has_entered and Global.player_is_interacting == false:
-		print(Global.player_is_interacting)
 		Global.player_is_interacting = true
-		print(Global.player_is_interacting)
 		dialog_node.start_dialog(dialog, file_name)
-		print(Global.player_is_interacting)
+
 		
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

@@ -3,8 +3,8 @@ extends MiniGame
 # Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
-	instructions = "Press space to fill your cup of coffee"
-	main_text = "Coffee"
+	instructions = "Press a buton to brew a cup"
+	main_text = "Coffee machine"
 	completes_quest = "coffee"
 	button_text = ["Coffee", "Te", "Hot chokolet", "Decaf"]
 	

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://eabk4v5p752v"]
+
+[ext_resource type="Script" uid="uid://ci0pqq3pimyi7" path="res://scripts/area/pad_lock_area.gd" id="1_21u61"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wccwa"]
+radius = 29.15476
+
+[node name="Area2D" type="Area2D" unique_id=1188670431]
+script = ExtResource("1_21u61")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=928377653]
+shape = SubResource("CircleShape2D_wccwa")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

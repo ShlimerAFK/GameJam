@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ni2525ttglq6" path="res://thingies/narration.tscn" id="5_dmn7j"]
 [ext_resource type="PackedScene" uid="uid://b7uffv017svji" path="res://thingies/minigame_gui.tscn" id="6_sqvcj"]
 [ext_resource type="PackedScene" uid="uid://cunb0unoapsp4" path="res://thingies/inventory_text.tscn" id="7_s2vrj"]
+[ext_resource type="PackedScene" uid="uid://itfk6vags3sj" path="res://thingies/pad_lock.tscn" id="8_fug2i"]
 
 [node name="GUI" type="CanvasLayer" unique_id=910458424]
 script = ExtResource("1_834qp")
@@ -24,3 +25,5 @@ offset_bottom = 1082.0
 [node name="MinigameControler" parent="." unique_id=1104580804 instance=ExtResource("6_sqvcj")]
 
 [node name="InventoryText" parent="." unique_id=957070641 instance=ExtResource("7_s2vrj")]
+
+[node name="PadLockNode" parent="." unique_id=1720684290 instance=ExtResource("8_fug2i")]

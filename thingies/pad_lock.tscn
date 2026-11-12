@@ -1,0 +1,256 @@
+[gd_scene format=3 uid="uid://itfk6vags3sj"]
+
+[ext_resource type="Script" uid="uid://veh32bftk06e" path="res://scripts/gui/pad_lock_gui.gd" id="1_7fnnx"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_4vsb2"]
+
+[node name="PadLockNode" type="Control" unique_id=1720684290]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7fnnx")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=118434425]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -450.0
+offset_right = 300.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer" unique_id=1621644473]
+layout_mode = 2
+texture = SubResource("CanvasTexture_4vsb2")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="ExitButton" type="Button" parent="MarginContainer/NinePatchRect" unique_id=2141784385]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -30.0
+offset_bottom = 30.0
+grow_horizontal = 0
+text = "X"
+
+[node name="MainText" type="Label" parent="MarginContainer/NinePatchRect" unique_id=11679816]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -142.5
+offset_top = 10.0
+offset_right = 142.5
+offset_bottom = 79.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Enter the passcode"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CodeInput" type="Label" parent="MarginContainer/NinePatchRect" unique_id=991192423]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -215.0
+offset_top = -317.5
+offset_right = 215.0
+offset_bottom = -282.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = ":"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonsContainer" type="NinePatchRect" parent="MarginContainer/NinePatchRect" unique_id=109581550]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -650.0
+offset_right = 200.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button1" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=115160197]
+layout_mode = 1
+offset_right = 100.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 25
+text = "1"
+
+[node name="Button2" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=517015291]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 100.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 25
+text = "2"
+
+[node name="Button3" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=1576413115]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_bottom = 100.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 25
+text = "3"
+
+[node name="Button4" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=1847250253]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -125.0
+offset_right = 100.0
+offset_bottom = -25.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "4"
+
+[node name="Button5" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=1854155694]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -125.0
+offset_right = 50.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "5"
+
+[node name="Button6" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=190172332]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -125.0
+offset_bottom = -25.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "6"
+
+[node name="Button7" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=672911273]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -250.0
+offset_right = 100.0
+offset_bottom = -150.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "7"
+
+[node name="Button8" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=1915270697]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -250.0
+offset_right = 50.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "8"
+
+[node name="Button9" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=2086447149]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -250.0
+offset_bottom = -150.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "9"
+
+[node name="Button10" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=693391458]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+offset_right = 100.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "*"
+
+[node name="Button11" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=900256352]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -100.0
+offset_right = 50.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "0"
+
+[node name="Button12" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=126301777]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "#"
+
+[connection signal="pressed" from="MarginContainer/NinePatchRect/ExitButton" to="." method="_on_exit_button_pressed"]
