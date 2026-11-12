@@ -67,7 +67,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kv0jq"]
@@ -86,6 +86,7 @@ shape = SubResource("RectangleShape2D_e56wq")
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_ys4fn")
 animation = &"idle"
+frame_progress = 0.5083792
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1681705094]
 

@@ -33,7 +33,7 @@ region = Rect2(90, 0, 18, 24)
 [sub_resource type="SpriteFrames" id="SpriteFrames_ls78n"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 15.0,
 "texture": SubResource("AtlasTexture_1tvji")
 }, {
 "duration": 1.0,
@@ -42,7 +42,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mqhdd")
 }, {
-"duration": 1.0,
+"duration": 3.0,
 "texture": SubResource("AtlasTexture_b1x33")
 }, {
 "duration": 1.0,
@@ -72,6 +72,7 @@ shape = SubResource("RectangleShape2D_stvbn")
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_ls78n")
 animation = &"idle"
+frame_progress = 0.21794522
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1298616387]
 

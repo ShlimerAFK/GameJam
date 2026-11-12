@@ -6,6 +6,10 @@ var dialog := "dialog_1"
 @export var file_name : String
 
 @onready var dialog_node = $"../GUI/DialogNode"
+@onready var animation = $AnimatedSprite2D
+func _ready() -> void:
+	animation.play("idle")
+	
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact") and player_has_entered and Global.player_is_interacting == false:
@@ -15,7 +19,6 @@ func _process(delta: float) -> void:
 		dialog_node.start_dialog(dialog, file_name)
 		print(Global.player_is_interacting)
 		
-
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	entered_area(area)
