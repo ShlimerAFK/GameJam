@@ -115,15 +115,28 @@ func player_speaking(text: String):
 		has_item = false
 		has_quest = false
 		
-		if dialogues[count]["options"][i].has("needs_quest") or dialogues[count]["options"][i].has("needs_item"):
-			
-			if dialogues[count]["options"][i].has("needs_quest"):
+		
+		if dialogues[count]["options"][i].has("needs_quest"):
 				has_quest = Global.check_if_quest_is_activated(dialogues[count]["options"][i]["needs_quest"])
-			if dialogues[count]["options"][i].has("needs_item"):
+				
+		if dialogues[count]["options"][i].has("needs_item"):
 				has_item = Global.check_if_player_has_item(dialogues[count]["options"][i]["needs_item"])
+		
+		if dialogues[count]["options"][i].has("needs_quest") and dialogues[count]["options"][i].has("needs_item"):
 			
-			if has_quest or has_item:
+			if has_quest and has_item:
 				amout_of_choises += 1
+		
+		elif dialogues[count]["options"][i].has("needs_quest"):
+			
+			if has_quest:
+				amout_of_choises += 1
+		
+		elif dialogues[count]["options"][i].has("needs_item"):
+			
+			if has_item:
+				amout_of_choises += 1
+		
 		else:
 			amout_of_choises += 1
 	

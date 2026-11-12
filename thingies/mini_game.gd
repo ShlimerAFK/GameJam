@@ -13,10 +13,10 @@ var button_text : Array
 @onready var minigame_screen = $"../GUI/MinigameControler/MarginContainer"
 @onready var main_text_lable = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MainText"
 @onready var instructions_lable = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/InstuctionsText"
-@onready var button_1 = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame/Button1"
-@onready var button_2 = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame/Button2"
-@onready var button_3 = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame/Button3"
-@onready var button_4 = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame/Button4"
+@onready var button_1 = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame1/Button1"
+@onready var button_2 = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame1/Button2"
+@onready var button_3 = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame1/Button3"
+@onready var button_4 = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame1/Button4"
 
 func _process(_delta):
 	if player_has_entered == true and Input.is_action_just_pressed("interact") and not Global.player_is_interacting:
