@@ -22,10 +22,11 @@ func display_active_quests():
 	text = ""
 	
 	var active_quests = Global.get_active_quests()
+	print(active_quests)
 	
 	if text_box.visible == false and active_quests.size() > 0:
 		text_box.visible = true
-	else:
+	elif active_quests.size() == 0:
 		text_box.visible = false
 	
 	for i in range(active_quests.size()):

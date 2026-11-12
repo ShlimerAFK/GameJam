@@ -12,16 +12,17 @@
 					"dialog": "dialog_2"
 				},
 				{
-					"text": "Do you know the code to the bosses office?",
-					"dialog": "dialog_3"
-				},
-				{
 					"text": "I'm quiting",
 					"dialog": "dialog_4"
 				},
 				{
 					"text": "Bye Dan",
 					"dialog": "dialog_5"
+				},
+				{
+					"text": "Do you know the code to the bosses office?",
+					"dialog": "dialog_3",
+					"needs_quest" : "padlock"
 				},
 				{
 					"text": "I have your coffee",

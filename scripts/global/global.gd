@@ -37,19 +37,23 @@ var quests := [
 		"text": "Get dan a cup of coffee",
 		"quest_is_active": false,
 		"quest_is_done": false
+	},
+	{
+		"name": "padlock",
+		"text": "Find the code to the padlock",
+		"quest_is_active": false,
+		"quest_is_done": false
 	}	
 ]
 
 func get_quest(quest_name: String):
-
 	for i in range(quests.size()):
+
 		if quests[i].name.to_lower() == quest_name.to_lower():
 			return quests[i]
-		
-		else:
-			return { "error": "found quest with that name" }
 
-	return {}
+	print_debug("error: found no quest with that name")
+	return { "error": "found no quest with that name" }
 	
 func activate_quest(input_quest: Dictionary):
 	

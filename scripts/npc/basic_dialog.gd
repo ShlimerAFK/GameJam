@@ -122,7 +122,7 @@ func player_speaking(text: String):
 			if dialogues[count]["options"][i].has("needs_item"):
 				has_item = Global.check_if_player_has_item(dialogues[count]["options"][i]["needs_item"])
 			
-			if has_quest and has_item:
+			if has_quest or has_item:
 				amout_of_choises += 1
 		else:
 			amout_of_choises += 1
