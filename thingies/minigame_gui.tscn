@@ -261,3 +261,38 @@ offset_left = 1094.0
 offset_top = 521.0
 offset_right = 1444.0
 offset_bottom = 924.0
+
+[node name="MiniGame4" type="NinePatchRect" parent="MarginContainer/NinePatchRect" unique_id=157488262]
+visible = false
+layout_mode = 0
+offset_top = 230.5
+offset_right = 1361.0
+offset_bottom = 701.5
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/NinePatchRect/MiniGame4" unique_id=320215964]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -158.875
+offset_top = -96.5
+offset_right = 158.875
+offset_bottom = -57.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/NinePatchRect/MiniGame4" unique_id=2143743302]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -219.75
+offset_top = -244.0
+offset_right = 219.75
+offset_bottom = -161.0
+grow_horizontal = 2
+grow_vertical = 0

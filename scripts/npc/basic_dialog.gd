@@ -102,8 +102,10 @@ func others_speaking(text: String):
 	if dialogues[count].has("completes_quest"):
 		Global.complete_quest(dialogues[count]["completes_quest"])
 		quest_controler.display_active_quests()
-		Global.clear_inventory()
-		inventory_controler.print_inventory(Global.inventory)
+		var quest = Global.get_quest(dialogues[count]["completes_quest"])
+		if quest.needs_to_complete_quest == "item":
+			Global.clear_inventory()
+			inventory_controler.print_inventory(Global.inventory)
 	
 func player_speaking(text: String):
 	var has_item: bool
@@ -119,10 +121,10 @@ func player_speaking(text: String):
 		
 		if dialogues[count]["options"][i].has("needs_quest"):
 			has_quest = Global.check_if_quest_is_activated(dialogues[count]["options"][i]["needs_quest"])
-				
+			
 		if dialogues[count]["options"][i].has("needs_item"):
 			has_item = Global.check_if_player_has_item(dialogues[count]["options"][i]["needs_item"])
-		
+
 		if dialogues[count]["options"][i].has("needs_task"):
 			has_task = Global.check_if_player_has_completed_task(dialogues[count]["options"][i]["needs_task"])
 		

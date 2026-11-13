@@ -54,7 +54,8 @@ var quests := [
 		"name": "coffee",
 		"text": "Get dan a cup of coffee",
 		"quest_is_active": false,
-		"quest_is_done": false
+		"quest_is_done": false,
+		"needs_to_complete_quest": "item"
 	},
 	{
 		"name": "padlock",
@@ -66,26 +67,30 @@ var quests := [
 		"name": "vending machine",
 		"text": "Fix the vending machine",
 		"quest_is_active": false,
-		"quest_is_done": false
+		"quest_is_done": false,
+		"needs_to_complete_quest": "task"
 	},
 	{
 		"name": "popup",
 		"text": "Remove Todds popups",
 		"quest_is_active": false,
-		"quest_is_done": false
+		"quest_is_done": false,
+		"needs_to_complete_quest": "task"
 	},
 	{
 		"name": "papers",
 		"text": "Get Jim's papers from his desk",
 		"quest_is_active": false,
-		"quest_is_done": false
+		"quest_is_done": false,
+		"needs_to_complete_quest": "item"
 	}
 	,
 	{
 		"name": "document",
 		"text": "Write Stephanie's document",
 		"quest_is_active": false,
-		"quest_is_done": false
+		"quest_is_done": false,
+		"needs_to_complete_quest": "task"
 	}
 ]
 
