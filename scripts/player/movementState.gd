@@ -15,7 +15,8 @@ var facing_direction := "down"
 func physics_update(delta: float):
 	
 	handle_movement(delta)
-	
+
+func update(delta: float):
 	player.move_and_slide()
 
 
