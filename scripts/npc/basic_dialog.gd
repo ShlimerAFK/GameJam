@@ -100,7 +100,6 @@ func others_speaking(text: String):
 		
 	
 	if dialogues[count].has("completes_quest"):
-		print("COMPLEAT")
 		Global.complete_quest(dialogues[count]["completes_quest"])
 		quest_controler.display_active_quests()
 		Global.clear_inventory()

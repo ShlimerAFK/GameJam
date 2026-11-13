@@ -16,10 +16,10 @@ func start_time_loop_timer():
 	
 func start_narr_timer():
 	narr_timer.start(100)
-	print("starting timer")
+
 func start_narr_timer_short():
 	narr_timer.start(50)
-	print("starting new timer")
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func restart_timeloop():

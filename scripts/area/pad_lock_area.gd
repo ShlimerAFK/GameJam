@@ -5,7 +5,6 @@ extends Interactable
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact") and player_has_entered and Global.player_is_interacting == false:
-		print("Interacted with area")
 		padlock_gui.on_interacted()
 
 

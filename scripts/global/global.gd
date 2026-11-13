@@ -18,8 +18,6 @@ func check_if_player_has_completed_task(task_name: String) -> bool:
 		if completed_tasks[i].to_lower() == task:
 			has_completed_task = true
 	
-	print(completed_tasks)
-	
 	return has_completed_task
 		
 

@@ -34,10 +34,8 @@ func _on_button_released():
 	if current_hp <= 0:
 		exit_game()
 		Global.add_competed_task("vending machine")
-		print(Global.completed_tasks)
 	
 func _on_timeout():
-	print("timeout")
 	bar.value += 0.3
 
 func play_game():

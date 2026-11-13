@@ -53,7 +53,6 @@ func display_sanity_state_layers():
 func _on_narr_timer_timeout() -> void:
 	if Global.player_is_interacting:
 		GlobalTimeLoop.start_narr_timer_short()
-		print("player is interacting")
 	else:
 		play_narration("narr_2")
 			

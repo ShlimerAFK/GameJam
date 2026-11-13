@@ -26,7 +26,6 @@ func on_interacted():
 	activate_quest()
 	
 func activate_quest():
-	print("activating quest")
 	if not Global.check_if_quest_is_activated(quest_name):
 		Global.activate_quest(Global.get_quest(quest_name))
 		quest_controler.display_active_quests()
