@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://5jx0537728ia"]
+
+[ext_resource type="Script" uid="uid://wakopjo34qaw" path="res://scripts/npc/npc_interact.gd" id="1_bqwi4"]
+[ext_resource type="Texture2D" uid="uid://dys6gnxfuot20" path="res://sprites/npc/Stephanie/stephanieStill.png" id="2_1siuu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bavm5"]
+size = Vector2(11, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skxmn"]
+atlas = ExtResource("2_1siuu")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l44nk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skxmn")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n5frd"]
+radius = 15.0
+
+[node name="Stephanie" type="StaticBody2D" unique_id=496411993]
+script = ExtResource("1_bqwi4")
+file_name = "stephanie.json"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=457556634]
+position = Vector2(1.5, -3)
+shape = SubResource("RectangleShape2D_bavm5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=632703571]
+position = Vector2(2, -12)
+sprite_frames = SubResource("SpriteFrames_l44nk")
+animation = &"idle"
+flip_h = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=962178533]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1569964041]
+position = Vector2(2, -11)
+shape = SubResource("CircleShape2D_n5frd")

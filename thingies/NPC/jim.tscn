@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://u3u7hjhnpphe"]
+
+[ext_resource type="Script" uid="uid://wakopjo34qaw" path="res://scripts/npc/npc_interact.gd" id="1_5qa6l"]
+[ext_resource type="Texture2D" uid="uid://dtbkwrmykfagk" path="res://sprites/npc/Jim/jimStill.png" id="2_jiwg5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4low7"]
+size = Vector2(12, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cv3jv"]
+atlas = ExtResource("2_jiwg5")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p523q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cv3jv")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8t3e2"]
+radius = 15.0
+
+[node name="Jim" type="StaticBody2D" unique_id=1786658538]
+script = ExtResource("1_5qa6l")
+file_name = "jim.json"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=853884083]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_4low7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2001296953]
+position = Vector2(0, -6)
+sprite_frames = SubResource("SpriteFrames_p523q")
+animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=576486964]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1732979281]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_8t3e2")

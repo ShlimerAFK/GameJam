@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://clkfl7i13pmfl" path="res://thingies/coffie_game_area.tscn" id="10_hwmdj"]
 [ext_resource type="PackedScene" uid="uid://dxws188rknph" path="res://thingies/NPC/janet.tscn" id="10_lxt4k"]
 [ext_resource type="PackedScene" uid="uid://deupdis45vhvk" path="res://thingies/vending_machine_area.tscn" id="11_lxt4k"]
+[ext_resource type="PackedScene" uid="uid://u3u7hjhnpphe" path="res://thingies/NPC/jim.tscn" id="12_h1qar"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_p4o86"]
 a = Vector2(128, 0)
@@ -171,3 +172,6 @@ position = Vector2(-76, -76)
 
 [node name="VendingMachineArea" parent="." unique_id=1298301340 instance=ExtResource("11_lxt4k")]
 position = Vector2(88, -120)
+
+[node name="Jim" parent="." unique_id=1786658538 instance=ExtResource("12_h1qar")]
+position = Vector2(47, -39)
