@@ -1,5 +1,11 @@
 extends MiniGame
 
+@onready var mini_game_1 = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame1"
+@onready var button_1 = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame1/Button1"
+@onready var button_2 = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame1/Button2"
+@onready var button_3 = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame1/Button3"
+@onready var button_4 = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame1/Button4"
+
 # Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
@@ -7,10 +13,23 @@ func _ready() -> void:
 	main_text = "Coffee machine"
 	completes_quest = "coffee"
 	button_text = ["Coffee", "Te", "Hot chokolet", "Decaf"]
+	current_minigame = mini_game_1
 	
-func play_game():
-	print("playing game")
-
+	set_button_text()
+	connect_buttons()
+	
+func set_button_text():
+	button_1.text = button_text[0]
+	button_2.text = button_text[1]
+	button_3.text = button_text[2]
+	button_4.text = button_text[3]
+	
+func connect_buttons():
+	button_1.pressed.connect(button_1_on_pressed)
+	button_2.pressed.connect(button_2_on_pressed)
+	button_3.pressed.connect(button_3_on_pressed)
+	button_4.pressed.connect(button_4_on_pressed)
+	
 func button_1_on_pressed():
 	Global.add_item_to_inventory(button_text[0])
 	exit_game()

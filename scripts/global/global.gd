@@ -13,6 +13,7 @@ func add_competed_task(task_name: String):
 func check_if_player_has_completed_task(task_name: String) -> bool:
 	var task = task_name.to_lower()
 	var has_completed_task = false
+	
 	for i in range(completed_tasks.size()):
 		if completed_tasks[i].to_lower() == task:
 			has_completed_task = true
