@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://itfk6vags3sj"]
 
 [ext_resource type="Script" uid="uid://veh32bftk06e" path="res://scripts/gui/pad_lock_gui.gd" id="1_7fnnx"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_4vsb2"]
+[ext_resource type="Texture2D" uid="uid://bfaq326yrx7a0" path="res://sprites/keypad/keypadBase.png" id="2_m43iw"]
+[ext_resource type="Texture2D" uid="uid://cupnam1hm7ea7" path="res://sprites/keypad/keypadBtn.png" id="3_56ytl"]
+[ext_resource type="Texture2D" uid="uid://b0ainm4m8hqnq" path="res://sprites/keypad/keypadBtnPress.png" id="4_l52sd"]
 
 [node name="PadLockNode" type="Control" unique_id=1720684290]
 layout_mode = 3
@@ -29,7 +30,7 @@ grow_vertical = 2
 
 [node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer" unique_id=1621644473]
 layout_mode = 2
-texture = SubResource("CanvasTexture_4vsb2")
+texture = ExtResource("2_m43iw")
 patch_margin_left = 10
 patch_margin_top = 10
 patch_margin_right = 10
@@ -40,12 +41,21 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -30.0
-offset_bottom = 30.0
+offset_left = -34.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 34.0
 grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
 text = "X"
+icon = ExtResource("4_l52sd")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="MainText" type="Label" parent="MarginContainer/NinePatchRect" unique_id=11679816]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -70,15 +80,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -215.0
-offset_top = -317.5
-offset_right = 215.0
-offset_bottom = -282.5
+offset_left = -180.0
+offset_top = -330.0
+offset_right = 179.0
+offset_bottom = -240.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 text = ":"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -91,9 +101,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -200.0
-offset_top = -650.0
+offset_top = -600.0
 offset_right = 200.0
-offset_bottom = -100.0
+offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -101,8 +111,11 @@ grow_vertical = 0
 layout_mode = 1
 offset_right = 100.0
 offset_bottom = 100.0
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 text = "1"
+icon = ExtResource("3_56ytl")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button2" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=517015291]
 layout_mode = 1
@@ -113,8 +126,11 @@ offset_left = -50.0
 offset_right = 50.0
 offset_bottom = 100.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 text = "2"
+icon = ExtResource("3_56ytl")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button3" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=1576413115]
 layout_mode = 1
@@ -124,8 +140,11 @@ anchor_right = 1.0
 offset_left = -100.0
 offset_bottom = 100.0
 grow_horizontal = 0
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 text = "3"
+icon = ExtResource("3_56ytl")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button4" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=1847250253]
 layout_mode = 1
@@ -136,8 +155,11 @@ offset_top = -125.0
 offset_right = 100.0
 offset_bottom = -25.0
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 text = "4"
+icon = ExtResource("3_56ytl")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button5" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=1854155694]
 layout_mode = 1
@@ -152,8 +174,11 @@ offset_right = 50.0
 offset_bottom = -25.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 text = "5"
+icon = ExtResource("3_56ytl")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button6" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=190172332]
 layout_mode = 1
@@ -167,8 +192,11 @@ offset_top = -125.0
 offset_bottom = -25.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 text = "6"
+icon = ExtResource("3_56ytl")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button7" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=672911273]
 layout_mode = 1
@@ -179,8 +207,11 @@ offset_top = -250.0
 offset_right = 100.0
 offset_bottom = -150.0
 grow_vertical = 0
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 text = "7"
+icon = ExtResource("3_56ytl")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button8" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=1915270697]
 layout_mode = 1
@@ -195,8 +226,11 @@ offset_right = 50.0
 offset_bottom = -150.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 text = "8"
+icon = ExtResource("3_56ytl")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button9" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=2086447149]
 layout_mode = 1
@@ -210,8 +244,11 @@ offset_top = -250.0
 offset_bottom = -150.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 text = "9"
+icon = ExtResource("3_56ytl")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button10" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=693391458]
 layout_mode = 1
@@ -221,8 +258,11 @@ anchor_bottom = 1.0
 offset_top = -100.0
 offset_right = 100.0
 grow_vertical = 0
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 text = "*"
+icon = ExtResource("3_56ytl")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button11" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=900256352]
 layout_mode = 1
@@ -236,8 +276,11 @@ offset_top = -100.0
 offset_right = 50.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 text = "0"
+icon = ExtResource("3_56ytl")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button12" type="Button" parent="MarginContainer/NinePatchRect/ButtonsContainer" unique_id=126301777]
 layout_mode = 1
@@ -250,7 +293,10 @@ offset_left = -100.0
 offset_top = -100.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 text = "#"
+icon = ExtResource("3_56ytl")
+icon_alignment = 1
+expand_icon = true
 
 [connection signal="pressed" from="MarginContainer/NinePatchRect/ExitButton" to="." method="_on_exit_button_pressed"]
