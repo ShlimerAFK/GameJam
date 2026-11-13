@@ -11,5 +11,8 @@ one_shot = true
 [node name="NarrTimer" type="Timer" parent="." unique_id=1475464896]
 one_shot = true
 
+[node name="SanityTimer" type="Timer" parent="." unique_id=2101943270]
+
 [connection signal="timeout" from="LoopTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="NarrTimer" to="." method="_on_narr_timer_timeout"]
+[connection signal="timeout" from="SanityTimer" to="." method="_on_sanity_timer_timeout"]

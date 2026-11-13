@@ -10,6 +10,8 @@ func _on_start_pressed() -> void:
 	#GlobalTimeLoop.start_time_loop_timer()
 	#GlobalTimeLoop.start_narr_timer()
 	
+	#GlobalTimeLoop.start_Sanity_timer()
+	
 	
 
 
