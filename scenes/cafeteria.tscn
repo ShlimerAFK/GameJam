@@ -170,4 +170,4 @@ position = Vector2(-88, -138)
 position = Vector2(-76, -76)
 
 [node name="VendingMachineArea" parent="." unique_id=1298301340 instance=ExtResource("11_lxt4k")]
-position = Vector2(-107, -13)
+position = Vector2(88, -120)

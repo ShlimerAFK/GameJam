@@ -12,6 +12,7 @@ var button_text : Array
 @onready var minigame_screen = $"../GUI/MinigameControler/MarginContainer"
 @onready var main_text_lable = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MainText"
 @onready var instructions_lable = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/InstuctionsText"
+@onready var exit_button = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/ExitButton"
 @onready var current_minigame 
 
 
@@ -24,7 +25,15 @@ func _process(_delta):
 		set_main_text()
 		set_instructions_text()
 		
+		connect_exit_button()
+		
 		play_game()
+
+func connect_exit_button():
+	exit_button.pressed.connect(_on_exit_button_pressed)
+
+func _on_exit_button_pressed():
+	exit_game()
 
 func set_main_text():
 	main_text_lable.text = main_text

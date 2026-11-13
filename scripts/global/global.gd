@@ -66,7 +66,7 @@ var quests := [
 	},
 	{
 		"name": "vending machine",
-		"text": "Finx the vending machine",
+		"text": "Fix the vending machine",
 		"quest_is_active": false,
 		"quest_is_done": false
 	},

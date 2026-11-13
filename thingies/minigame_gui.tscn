@@ -33,6 +33,17 @@ patch_margin_top = 10
 patch_margin_right = 10
 patch_margin_bottom = 10
 
+[node name="ExitButton" type="Button" parent="MarginContainer/NinePatchRect" unique_id=1292891147]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -50.0
+offset_bottom = 50.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "X"
+
 [node name="MainText" type="Label" parent="MarginContainer/NinePatchRect" unique_id=1435504322]
 layout_mode = 1
 anchors_preset = 5
@@ -58,9 +69,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -215.0
-offset_top = -117.5
+offset_top = -218.5
 offset_right = 215.0
-offset_bottom = -82.5
+offset_bottom = -176.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -135,7 +146,7 @@ text = "4"
 [node name="MiniGame2" type="NinePatchRect" parent="MarginContainer/NinePatchRect" unique_id=1321118631]
 visible = false
 layout_mode = 0
-offset_top = 291.5
+offset_top = 179.5
 offset_right = 1360.0
 offset_bottom = 700.0
 
@@ -147,12 +158,14 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -200.0
-offset_top = -104.25
+offset_top = -4.25
 offset_right = 200.0
-offset_bottom = -77.25
+offset_bottom = 22.75
 grow_horizontal = 2
 grow_vertical = 2
-step = 1.0
+max_value = 50.0
+step = 0.1
+show_percentage = false
 
 [node name="Button" type="Button" parent="MarginContainer/NinePatchRect/MiniGame2" unique_id=1797556706]
 layout_mode = 1
@@ -161,13 +174,24 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -50.0
-offset_right = 100.0
-offset_bottom = 50.0
+offset_left = -108.0
+offset_top = 50.0
+offset_right = 108.0
+offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
-text = "Punch"
+text = " Charge Punch"
 
 [node name="ChargeUpTimer" type="Timer" parent="MarginContainer/NinePatchRect/MiniGame2" unique_id=1955622843]
+
+[node name="HpBar" type="ProgressBar" parent="MarginContainer/NinePatchRect/MiniGame2" unique_id=1142339146]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 100.0
+offset_right = 300.0
+offset_bottom = 127.0
+grow_horizontal = 2
