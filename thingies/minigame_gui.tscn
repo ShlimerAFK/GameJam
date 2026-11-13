@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://b7uffv017svji"]
 
+[ext_resource type="PackedScene" uid="uid://cgugmxpj7nu12" path="res://thingies/popup.tscn" id="1_phutd"]
+
 [sub_resource type="CanvasTexture" id="CanvasTexture_tjh11"]
 
 [node name="MinigameControler" type="Control" unique_id=1104580804]
@@ -49,14 +51,14 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -142.5
-offset_right = 142.5
-offset_bottom = 69.0
+offset_left = -171.0
+offset_right = 171.0
+offset_bottom = 139.5
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 60
 text = "Placeholder"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -69,14 +71,14 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -215.0
-offset_top = -218.5
+offset_top = -190.5
 offset_right = 215.0
-offset_bottom = -176.5
+offset_bottom = -113.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 text = "placeholder"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -146,7 +148,7 @@ text = "4"
 [node name="MiniGame2" type="NinePatchRect" parent="MarginContainer/NinePatchRect" unique_id=1321118631]
 visible = false
 layout_mode = 0
-offset_top = 179.5
+offset_top = 244.5
 offset_right = 1360.0
 offset_bottom = 700.0
 
@@ -157,10 +159,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -4.25
-offset_right = 200.0
-offset_bottom = 22.75
+offset_left = -250.0
+offset_top = -15.5
+offset_right = 250.0
+offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
 max_value = 50.0
@@ -190,8 +192,72 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -300.0
+offset_left = -350.0
 offset_top = 100.0
-offset_right = 300.0
-offset_bottom = 127.0
+offset_right = 350.0
+offset_bottom = 140.0
 grow_horizontal = 2
+
+[node name="MiniGame3" type="NinePatchRect" parent="MarginContainer/NinePatchRect" unique_id=1090477885]
+visible = false
+layout_mode = 0
+offset_left = -281.0
+offset_top = -188.5
+offset_right = 1637.0
+offset_bottom = 892.5
+
+[node name="Popup1" parent="MarginContainer/NinePatchRect/MiniGame3" unique_id=379941131 instance=ExtResource("1_phutd")]
+layout_mode = 0
+offset_left = 442.0
+offset_top = 654.0
+offset_right = 792.0
+offset_bottom = 1057.0
+
+[node name="Popup2" parent="MarginContainer/NinePatchRect/MiniGame3" unique_id=110235639 instance=ExtResource("1_phutd")]
+layout_mode = 0
+offset_left = 1502.0
+offset_top = 396.0
+offset_right = 1852.0
+offset_bottom = 799.0
+
+[node name="Popup3" parent="MarginContainer/NinePatchRect/MiniGame3" unique_id=1503869886 instance=ExtResource("1_phutd")]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 31.0
+offset_right = 517.0
+offset_bottom = 434.0
+
+[node name="Popup4" parent="MarginContainer/NinePatchRect/MiniGame3" unique_id=713429686 instance=ExtResource("1_phutd")]
+layout_mode = 0
+offset_left = 1274.0
+offset_top = 26.0
+offset_right = 1624.0
+offset_bottom = 429.0
+
+[node name="Popup5" parent="MarginContainer/NinePatchRect/MiniGame3" unique_id=690356056 instance=ExtResource("1_phutd")]
+layout_mode = 0
+offset_left = 943.0
+offset_top = 294.0
+offset_right = 1293.0
+offset_bottom = 697.0
+
+[node name="Popup6" parent="MarginContainer/NinePatchRect/MiniGame3" unique_id=466416308 instance=ExtResource("1_phutd")]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 559.0
+offset_right = 465.0
+offset_bottom = 962.0
+
+[node name="Popup7" parent="MarginContainer/NinePatchRect/MiniGame3" unique_id=811868729 instance=ExtResource("1_phutd")]
+layout_mode = 0
+offset_left = 662.0
+offset_top = 84.0
+offset_right = 1012.0
+offset_bottom = 487.0
+
+[node name="Popup8" parent="MarginContainer/NinePatchRect/MiniGame3" unique_id=1985155440 instance=ExtResource("1_phutd")]
+layout_mode = 0
+offset_left = 1094.0
+offset_top = 521.0
+offset_right = 1444.0
+offset_bottom = 924.0

@@ -7,7 +7,7 @@ var next_spawn_door := "Door1"
 # Tasks
 var completed_tasks := []
 
-func add_competed_task(task_name: String):
+func add_completed_task(task_name: String):
 	completed_tasks.append(task_name)
 	
 func check_if_player_has_completed_task(task_name: String) -> bool:
