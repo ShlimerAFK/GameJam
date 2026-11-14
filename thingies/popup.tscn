@@ -32,7 +32,7 @@ offset_right = 61.5
 offset_bottom = 77.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 30
 text = "Important"
 
 [node name="MainText" type="Label" parent="." unique_id=1909487015]
@@ -50,6 +50,7 @@ offset_bottom = 77.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 17
 text = "We have been trying to reatch you about your cars extended warenty.
 
  To renew your warenty please go the http//:wearescammingyou.org webbsite"
