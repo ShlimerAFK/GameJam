@@ -24,6 +24,7 @@ buses/default_bus_layout="uid://dvfwapqiqvh8b"
 Global="*uid://b5qmkxynhy7dl"
 GlobalSanity="*uid://pnkmv0h50uyy"
 GlobalTimeLoop="*uid://rgqr52kjnw0j"
+GlobalMusic="*uid://xtt73l8vryyu"
 
 [display]
 
@@ -36,6 +37,10 @@ window/stretch/aspect="keep_height"
 [dotnet]
 
 project/assembly_name="Game Jam"
+
+[gui]
+
+theme/custom_font="uid://to6tqvphelyn"
 
 [input]
 

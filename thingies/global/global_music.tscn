@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://xtt73l8vryyu"]
+
+[ext_resource type="Script" uid="uid://e281p8m4d1h7" path="res://scripts/global/global_music.gd" id="1_8kj4h"]
+[ext_resource type="PackedScene" uid="uid://cd1fqrtok8lug" path="res://thingies/audio/music_player.tscn" id="1_h62ab"]
+
+[node name="Music" type="Node2D" unique_id=1633953609]
+script = ExtResource("1_8kj4h")
+
+[node name="MusicPlayer" parent="." unique_id=157687527 instance=ExtResource("1_h62ab")]

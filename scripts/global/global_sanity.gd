@@ -4,11 +4,16 @@ var sanity := 100
 
 var sanity_states := 6
 
+signal decreased_sanity_state
+signal increased_sanity_state
+
 func increase_sanity(value: int):
 	if sanity + value > 100:
 		sanity = 100
 	else:
 		sanity += value
+		
+	increased_sanity_state.emit(get_sanity_state(), get_sanity())
 	
 func decrease_sanity(value: int):
 	
@@ -16,6 +21,8 @@ func decrease_sanity(value: int):
 		sanity = 0
 	else:
 		sanity -= value
+	
+	decreased_sanity_state.emit(get_sanity_state(), get_sanity())
 		
 func get_sanity():
 	return sanity

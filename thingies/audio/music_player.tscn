@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cd1fqrtok8lug"]
+
+[ext_resource type="AudioStream" uid="uid://dnm085r52e6ly" path="res://audio/music/9_to_5_horror_ambiance_1_1.0.mp3" id="1_h01vc"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" unique_id=157687527]
+stream = ExtResource("1_h01vc")
+bus = &"Music"
