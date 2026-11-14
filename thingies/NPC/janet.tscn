@@ -74,6 +74,7 @@ animations = [{
 radius = 15.0
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=256800973]
+y_sort_enabled = true
 script = ExtResource("1_cuhq0")
 file_name = "janet.json"
 
