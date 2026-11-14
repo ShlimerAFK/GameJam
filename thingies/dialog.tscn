@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cjruxo0fl2mkc" path="res://scripts/npc/basic_dialog.gd" id="1_l3d60"]
 [ext_resource type="Texture2D" uid="uid://nme81gewcm5n" path="res://sprites/dialouge/DialougeBoxL.png" id="2_bshy5"]
+[ext_resource type="AudioStream" uid="uid://ubyfap6mxeeq" path="res://audio/sfx/key_press.wav" id="3_jfv3o"]
+[ext_resource type="Script" uid="uid://bqyd47st70ht6" path="res://scripts/audio/audio_stream_player.gd" id="4_ecpw4"]
 
 [node name="DialogNode" type="Control" unique_id=530113667]
 layout_mode = 3
@@ -50,3 +52,13 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1609279060]
+stream = ExtResource("3_jfv3o")
+max_polyphony = 4
+bus = &"sfx"
+script = ExtResource("4_ecpw4")
+
+[node name="Timer" type="Timer" parent="." unique_id=62265399]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

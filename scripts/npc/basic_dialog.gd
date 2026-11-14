@@ -8,6 +8,9 @@ var file_path : String
 @onready var inventory_controler := $"../InventoryText"
 @onready var textbox: MarginContainer = $TextBox
 @onready var notification_controler: Control = $"../NotificationControler"
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+@onready var timer: Timer = $Timer
+
 
 
 var count := 0
@@ -16,8 +19,10 @@ var tween: Tween = null
 var player_is_choosing := false
 var options := []
 var current_file_name: String
+var pitch_mod : float
 
-func start_dialog(dialog: String, file_name: String) -> void:
+func start_dialog(dialog: String, file_name: String, input_pitch_mod: float) -> void:
+	pitch_mod = input_pitch_mod
 	
 	current_file_name = file_name
 	file_path = "res://dialogs/" + current_file_name
@@ -37,7 +42,7 @@ func start_new_dialog(index: int):
 	player_is_choosing = false
 	var new_dialog = options[index]["dialog"]
 	count = 0
-	start_dialog(new_dialog, current_file_name)
+	start_dialog(new_dialog, current_file_name, pitch_mod)
 
 func _process(delta: float) -> void:
 	
@@ -94,7 +99,7 @@ func others_speaking(text: String):
 	text = str(dialogues[count]["speaker"]) + ": " + str(dialogues[count]["text"])
 	
 	dialog_lable.text = text
-	animate_lable(text)
+	animate_lable(text, true)
 	
 	if dialogues[count].has("quest_name"):
 		var quest = Global.get_quest(dialogues[count]["quest_name"])
@@ -174,15 +179,25 @@ func player_speaking(text: String):
 	
 	dialog_lable.text = text
 	
-	animate_lable(text)
+	animate_lable(text, false)
 
 func add_option_to_options(i : int):
 	options.append(dialogues[count]["options"][i])
 
 	
-func animate_lable(text: String):
-	var transition_length = text.length() * 0.02
+func animate_lable(text: String, play_audio: bool):
+	var length_per_letter = 0.02
+	var transition_length = text.length() * length_per_letter
 	dialog_lable.visible_ratio = 0
 	tween = get_tree().create_tween()
 	tween.tween_property(dialog_lable, "visible_ratio", 1, transition_length)
 	
+	if play_audio:
+		timer.start(length_per_letter * 2)
+		await tween.finished
+		timer.stop()
+	
+
+
+func _on_timer_timeout() -> void:
+	audio_stream_player.play_sound_with_random_pitch(pitch_mod)

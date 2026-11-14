@@ -77,6 +77,7 @@ radius = 15.0
 y_sort_enabled = true
 script = ExtResource("1_cuhq0")
 file_name = "janet.json"
+pitch_mod = 0.4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1168315723]
 y_sort_enabled = true
