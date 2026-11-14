@@ -12,16 +12,17 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_top = -40.0
-offset_right = 140.0
+offset_right = 251.0
 grow_vertical = 0
-theme_override_constants/margin_left = 5
+theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
+theme_override_constants/margin_bottom = 20
 
 [node name="InteractText" type="Label" parent="MarginContainer" unique_id=2146938654]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 22
 text = "Press E to interact"
 horizontal_alignment = 1
 vertical_alignment = 1

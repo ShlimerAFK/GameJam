@@ -48,6 +48,7 @@ custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
+theme_override_font_sizes/font_size = 25
 text = "Start"
 
 [node name="Settings" type="Button" parent="ButtonManeger/MarginContainer" unique_id=1714809064]
@@ -55,6 +56,7 @@ custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_font_sizes/font_size = 25
 text = "Settings"
 
 [node name="Exit" type="Button" parent="ButtonManeger/MarginContainer" unique_id=245053609]
@@ -62,7 +64,21 @@ custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+theme_override_font_sizes/font_size = 25
 text = "Exit"
+
+[node name="Note" type="Label" parent="ButtonManeger" unique_id=1326187600]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -43.0
+offset_right = 153.0
+offset_bottom = -20.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Made by humans"
 
 [connection signal="pressed" from="ButtonManeger/MarginContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="ButtonManeger/MarginContainer/Settings" to="." method="_on_settings_pressed"]

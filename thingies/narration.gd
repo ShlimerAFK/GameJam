@@ -68,7 +68,7 @@ func narrate(text: String):
 	animate_lable(text)
 	
 func animate_lable(text: String):
-	var transition_length = text.length() * 0.05
+	var transition_length = text.length() * 0.04
 	narrator_lable.visible_ratio = 0
 	tween = get_tree().create_tween()
 	tween.tween_property(narrator_lable, "visible_ratio", 1, transition_length)

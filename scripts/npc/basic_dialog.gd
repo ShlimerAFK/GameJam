@@ -7,6 +7,7 @@ var file_path : String
 @onready var info_controler := $"../KnownInformationControler"
 @onready var inventory_controler := $"../InventoryText"
 @onready var textbox: MarginContainer = $TextBox
+@onready var notification_controler: Control = $"../NotificationControler"
 
 
 var count := 0
@@ -99,18 +100,22 @@ func others_speaking(text: String):
 		var quest = Global.get_quest(dialogues[count]["quest_name"])
 		quest_controler.add_quest(quest)
 		
+		notification_controler.display_notification()
+		
 	if dialogues[count].has("completes_quest"):
 		Global.complete_quest(dialogues[count]["completes_quest"])
 		
 		quest_controler.display_active_quests()
-		
 		info_controler.display_known_information()
+		notification_controler.display_notification()
 		
 		var quest = Global.get_quest(dialogues[count]["completes_quest"])
 		
 		if quest.needs_to_complete_quest == "item":
 			Global.clear_inventory()
 			inventory_controler.print_inventory(Global.inventory)
+		
+		
 	
 func player_speaking(text: String):
 	var has_item: bool

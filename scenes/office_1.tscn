@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bmt6sgusf1o0h" path="res://thingies/tileset_templates/sanity.tscn" id="6_1l8wq"]
 [ext_resource type="PackedScene" uid="uid://bs46i8y6tukst" path="res://thingies/door_area.tscn" id="6_e1il7"]
 [ext_resource type="PackedScene" uid="uid://douyv2kqqv15h" path="res://thingies/tileset_templates/animated.tscn" id="7_w4pu7"]
+[ext_resource type="PackedScene" uid="uid://djyx2te3d2ejs" path="res://thingies/set_up_game_start.tscn" id="10_748g4"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_7w20u"]
 a = Vector2(-48, 0)
@@ -17,7 +18,6 @@ b = Vector2(48, 0)
 [node name="Node2D" type="Node2D" unique_id=350274399]
 y_sort_enabled = true
 script = ExtResource("1_3e0pf")
-room_plays_narration = true
 
 [node name="CharacterBody2D" parent="." unique_id=629992924 instance=ExtResource("3_3e0pf")]
 
@@ -153,3 +153,5 @@ position = Vector2(24, 17)
 scene_destination = "corridor.tscn"
 destination_door_name = "Door1"
 door_position_in_room = "bottom"
+
+[node name="SetUpGameStart" parent="." unique_id=1856032773 instance=ExtResource("10_748g4")]

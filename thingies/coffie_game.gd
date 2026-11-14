@@ -6,7 +6,9 @@ extends MiniGame
 @onready var button_3 = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame1/Button3"
 @onready var button_4 = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame1/Button4"
 
+@onready var notification = $"../GUI/NotificationControler"
 # Called when the node enters the scene tree for the first time.
+
 
 func _ready() -> void:
 	instructions = "Press a buton to brew a cup"
@@ -33,18 +35,22 @@ func connect_buttons():
 func button_1_on_pressed():
 	Global.add_item_to_inventory(button_text[0])
 	exit_game()
+	notification.display_notification()
 
 func button_2_on_pressed():
 	Global.add_item_to_inventory(button_text[1])
 	exit_game()
+	notification.display_notification()
 	
 func button_3_on_pressed():
 	Global.add_item_to_inventory(button_text[2])
 	exit_game()
+	notification.display_notification()
 	
 func button_4_on_pressed():
 	Global.add_item_to_inventory(button_text[3])
 	exit_game()
+	notification.display_notification()
 	
 func _on_area_entered(area: Area2D) -> void:
 	entered_area(area)

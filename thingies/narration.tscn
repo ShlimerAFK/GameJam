@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://ni2525ttglq6"]
 
 [ext_resource type="Script" uid="uid://bkrb55n3buhnh" path="res://thingies/narration.gd" id="1_8lcec"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_jfv3o"]
+[ext_resource type="Texture2D" uid="uid://nme81gewcm5n" path="res://sprites/dialouge/DialougeBoxL.png" id="2_2c3j1"]
 
 [node name="NarrationNode" type="Control" unique_id=530113667]
 layout_mode = 3
@@ -36,11 +35,8 @@ grow_vertical = 0
 
 [node name="NinePatchRect" type="NinePatchRect" parent="TextBox" unique_id=2018025404]
 layout_mode = 2
-texture = SubResource("CanvasTexture_jfv3o")
-patch_margin_left = 8
-patch_margin_top = 8
-patch_margin_right = 8
-patch_margin_bottom = 8
+texture = ExtResource("2_2c3j1")
+region_rect = Rect2(177.32297, 0, 2679.9202, 240)
 
 [node name="MarginContainer" type="MarginContainer" parent="TextBox" unique_id=158018026]
 layout_mode = 2
@@ -52,5 +48,6 @@ theme_override_constants/margin_bottom = 8
 [node name="Label" type="Label" parent="TextBox/MarginContainer" unique_id=646130311]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -10,6 +10,7 @@ var quest_name = "padlock"
 @onready var buttons_container = $MarginContainer/NinePatchRect/ButtonsContainer
 @onready var code_input = $MarginContainer/NinePatchRect/CodeInput
 @onready var quest_controler = $"../QuestControler"
+@onready var notification_controler: Control = $"../NotificationControler"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -29,6 +30,7 @@ func activate_quest():
 	if not Global.check_if_quest_is_activated(quest_name):
 		Global.activate_quest(Global.get_quest(quest_name))
 		quest_controler.display_active_quests()
+		notification_controler.display_notification()
 
 func hide_pad_lock():
 	padlock.visible = false

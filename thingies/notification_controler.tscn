@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cscv14x807jqs"]
+
+[ext_resource type="Script" uid="uid://cjipcjmxdk1gf" path="res://thingies/notification_controler.gd" id="1_7kgx8"]
+[ext_resource type="Texture2D" uid="uid://nme81gewcm5n" path="res://sprites/dialouge/DialougeBoxL.png" id="1_cai5b"]
+
+[node name="NotificationControler" type="Control" unique_id=1615213092]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_7kgx8")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1441840378]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -33.0
+offset_top = 20.0
+offset_right = 33.0
+offset_bottom = 60.0
+grow_horizontal = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer" unique_id=1645148988]
+layout_mode = 2
+texture = ExtResource("1_cai5b")
+region_rect = Rect2(182.55908, 0, 2605.3547, 240)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=1848600831]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer" unique_id=1912043518]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "AHHHHHH"
+
+[node name="Timer" type="Timer" parent="." unique_id=372041401]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

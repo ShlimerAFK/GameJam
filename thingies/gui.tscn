@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://itfk6vags3sj" path="res://thingies/pad_lock.tscn" id="8_fug2i"]
 [ext_resource type="PackedScene" uid="uid://uxi0qqwdirf5" path="res://thingies/known_information_controler.tscn" id="9_qj787"]
 [ext_resource type="PackedScene" uid="uid://cjrv7pwyom5k6" path="res://thingies/notes_backdrop.tscn" id="10_s88cb"]
+[ext_resource type="PackedScene" uid="uid://cscv14x807jqs" path="res://thingies/notification_controler.tscn" id="11_cy2qj"]
 
 [node name="GUI" type="CanvasLayer" unique_id=910458424]
 script = ExtResource("1_834qp")
@@ -19,17 +20,23 @@ script = ExtResource("1_834qp")
 [node name="InteractText" parent="." unique_id=940032747 instance=ExtResource("3_8xa08")]
 offset_right = 1922.0
 offset_bottom = 1082.0
+mouse_filter = 2
 
 [node name="QuestControler" parent="." unique_id=1605467125 instance=ExtResource("4_7ohqj")]
 
 [node name="NarrationNode" parent="." unique_id=530113667 instance=ExtResource("5_dmn7j")]
+mouse_filter = 2
 
 [node name="MinigameControler" parent="." unique_id=1104580804 instance=ExtResource("6_sqvcj")]
+z_index = 1
 
 [node name="InventoryText" parent="." unique_id=957070641 instance=ExtResource("7_s2vrj")]
 
 [node name="PadLockNode" parent="." unique_id=1720684290 instance=ExtResource("8_fug2i")]
+z_index = 2
 
 [node name="KnownInformationControler" parent="." unique_id=12775480 instance=ExtResource("9_qj787")]
 
 [node name="NotesBackdrop" parent="." unique_id=1671093284 instance=ExtResource("10_s88cb")]
+
+[node name="NotificationControler" parent="." unique_id=1615213092 instance=ExtResource("11_cy2qj")]
