@@ -46,9 +46,10 @@ func start_new_dialog(index: int):
 
 func _process(delta: float) -> void:
 	
-	if Input.is_action_just_pressed("scroll_dialog") and count < len(dialogues) and player_is_choosing == false:
+	if Input.is_action_just_pressed("scroll_dialog") and count < len(dialogues) and player_is_choosing == false and textbox.visible == true:
 		play_text_animation()
 		count += 1
+	
 	
 	elif Input.is_action_just_pressed("1") and options.size() >= 1 and player_is_choosing:
 		start_new_dialog(0)
@@ -83,6 +84,8 @@ func read_json_data(filepath):
 	return json.get_data()
 
 func play_text_animation():
+	
+	timer.stop()
 	
 	var text: String
 	
