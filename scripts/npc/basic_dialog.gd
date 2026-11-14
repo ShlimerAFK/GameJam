@@ -4,6 +4,7 @@ var file_path : String
 
 @onready var dialog_lable: Label = $TextBox/MarginContainer/Label
 @onready var quest_controler := $"../QuestControler"
+@onready var info_controler := $"../KnownInformationControler"
 @onready var inventory_controler := $"../InventoryText"
 @onready var textbox: MarginContainer = $TextBox
 
@@ -100,8 +101,13 @@ func others_speaking(text: String):
 		
 	if dialogues[count].has("completes_quest"):
 		Global.complete_quest(dialogues[count]["completes_quest"])
+		
 		quest_controler.display_active_quests()
+		
+		info_controler.display_known_information()
+		
 		var quest = Global.get_quest(dialogues[count]["completes_quest"])
+		
 		if quest.needs_to_complete_quest == "item":
 			Global.clear_inventory()
 			inventory_controler.print_inventory(Global.inventory)
@@ -132,30 +138,30 @@ func player_speaking(text: String):
 		if dialogues[count]["options"][i].has("needs_quest") and dialogues[count]["options"][i].has("needs_item"):
 			
 			if has_quest and has_item:
-				options.append(dialogues[count]["options"][i])
+				add_option_to_options(i)
 				
 		elif dialogues[count]["options"][i].has("needs_quest") and dialogues[count]["options"][i].has("needs_task"):
 			
 			if has_quest and has_task:
-				options.append(dialogues[count]["options"][i])
+				add_option_to_options(i)
 				
 		elif dialogues[count]["options"][i].has("needs_quest"):
 			
 			if has_quest:
-				options.append(dialogues[count]["options"][i])
+				add_option_to_options(i)
 		
 		elif dialogues[count]["options"][i].has("needs_item"):
 			
 			if has_item:
-				options.append(dialogues[count]["options"][i])
+				add_option_to_options(i)
 		
 		elif dialogues[count]["options"][i].has("needs_task"):
 			
 			if has_item:
-				options.append(dialogues[count]["options"][i])
+				add_option_to_options(i)
 		
 		else:
-			options.append(dialogues[count]["options"][i])
+			add_option_to_options(i)
 	
 	for i in range (options.size()):
 		text += str(i +1) + ". "
@@ -167,6 +173,9 @@ func player_speaking(text: String):
 	dialog_lable.text = text
 	
 	animate_lable(text)
+
+func add_option_to_options(i : int):
+	options.append(dialogues[count]["options"][i])
 
 	
 func animate_lable(text: String):

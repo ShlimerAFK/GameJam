@@ -1,4 +1,4 @@
-extends Control
+extends Note
 
 
 @onready var quests_lable = $TextBox/MarginContainer/QuestsLable
@@ -9,6 +9,10 @@ var tween: Tween = null
 
 func _ready() -> void:
 	display_active_quests()
+	setup()
+
+func define_hideable():
+	hideable = $"."
 	
 func add_quest(input_quest: Dictionary):
 	

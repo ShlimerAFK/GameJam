@@ -28,7 +28,6 @@ func _ready() -> void:
 	player.global_position = spawn.global_position + spawn_offset
 	
 	display_sanity_state_layers()
-	inventory.print_inventory(Global.inventory)
 	
 	if room_plays_narration and GlobalTimeLoop.has_narrated == false:
 		play_narration("narr_1")

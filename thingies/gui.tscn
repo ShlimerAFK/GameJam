@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://b7uffv017svji" path="res://thingies/minigame_gui.tscn" id="6_sqvcj"]
 [ext_resource type="PackedScene" uid="uid://cunb0unoapsp4" path="res://thingies/inventory_text.tscn" id="7_s2vrj"]
 [ext_resource type="PackedScene" uid="uid://itfk6vags3sj" path="res://thingies/pad_lock.tscn" id="8_fug2i"]
+[ext_resource type="PackedScene" uid="uid://uxi0qqwdirf5" path="res://thingies/known_information_controler.tscn" id="9_qj787"]
+[ext_resource type="PackedScene" uid="uid://cjrv7pwyom5k6" path="res://thingies/notes_backdrop.tscn" id="10_s88cb"]
 
 [node name="GUI" type="CanvasLayer" unique_id=910458424]
 script = ExtResource("1_834qp")
@@ -27,3 +29,7 @@ offset_bottom = 1082.0
 [node name="InventoryText" parent="." unique_id=957070641 instance=ExtResource("7_s2vrj")]
 
 [node name="PadLockNode" parent="." unique_id=1720684290 instance=ExtResource("8_fug2i")]
+
+[node name="KnownInformationControler" parent="." unique_id=12775480 instance=ExtResource("9_qj787")]
+
+[node name="NotesBackdrop" parent="." unique_id=1671093284 instance=ExtResource("10_s88cb")]

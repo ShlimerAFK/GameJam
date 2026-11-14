@@ -1,4 +1,4 @@
-extends Control
+extends Note
 
 @onready var lable = $TextBox/MarginContainer/Label
 @onready var text_box = $TextBox
@@ -6,6 +6,11 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Global.inventory_changed.connect(_on_inventory_changed)
+	print_inventory(Global.inventory)
+	setup()
+
+func define_hideable():
+	hideable = $"."
 
 func _on_inventory_changed(inventory):
 	print_inventory(inventory)

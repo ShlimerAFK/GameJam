@@ -55,7 +55,8 @@ var quests := [
 		"text": "Get dan a cup of coffee",
 		"quest_is_active": false,
 		"quest_is_done": false,
-		"needs_to_complete_quest": "item"
+		"needs_to_complete_quest": "item",
+		"completion_information" : "The bosses brithday is the 7th of october 1970"
 	},
 	{
 		"name": "padlock",
@@ -68,21 +69,24 @@ var quests := [
 		"text": "Fix the vending machine",
 		"quest_is_active": false,
 		"quest_is_done": false,
-		"needs_to_complete_quest": "task"
+		"needs_to_complete_quest": "task",
+		"completion_information" : "The boss started working here 1990"
 	},
 	{
 		"name": "popup",
 		"text": "Remove Todds popups",
 		"quest_is_active": false,
 		"quest_is_done": false,
-		"needs_to_complete_quest": "task"
+		"needs_to_complete_quest": "task",
+		"completion_information" : "The boss has 3 kids"
 	},
 	{
 		"name": "papers",
 		"text": "Get Jim's papers from his desk",
 		"quest_is_active": false,
 		"quest_is_done": false,
-		"needs_to_complete_quest": "item"
+		"needs_to_complete_quest": "item",
+		"completion_information" : "The bosses wife is 55 years old"
 	}
 	,
 	{
@@ -90,7 +94,8 @@ var quests := [
 		"text": "Write Stephanie's document",
 		"quest_is_active": false,
 		"quest_is_done": false,
-		"needs_to_complete_quest": "task"
+		"needs_to_complete_quest": "task",
+		"completion_information" : "I think the order of the code is his birthmonth ...."
 	}
 ]
 
@@ -135,3 +140,17 @@ func complete_quest(name: String):
 	var quest = get_quest(name)
 	quest.quest_is_done = true
 	quest.quest_is_active = false
+	
+func get_completed_quests() -> Array:
+	var completed_quests := []
+	
+	for i in range(quests.size()):
+		if quests[i].quest_is_done == true:
+			completed_quests.append(quests[i])
+			
+	return completed_quests
+	
+	
+	
+	
+	
