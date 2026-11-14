@@ -6,7 +6,6 @@ var music_index
 
 func _ready() -> void:
 	music_index = AudioServer.get_bus_index("Music")
-	print(music_index)
 
 func connect_to_sanity():
 	GlobalSanity.decreased_sanity_state.connect(_on_decreased_sanity_state)
@@ -17,8 +16,7 @@ func set_volume(volume):
 
 func get_volume_from_sanity(sanity: int):
 	var volume = round((100 - sanity)/2) - 50
-	print(volume)
-	
+
 	return volume
 func _on_decreased_sanity_state(sanity_state : int, sanity: int):
 	

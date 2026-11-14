@@ -129,8 +129,6 @@ func player_speaking(text: String):
 		has_quest = false
 		has_task = false
 		
-		print(str(dialogues[count]["options"][i]["text"]))
-		
 		if dialogues[count]["options"][i].has("needs_quest"):
 			has_quest = Global.check_if_quest_is_activated(dialogues[count]["options"][i]["needs_quest"])
 			
