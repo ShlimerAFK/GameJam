@@ -3,6 +3,7 @@ extends Note
 
 @onready var quests_lable = $TextBox/MarginContainer/QuestsLable
 @onready var text_box = $TextBox
+@onready var notification_controler: Control = $"../NotificationControler"
 
 var text := ""
 var tween: Tween = null
@@ -21,6 +22,8 @@ func add_quest(input_quest: Dictionary):
 		Global.activate_quest(quest)
 		
 		display_active_quests()
+		
+		notification_controler.display_notification()
 	
 func display_active_quests():
 	text = ""

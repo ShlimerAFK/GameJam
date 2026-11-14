@@ -100,7 +100,6 @@ func others_speaking(text: String):
 		var quest = Global.get_quest(dialogues[count]["quest_name"])
 		quest_controler.add_quest(quest)
 		
-		notification_controler.display_notification()
 		
 	if dialogues[count].has("completes_quest"):
 		Global.complete_quest(dialogues[count]["completes_quest"])
