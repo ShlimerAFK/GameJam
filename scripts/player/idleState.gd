@@ -30,7 +30,5 @@ func handle_input(event: InputEvent):
 func _on_walk_state_changed_direction(direction: String) -> void:
 	facing_direction = direction
 	
-
-
 func _on_run_state_changed_direction(direction: String) -> void:
 	facing_direction = direction
