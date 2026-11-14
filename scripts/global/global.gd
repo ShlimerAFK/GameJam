@@ -150,7 +150,3 @@ func get_completed_quests() -> Array:
 			
 	return completed_quests
 	
-	
-	
-	
-	

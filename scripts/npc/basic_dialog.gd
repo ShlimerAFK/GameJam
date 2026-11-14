@@ -50,7 +50,6 @@ func _process(delta: float) -> void:
 		play_text_animation()
 		count += 1
 	
-	
 	elif Input.is_action_just_pressed("1") and options.size() >= 1 and player_is_choosing:
 		start_new_dialog(0)
 	

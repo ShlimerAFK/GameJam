@@ -55,6 +55,7 @@ vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1609279060]
 stream = ExtResource("3_jfv3o")
+volume_db = -6.0
 max_polyphony = 4
 bus = &"sfx"
 script = ExtResource("4_ecpw4")
