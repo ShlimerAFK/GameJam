@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dsh0fg115vvhe" path="res://scripts/generic/root_node.gd" id="1_3e0pf"]
 [ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://thingies/player.tscn" id="3_3e0pf"]
+[ext_resource type="PackedScene" uid="uid://dv86l736g3rf5" path="res://thingies/shaders/shaders.tscn" id="4_2phy8"]
 [ext_resource type="PackedScene" uid="uid://jroxlsrexcqi" path="res://thingies/tileset_templates/terrain.tscn" id="4_e1il7"]
 [ext_resource type="PackedScene" uid="uid://cchsb3liba1f8" path="res://thingies/tileset_templates/decor.tscn" id="5_1l8wq"]
 [ext_resource type="PackedScene" uid="uid://cc1x44ypsamki" path="res://thingies/gui.tscn" id="5_3e0pf"]
@@ -21,6 +22,9 @@ room_plays_narration = true
 [node name="CharacterBody2D" parent="." unique_id=629992924 instance=ExtResource("3_3e0pf")]
 
 [node name="GUI" parent="." unique_id=910458424 instance=ExtResource("5_3e0pf")]
+layer = 200
+
+[node name="Shaders" parent="." unique_id=1745283210 instance=ExtResource("4_2phy8")]
 
 [node name="Tilemaps" type="Node2D" parent="." unique_id=1476671647]
 y_sort_enabled = true

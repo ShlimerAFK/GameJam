@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dv86l736g3rf5"]
+
+[ext_resource type="Shader" uid="uid://exoeepjlhw4f" path="res://thingies/shaders/saturation.gdshader" id="1_15w1s"]
+[ext_resource type="Script" uid="uid://iemda587jcyx" path="res://thingies/shaders/sanity_effect_controller.gd" id="1_kd05p"]
+[ext_resource type="Shader" uid="uid://dex1hpy6nf22r" path="res://thingies/shaders/red_tint.gdshader" id="2_hpa4t"]
+[ext_resource type="Shader" uid="uid://c6gh04lv7lclr" path="res://thingies/shaders/vignette.gdshader" id="4_47owg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xjn1n"]
+shader = ExtResource("1_15w1s")
+shader_parameter/sanity_value = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kd05p"]
+shader = ExtResource("2_hpa4t")
+shader_parameter/sanity_value = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_15w1s"]
+shader = ExtResource("4_47owg")
+shader_parameter/sanity_value = 0.0
+
+[node name="Shaders" type="Node2D" unique_id=322748181]
+
+[node name="Saturation" type="CanvasLayer" parent="." unique_id=1745283210]
+layer = 100
+
+[node name="Saturation" type="ColorRect" parent="Saturation" unique_id=1406380567]
+material = SubResource("ShaderMaterial_xjn1n")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kd05p")
+
+[node name="RedTint" type="CanvasLayer" parent="." unique_id=812168089]
+layer = 100
+
+[node name="RedTint" type="ColorRect" parent="RedTint" unique_id=1224801982]
+material = SubResource("ShaderMaterial_kd05p")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kd05p")
+
+[node name="Vignette" type="CanvasLayer" parent="." unique_id=538733643]
+layer = 100
+
+[node name="Vignette" type="ColorRect" parent="Vignette" unique_id=660282866]
+material = SubResource("ShaderMaterial_15w1s")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kd05p")
