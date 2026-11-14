@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cgugmxpj7nu12"]
+
+[ext_resource type="Texture2D" uid="uid://dd1b341pvqgb0" path="res://sprites/menu/menu_test.png" id="1_f5okb"]
+[ext_resource type="Script" uid="uid://dmqnj83t4d12c" path="res://scripts/gui/popup.gd" id="2_k0xcm"]
+
+[node name="Popup1" type="NinePatchRect" unique_id=379941131]
+offset_right = 350.0
+offset_bottom = 403.0
+texture = ExtResource("1_f5okb")
+script = ExtResource("2_k0xcm")
+
+[node name="Button" type="Button" parent="." unique_id=698552414]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -32.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = 30.0
+grow_horizontal = 0
+flat = true
+
+[node name="TitleText" type="Label" parent="." unique_id=2096781478]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -61.5
+offset_top = 38.0
+offset_right = 61.5
+offset_bottom = 77.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Important"
+
+[node name="MainText" type="Label" parent="." unique_id=1909487015]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -93.5
+offset_right = 153.0
+offset_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "We have been trying to reatch you about your cars extended warenty.
+
+ To renew your warenty please go the http//:wearescammingyou.org webbsite"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

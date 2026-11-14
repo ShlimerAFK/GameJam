@@ -23,7 +23,6 @@ func start_narr_timer_short():
 func start_Sanity_timer():
 	var time_before_sanity_decrease = 5
 	sanity_timer.start(time_before_sanity_decrease)
-	print("Timer has started")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func restart_timeloop():
@@ -44,4 +43,3 @@ func _on_narr_timer_timeout() -> void:
 
 func _on_sanity_timer_timeout() -> void:
 	GlobalSanity.decrease_sanity(10)
-	print("decreasing sanity")

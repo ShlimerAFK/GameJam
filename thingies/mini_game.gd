@@ -18,16 +18,20 @@ var button_text : Array
 
 func _process(_delta):
 	if player_has_entered == true and Input.is_action_just_pressed("interact") and not Global.player_is_interacting:
-		Global.player_is_interacting = true
-		minigame_screen.visible = true
-		current_minigame.visible = true
+		if not quest_needs_to_be_activated():
+			Global.player_is_interacting = true
+			minigame_screen.visible = true
+			current_minigame.visible = true
 
-		set_main_text()
-		set_instructions_text()
-		
-		connect_exit_button()
-		
-		play_game()
+			set_main_text()
+			set_instructions_text()
+			
+			connect_exit_button()
+			
+			play_game()
+
+func quest_needs_to_be_activated():
+	return false
 
 func connect_exit_button():
 	exit_button.pressed.connect(_on_exit_button_pressed)

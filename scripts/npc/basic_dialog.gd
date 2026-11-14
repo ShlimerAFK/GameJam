@@ -12,7 +12,7 @@ var count := 0
 var dialogues := []
 var tween: Tween = null
 var player_is_choosing := false
-var amout_of_choises := 0
+var options := []
 var current_file_name: String
 
 func start_dialog(dialog: String, file_name: String) -> void:
@@ -33,7 +33,7 @@ func start_dialog(dialog: String, file_name: String) -> void:
 
 func start_new_dialog(index: int):
 	player_is_choosing = false
-	var new_dialog = dialogues[count -1]["options"][index]["dialog"]
+	var new_dialog = options[index]["dialog"]
 	count = 0
 	start_dialog(new_dialog, current_file_name)
 
@@ -43,19 +43,19 @@ func _process(delta: float) -> void:
 		play_text_animation()
 		count += 1
 	
-	elif Input.is_action_just_pressed("1") and amout_of_choises >= 1 and player_is_choosing:
+	elif Input.is_action_just_pressed("1") and options.size() >= 1 and player_is_choosing:
 		start_new_dialog(0)
 	
-	elif Input.is_action_just_pressed("2") and amout_of_choises >= 2 and player_is_choosing:
+	elif Input.is_action_just_pressed("2") and options.size() >= 2 and player_is_choosing:
 		start_new_dialog(1)
 	
-	elif Input.is_action_just_pressed("3") and amout_of_choises >= 3 and player_is_choosing:
+	elif Input.is_action_just_pressed("3") and options.size() >= 3 and player_is_choosing:
 		start_new_dialog(2)
 	
-	elif Input.is_action_just_pressed("4") and amout_of_choises >= 4 and player_is_choosing:
+	elif Input.is_action_just_pressed("4") and options.size() >= 4 and player_is_choosing:
 		start_new_dialog(3)
 	
-	elif Input.is_action_just_pressed("5") and amout_of_choises >= 5 and player_is_choosing:
+	elif Input.is_action_just_pressed("5") and options.size() >= 5 and player_is_choosing:
 		start_new_dialog(4)
 		
 	elif Input.is_action_just_pressed("scroll_dialog") and count == len(dialogues) and player_is_choosing == false and textbox.visible == true:
@@ -98,67 +98,70 @@ func others_speaking(text: String):
 		var quest = Global.get_quest(dialogues[count]["quest_name"])
 		quest_controler.add_quest(quest)
 		
-	
 	if dialogues[count].has("completes_quest"):
 		Global.complete_quest(dialogues[count]["completes_quest"])
 		quest_controler.display_active_quests()
-		Global.clear_inventory()
-		inventory_controler.print_inventory(Global.inventory)
+		var quest = Global.get_quest(dialogues[count]["completes_quest"])
+		if quest.needs_to_complete_quest == "item":
+			Global.clear_inventory()
+			inventory_controler.print_inventory(Global.inventory)
 	
 func player_speaking(text: String):
 	var has_item: bool
 	var has_quest: bool
 	var has_task: bool
 	
-	amout_of_choises = 0
+	options = []
 
 	for i in range(dialogues[count]["options"].size()):
 		has_item = false
 		has_quest = false
 		has_task = false
 		
+		print(str(dialogues[count]["options"][i]["text"]))
+		
 		if dialogues[count]["options"][i].has("needs_quest"):
 			has_quest = Global.check_if_quest_is_activated(dialogues[count]["options"][i]["needs_quest"])
-				
+			
 		if dialogues[count]["options"][i].has("needs_item"):
 			has_item = Global.check_if_player_has_item(dialogues[count]["options"][i]["needs_item"])
-		
+
 		if dialogues[count]["options"][i].has("needs_task"):
 			has_task = Global.check_if_player_has_completed_task(dialogues[count]["options"][i]["needs_task"])
 		
 		if dialogues[count]["options"][i].has("needs_quest") and dialogues[count]["options"][i].has("needs_item"):
 			
 			if has_quest and has_item:
-				amout_of_choises += 1
+				options.append(dialogues[count]["options"][i])
 				
 		elif dialogues[count]["options"][i].has("needs_quest") and dialogues[count]["options"][i].has("needs_task"):
 			
 			if has_quest and has_task:
-				amout_of_choises += 1
+				options.append(dialogues[count]["options"][i])
 				
 		elif dialogues[count]["options"][i].has("needs_quest"):
 			
 			if has_quest:
-				amout_of_choises += 1
+				options.append(dialogues[count]["options"][i])
 		
 		elif dialogues[count]["options"][i].has("needs_item"):
 			
 			if has_item:
-				amout_of_choises += 1
+				options.append(dialogues[count]["options"][i])
 		
 		elif dialogues[count]["options"][i].has("needs_task"):
 			
 			if has_item:
-				amout_of_choises += 1
+				options.append(dialogues[count]["options"][i])
 		
 		else:
-			amout_of_choises += 1
+			options.append(dialogues[count]["options"][i])
 	
-	for i in range (amout_of_choises):
+	for i in range (options.size()):
 		text += str(i +1) + ". "
-		text += str(dialogues[count]["options"][i]["text"])
+		text += str(options[i].text)
 		
-		if not i == amout_of_choises - 1:
+		if not i == options.size() - 1:
 			text += "\n"
 	
 	dialog_lable.text = text

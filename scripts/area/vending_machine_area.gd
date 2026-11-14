@@ -33,7 +33,7 @@ func _on_button_released():
 	
 	if current_hp <= 0:
 		exit_game()
-		Global.add_competed_task("vending machine")
+		Global.add_completed_task("vending machine")
 	
 func _on_timeout():
 	bar.value += 0.3

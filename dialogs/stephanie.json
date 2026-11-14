@@ -10,12 +10,15 @@
 			"speaker": "You",
 			"options" : [
 				{
+					
 					"text" : "dialog option 1",
-					"dialog" : "dialog_2"
+					"dialog" : "dialog_2",
+					"needs_quest" : "padlock" 
 				},
 				{
 					"text" : "dialog option 2",
-					"dialog" : "dialog_3"
+					"dialog" : "dialog_3",
+					"needs_quest" : "padlock" 
 				},
 				{
 					"text" : "dialog option 3",

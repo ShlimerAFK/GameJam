@@ -10,7 +10,7 @@ extends Node2D
 
 @onready var sanity_layers := [$Tilemaps/Sanity1, $Tilemaps/Sanity2, $Tilemaps/Sanity3, $Tilemaps/Sanity4, $Tilemaps/Sanity5, $Tilemaps/Sanity6] 
 
-var sanity_states := GlobalSanity.sanity_states
+var sanity_states = GlobalSanity.sanity_states
 	
 func _ready() -> void:
 	
