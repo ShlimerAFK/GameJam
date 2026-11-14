@@ -5,7 +5,7 @@ uniform float sanity_value : hint_range(0.0, 1.0);
 
 
 void fragment() {
-	float redness_amount = sanity_value * 0.3;
+	float redness_amount = sanity_value * 0.4;
 	
     vec4 screen_color = texture(SCREEN_TEXTURE, SCREEN_UV);
     

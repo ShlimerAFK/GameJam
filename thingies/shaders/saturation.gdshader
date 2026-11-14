@@ -5,7 +5,7 @@ uniform float sanity_value : hint_range(0.0, 1.0);
 
 
 void fragment() {
-	float desaturate_amount = sanity_value * 0.6;
+	float desaturate_amount = sanity_value * 0.5;
 	
     vec4 screen_color = texture(SCREEN_TEXTURE, SCREEN_UV);
     
