@@ -112,3 +112,4 @@ scroll_dialog={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0.07683582, 0.07683582, 0.0768358, 1)

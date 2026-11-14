@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cc1x44ypsamki" path="res://thingies/gui.tscn" id="2_mus4g"]
 [ext_resource type="PackedScene" uid="uid://oy67rn0cumj3" path="res://thingies/player.tscn" id="3_7w20u"]
 [ext_resource type="PackedScene" uid="uid://jroxlsrexcqi" path="res://thingies/tileset_templates/terrain.tscn" id="4_mus4g"]
+[ext_resource type="PackedScene" uid="uid://dv86l736g3rf5" path="res://thingies/shaders/shaders.tscn" id="4_w32gw"]
 [ext_resource type="PackedScene" uid="uid://bs46i8y6tukst" path="res://thingies/door_area.tscn" id="5_7w20u"]
 [ext_resource type="PackedScene" uid="uid://cchsb3liba1f8" path="res://thingies/tileset_templates/decor.tscn" id="5_n8bhm"]
 [ext_resource type="PackedScene" uid="uid://douyv2kqqv15h" path="res://thingies/tileset_templates/animated.tscn" id="6_pblcb"]
@@ -25,6 +26,8 @@ script = ExtResource("1_7w20u")
 [node name="CharacterBody2D" parent="." unique_id=629992924 instance=ExtResource("3_7w20u")]
 
 [node name="GUI" parent="." unique_id=910458424 instance=ExtResource("2_mus4g")]
+
+[node name="Shaders" parent="." unique_id=1745283210 instance=ExtResource("4_w32gw")]
 
 [node name="Tilemaps" type="Node2D" parent="." unique_id=1170703441]
 y_sort_enabled = true
