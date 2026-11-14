@@ -5,6 +5,7 @@ extends MiniGame
 @onready var mini_game_4 = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame4"
 @onready var text_input = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame4/LineEdit"
 @onready var label = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame4/Label"
+@onready var notification_controler = $"../GUI/NotificationControler"
 
 var correct_text = "Bob"
 
@@ -35,6 +36,8 @@ func check_if_text_matches(text: String):
 		exit_game()
 		Global.add_item_to_inventory("Jims papers")
 		Global.add_completed_task("document")
+		notification_controler.display_notification()
+		
 	
 func _on_area_entered(area: Area2D) -> void:
 	entered_area(area)
