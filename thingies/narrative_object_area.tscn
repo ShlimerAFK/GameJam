@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c0tr1itluf640"]
+
+[ext_resource type="Script" uid="uid://dvvaif6xjhn4c" path="res://scripts/area/narrative_object_area.gd" id="1_pwoww"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_snb48"]
+radius = 20.024984
+
+[node name="NarrativeObjectArea" type="Area2D" unique_id=1760318387]
+script = ExtResource("1_pwoww")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=899872071]
+shape = SubResource("CircleShape2D_snb48")

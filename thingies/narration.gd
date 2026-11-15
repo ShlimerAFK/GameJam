@@ -32,7 +32,7 @@ func start_narration(dialog: String, file_name: String) -> void:
 
 func _process(delta: float) -> void:
 	
-	if Input.is_action_just_pressed("scroll_dialog") and count < len(dialogues):
+	if Input.is_action_just_pressed("scroll_dialog") and count < len(dialogues) and textbox.visible == true:
 		play_text_animation()
 		count += 1
 		
