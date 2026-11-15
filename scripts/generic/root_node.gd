@@ -22,7 +22,11 @@ func _ready() -> void:
 	else:
 		print_debug("Door position not specified. position expected: top or bottom when position name " + str(spawn.door_position_in_room) + " was given")
 	
-	player.global_position = spawn.global_position + spawn_offset
+	if Global.is_first_spawn:
+		player.global_position = Vector2(0,0)
+		Global.is_first_spawn = false
+	else:
+		player.global_position = spawn.global_position + spawn_offset
 	
 	display_sanity_state_layers()
 	

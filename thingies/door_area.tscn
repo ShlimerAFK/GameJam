@@ -1,17 +1,19 @@
 [gd_scene format=3 uid="uid://bs46i8y6tukst"]
 
 [ext_resource type="Script" uid="uid://dqwfi7yh1ei38" path="res://scripts/objects/door_ineraction.gd" id="1_ycw4k"]
+[ext_resource type="AudioStream" uid="uid://dth6yll7a5is6" path="res://audio/sfx/doors/open_door_1.1.mp3" id="2_gciry"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f2an6"]
 radius = 22.0
 
 [node name="DoorArea" type="Area2D" unique_id=148327902]
 script = ExtResource("1_ycw4k")
-transition_type = "fade"
-duration = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1141445772]
 shape = SubResource("CircleShape2D_f2an6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=797922143]
+stream = ExtResource("2_gciry")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

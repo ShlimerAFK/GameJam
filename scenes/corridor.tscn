@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://bmt6sgusf1o0h" path="res://thingies/tileset_templates/sanity.tscn" id="7_wctbt"]
 [ext_resource type="PackedScene" uid="uid://csmc7qeleky5o" path="res://thingies/NPC/carl.tscn" id="9_uiklb"]
 [ext_resource type="PackedScene" uid="uid://c0tr1itluf640" path="res://thingies/narrative_object_area.tscn" id="11_f323m"]
+[ext_resource type="PackedScene" uid="uid://hubwvmhrihvu" path="res://thingies/audio/clock.tscn" id="12_ucmnp"]
+[ext_resource type="PackedScene" uid="uid://btj78si58mfna" path="res://thingies/audio/air_vent.tscn" id="13_pbkn3"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_e1il7"]
 a = Vector2(-256, 0)
@@ -222,7 +224,17 @@ door_position_in_room = "bottom"
 [node name="Carl" parent="." unique_id=368403260 instance=ExtResource("9_uiklb")]
 position = Vector2(63, 32)
 
-[node name="Plant" parent="." unique_id=1760318387 instance=ExtResource("11_f323m")]
+[node name="Audio" type="Node2D" parent="." unique_id=1627665205]
+
+[node name="Clock" parent="Audio" unique_id=970536357 instance=ExtResource("12_ucmnp")]
+position = Vector2(263, -72)
+
+[node name="AirVent" parent="Audio" unique_id=849143158 instance=ExtResource("13_pbkn3")]
+position = Vector2(-241, -87)
+
+[node name="Objects" type="Node2D" parent="." unique_id=55918423]
+
+[node name="Plant" parent="Objects" unique_id=1760318387 instance=ExtResource("11_f323m")]
 position = Vector2(-40, -46)
 filename = "plant.json"
 narrations = ["narr_1", "narr_2", "narr_2", "narr_2", "narr_3", "narr_3"]

@@ -12,6 +12,13 @@ var quest_name = "padlock"
 @onready var quest_controler = $"../QuestControler"
 @onready var notification_controler: Control = $"../NotificationControler"
 
+@onready var button_beep: AudioStreamPlayer2D = $"../../PadlockArea/ButtonBeep"
+@onready var wrong_password_player: AudioStreamPlayer2D = $"../../PadlockArea/WrongPasswordPlayer"
+@onready var correct_password_player: AudioStreamPlayer2D = $"../../PadlockArea/CorrectPasswordPlayer"
+
+@onready var animation_player: AnimationPlayer = $"../../FadeOut/CanvasLayer/AnimationPlayer"
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hide_pad_lock()
@@ -42,10 +49,12 @@ func _on_button_pressed(text: String):
 		check_if_code_matches()
 		
 	elif text == "*":
+		button_beep.play()
 		inputed_numbers.pop_back()
 		update_shown_code()
 		
 	elif inputed_numbers.size() < correct_code.size():
+		button_beep.play()
 		inputed_numbers.append(int(text))
 		update_shown_code()
 		
@@ -59,8 +68,11 @@ func update_shown_code():
 func check_if_code_matches():
 	if correct_code == inputed_numbers:
 		hide_pad_lock()
+		correct_password_player.play()
+		animation_player.play("fade_out")
 		switch_scene()
 	else:
+		wrong_password_player.play()
 		inputed_numbers = []
 		update_shown_code()
 		

@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://cjrv7pwyom5k6"]
 
 [ext_resource type="Script" uid="uid://evq5pp412slc" path="res://scripts/gui/notes_backdrop.gd" id="1_yiddm"]
+[ext_resource type="AudioStream" uid="uid://0uig3t247s8b" path="res://audio/sfx/notebook/open_notebook.mp3" id="2_gtip2"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yiddm"]
 load_path = "res://.godot/imported/notes_temp.png-5f6043f328b7d234b83d52d570a1f263.ctex"
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_0q6ic"]
+random_pitch = 1.2599211
+random_volume_offset_db = 1.0
+streams_count = 1
+stream_0/stream = ExtResource("2_gtip2")
 
 [node name="NotesBackdrop" type="Control" unique_id=1671093284]
 layout_mode = 3
@@ -105,4 +112,5 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2051542736]
+stream = SubResource("AudioStreamRandomizer_0q6ic")
 bus = &"sfx"

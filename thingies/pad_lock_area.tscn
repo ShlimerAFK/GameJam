@@ -1,15 +1,41 @@
 [gd_scene format=3 uid="uid://eabk4v5p752v"]
 
 [ext_resource type="Script" uid="uid://ci0pqq3pimyi7" path="res://scripts/area/pad_lock_area.gd" id="1_21u61"]
+[ext_resource type="AudioStream" uid="uid://5roa55nae2yy" path="res://audio/sfx/padlock/padlock_click_1.mp3" id="2_rpo3h"]
+[ext_resource type="AudioStream" uid="uid://0avsc4iaovv0" path="res://audio/sfx/padlock/padlock_click_2.mp3" id="3_4rsjl"]
+[ext_resource type="AudioStream" uid="uid://rpc0ryd1drff" path="res://audio/sfx/padlock/padlock_click_3.mp3" id="4_g1v54"]
+[ext_resource type="AudioStream" uid="uid://dspqm7l7y2low" path="res://audio/sfx/padlock/padlock_click_4.mp3" id="5_mj2jk"]
+[ext_resource type="AudioStream" uid="uid://4je2m8ngdviy" path="res://audio/sfx/padlock/padlock_incorrect_password.mp3" id="6_g1v54"]
+[ext_resource type="AudioStream" uid="uid://mnkbc7h31l5f" path="res://audio/sfx/padlock/padlock_correct_password.mp3" id="7_mj2jk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wccwa"]
 radius = 29.15476
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_21u61"]
+random_volume_offset_db = 2.0
+streams_count = 4
+stream_0/stream = ExtResource("2_rpo3h")
+stream_1/stream = ExtResource("3_4rsjl")
+stream_2/stream = ExtResource("4_g1v54")
+stream_3/stream = ExtResource("5_mj2jk")
 
 [node name="Area2D" type="Area2D" unique_id=1188670431]
 script = ExtResource("1_21u61")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=928377653]
 shape = SubResource("CircleShape2D_wccwa")
+
+[node name="ButtonBeep" type="AudioStreamPlayer2D" parent="." unique_id=2091167670]
+stream = SubResource("AudioStreamRandomizer_21u61")
+volume_db = -3.0
+
+[node name="WrongPasswordPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1642955815]
+stream = ExtResource("6_g1v54")
+volume_db = 3.0
+
+[node name="CorrectPasswordPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1806392931]
+stream = ExtResource("7_mj2jk")
+volume_db = 1.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

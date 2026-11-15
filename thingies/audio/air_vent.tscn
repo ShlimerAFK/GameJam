@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://btj78si58mfna"]
+
+[ext_resource type="Script" uid="uid://bqyetj2aq1ycf" path="res://scripts/audio/generic_sound_player.gd" id="1_oogk0"]
+[ext_resource type="AudioStream" uid="uid://b5p8l6jf2dosm" path="res://audio/sfx/arivent/airvent.mp3" id="2_nkrry"]
+
+[node name="AirVent" type="Node2D" unique_id=970536357]
+script = ExtResource("1_oogk0")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=462012368]
+stream = ExtResource("2_nkrry")
+volume_db = -8.0
+attenuation = 3.7321417

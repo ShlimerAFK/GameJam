@@ -5,13 +5,15 @@ class_name InteractableObject
 @export var filename: String
 @export var narrations : Array = ["narr_1","narr_1","narr_1","narr_1","narr_1","narr_1"]
 
-@onready var narration = $"../GUI/NarrationNode"
+@onready var narration = $"../../GUI/NarrationNode"
 @onready var object: InteractableObject = $"."
 
 var file_path : String
 
 
 func _ready() -> void:
+	
+	gui = $"../../GUI"
 	
 	file_path = "objects/" + filename
 	

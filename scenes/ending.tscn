@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://0wraxxwn1djf" path="res://scripts/ending/ending.gd" id="1_fyrdv"]
 [ext_resource type="PackedScene" uid="uid://ni2525ttglq6" path="res://thingies/narration.tscn" id="2_2x1jc"]
+[ext_resource type="AudioStream" uid="uid://dt28drwvg7wps" path="res://audio/sfx/gore/Face_peal_2.0.mp3" id="3_2x1jc"]
 
 [node name="Control" type="Control" unique_id=335857157]
 layout_mode = 3
@@ -17,4 +18,11 @@ layout_mode = 1
 
 [node name="Timer" type="Timer" parent="." unique_id=1013666007]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=68015004]
+stream = ExtResource("3_2x1jc")
+
+[node name="SfxTimer" type="Timer" parent="." unique_id=586871762]
+one_shot = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SfxTimer" to="." method="_on_sfx_timer_timeout"]

@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://bmt6sgusf1o0h" path="res://thingies/tileset_templates/sanity.tscn" id="7_tkapk"]
 [ext_resource type="PackedScene" uid="uid://crcrptu6khfas" path="res://thingies/NPC/dan.tscn" id="9_uf2di"]
 [ext_resource type="PackedScene" uid="uid://dclhfafbl6wa7" path="res://thingies/document_area.tscn" id="10_h5p11"]
+[ext_resource type="PackedScene" uid="uid://btj78si58mfna" path="res://thingies/audio/air_vent.tscn" id="12_twawk"]
+[ext_resource type="PackedScene" uid="uid://hubwvmhrihvu" path="res://thingies/audio/clock.tscn" id="13_kv3be"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_7w20u"]
 a = Vector2(-48, 0)
@@ -166,3 +168,11 @@ position = Vector2(-25, -7)
 
 [node name="DocumentArea" parent="." unique_id=430417296 instance=ExtResource("10_h5p11")]
 position = Vector2(21, -52)
+
+[node name="Audio" type="Node2D" parent="." unique_id=41479427]
+
+[node name="AirVent" parent="Audio" unique_id=970536357 instance=ExtResource("12_twawk")]
+position = Vector2(25, -91)
+
+[node name="Clock" parent="Audio" unique_id=813422426 instance=ExtResource("13_kv3be")]
+position = Vector2(-8, -72)

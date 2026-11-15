@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b1c86pk66gcl"]
+
+[ext_resource type="Script" uid="uid://bqyetj2aq1ycf" path="res://scripts/audio/generic_sound_player.gd" id="1_4umdw"]
+
+[node name="GenericSoundPlayer" type="Node2D" unique_id=970536357]
+script = ExtResource("1_4umdw")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=462012368]
+volume_db = -12.0
+attenuation = 3.7321417

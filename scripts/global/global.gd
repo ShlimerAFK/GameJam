@@ -2,6 +2,8 @@ extends Node
 
 var player_is_interacting : bool
 var next_spawn_door := "Door1"
+var is_first_spawn := true
+var is_first_load := true
 
 
 # Tasks

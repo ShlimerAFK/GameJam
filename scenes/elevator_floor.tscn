@@ -10,10 +10,78 @@
 [ext_resource type="PackedScene" uid="uid://bs46i8y6tukst" path="res://thingies/door_area.tscn" id="6_mr5hx"]
 [ext_resource type="PackedScene" uid="uid://eabk4v5p752v" path="res://thingies/pad_lock_area.tscn" id="8_ofdbp"]
 [ext_resource type="PackedScene" uid="uid://5jx0537728ia" path="res://thingies/NPC/stephanie.tscn" id="9_vvx4t"]
+[ext_resource type="PackedScene" uid="uid://btj78si58mfna" path="res://thingies/audio/air_vent.tscn" id="11_7n5vn"]
+[ext_resource type="PackedScene" uid="uid://hubwvmhrihvu" path="res://thingies/audio/clock.tscn" id="12_dnop2"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ok1ut"]
 a = Vector2(-80, 0)
 b = Vector2(80, 0)
+
+[sub_resource type="Animation" id="Animation_ekxnf"]
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bqqt6"]
+resource_name = "fade_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.16666667, 0.13333334, 1.9333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.46666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7n5vn"]
+resource_name = "fade_out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7n5vn"]
+_data = {
+&"RESET": SubResource("Animation_ekxnf"),
+&"fade_in": SubResource("Animation_bqqt6"),
+&"fade_out": SubResource("Animation_7n5vn")
+}
 
 [node name="Node2D" type="Node2D" unique_id=350274399]
 y_sort_enabled = true
@@ -167,3 +235,31 @@ position = Vector2(-48, -61)
 
 [node name="Stephanie" parent="." unique_id=496411993 instance=ExtResource("9_vvx4t")]
 position = Vector2(0, -46)
+
+[node name="Audio" type="Node2D" parent="." unique_id=1188564323]
+
+[node name="AirVent" parent="Audio" unique_id=970536357 instance=ExtResource("11_7n5vn")]
+position = Vector2(72, -89)
+
+[node name="Clock" parent="Audio" unique_id=1935997667 instance=ExtResource("12_dnop2")]
+position = Vector2(-7, -72)
+
+[node name="FadeOut" type="Node2D" parent="." unique_id=478035175]
+modulate = Color(1, 1, 1, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="FadeOut" unique_id=1747603945]
+
+[node name="ColorRect" type="ColorRect" parent="FadeOut/CanvasLayer" unique_id=866979216]
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FadeOut/CanvasLayer" unique_id=1682760711]
+libraries/ = SubResource("AnimationLibrary_7n5vn")

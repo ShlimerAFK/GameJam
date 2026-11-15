@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://du78b3v1orhnr" path="res://thingies/NPC/todd.tscn" id="9_thxof"]
 [ext_resource type="PackedScene" uid="uid://c5yeqfcm5pr5m" path="res://thingies/popup_area.tscn" id="10_aqdri"]
 [ext_resource type="PackedScene" uid="uid://c0tr1itluf640" path="res://thingies/narrative_object_area.tscn" id="12_nkwxu"]
+[ext_resource type="PackedScene" uid="uid://hubwvmhrihvu" path="res://thingies/audio/clock.tscn" id="13_gt5ud"]
+[ext_resource type="PackedScene" uid="uid://btj78si58mfna" path="res://thingies/audio/air_vent.tscn" id="14_uh7oo"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_7w20u"]
 a = Vector2(-48, 0)
@@ -185,3 +187,11 @@ position = Vector2(16, -50)
 [node name="Calendar" parent="." unique_id=1760318387 instance=ExtResource("12_nkwxu")]
 position = Vector2(-24, -63)
 filename = "calendar.json"
+
+[node name="Audio" type="Node2D" parent="." unique_id=218430703]
+position = Vector2(23, -87)
+
+[node name="Clock" parent="." unique_id=970536357 instance=ExtResource("13_gt5ud")]
+position = Vector2(1, -72)
+
+[node name="AirVent" parent="Clock" unique_id=1216952571 instance=ExtResource("14_uh7oo")]

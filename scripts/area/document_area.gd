@@ -18,14 +18,6 @@ func _ready() -> void:
 	current_minigame = mini_game_4
 	
 	text_input.text_submitted.connect(_on_text_input_submitted)
-
-func quest_needs_to_be_activated():
-	var quest = Global.get_quest("document")
-	
-	if quest.quest_is_active:
-		return false
-	else:
-		return true
 	
 func _on_text_input_submitted(text :String):
 	label.text = text + "\n"

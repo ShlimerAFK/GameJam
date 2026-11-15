@@ -42,4 +42,4 @@ func _on_narr_timer_timeout() -> void:
 	narr_timeout.emit()
 
 func _on_sanity_timer_timeout() -> void:
-	GlobalSanity.decrease_sanity(10)
+	GlobalSanity.decrease_sanity(1)

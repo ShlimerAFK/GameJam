@@ -5,6 +5,10 @@ extends MiniGame
 @onready var bar = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame2/ProgressBar"
 @onready var hp_bar = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame2/HpBar"
 
+@onready var normal_puch: AudioStreamPlayer2D = $NormalPuch
+@onready var hard_punch: AudioStreamPlayer2D = $HardPunch
+
+
 var max_hp = 1000
 var current_hp = 1000
 
@@ -31,7 +35,11 @@ func _on_button_released():
 	hp_bar.value = current_hp
 	bar.value = 0
 	
-	if current_hp <= 0:
+	if current_hp > 0:
+		normal_puch.play()
+	
+	elif current_hp <= 0:
+		hard_punch.play()
 		exit_game()
 		Global.add_completed_task("vending machine")
 	

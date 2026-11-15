@@ -1,15 +1,34 @@
 [gd_scene format=3 uid="uid://deupdis45vhvk"]
 
 [ext_resource type="Script" uid="uid://bulewmbkcp1hd" path="res://scripts/area/vending_machine_area.gd" id="1_gdhwm"]
+[ext_resource type="AudioStream" uid="uid://ds37aex3moxu1" path="res://audio/sfx/vending_mashine/vending_mashine_punch_normal.mp3" id="2_c1b5y"]
+[ext_resource type="AudioStream" path="res://audio/sfx/punches/vending_mashine_punch_hard.mp3" id="3_b5x13"]
+[ext_resource type="AudioStream" uid="uid://dsb15yyqslmaq" path="res://audio/sfx/vending_mashine/vending_mashine_punch_normal_v2.mp3" id="3_c1b5y"]
+[ext_resource type="AudioStream" uid="uid://de0n6hyce8c3b" path="res://audio/sfx/vending_mashine/vending_mashine_punch_normal_v3.mp3" id="4_obuay"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wccwa"]
 radius = 13.038404
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_gdhwm"]
+random_pitch = 1.0594631
+streams_count = 3
+stream_0/stream = ExtResource("2_c1b5y")
+stream_1/stream = ExtResource("3_c1b5y")
+stream_2/stream = ExtResource("4_obuay")
 
 [node name="VendingMachineArea" type="Area2D" unique_id=1298301340]
 script = ExtResource("1_gdhwm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2084223885]
 shape = SubResource("CircleShape2D_wccwa")
+
+[node name="NormalPuch" type="AudioStreamPlayer2D" parent="." unique_id=261666050]
+stream = SubResource("AudioStreamRandomizer_gdhwm")
+volume_db = -3.0
+
+[node name="HardPunch" type="AudioStreamPlayer2D" parent="." unique_id=293434925]
+stream = ExtResource("3_b5x13")
+volume_db = -3.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
