@@ -14,3 +14,7 @@ script = ExtResource("1_fyrdv")
 
 [node name="NarrationNode" parent="." unique_id=530113667 instance=ExtResource("2_2x1jc")]
 layout_mode = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=1013666007]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

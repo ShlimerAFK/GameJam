@@ -63,6 +63,7 @@ func check_if_code_matches():
 	else:
 		inputed_numbers = []
 		update_shown_code()
+		
 
 func switch_scene():
 	get_tree().change_scene_to_file("res://scenes/ending.tscn")

@@ -3,7 +3,69 @@
 [ext_resource type="Script" uid="uid://c7htdav55awaq" path="res://scenes/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://dd1b341pvqgb0" path="res://sprites/menu/menu_test.png" id="2_ekxnf"]
 
+[sub_resource type="Animation" id="Animation_ekxnf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bqqt6"]
+resource_name = "fade_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.16666667, 0.13333334, 1.9333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.46666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wu84c"]
+_data = {
+&"RESET": SubResource("Animation_ekxnf"),
+&"fade_in": SubResource("Animation_bqqt6")
+}
+
 [node name="Main menu" type="Node2D" unique_id=685438873]
+modulate = Color(1, 1, 1, 0)
 script = ExtResource("1_l6cm7")
 
 [node name="ButtonManeger" type="Control" parent="." unique_id=1227240553]
@@ -158,6 +220,21 @@ theme_override_font_sizes/font_size = 14
 text = "Press 1, 2, 3, 4 or 5 
 to choose dialog option"
 horizontal_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1907551895]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1348601648]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=1379501205]
+libraries/ = SubResource("AnimationLibrary_wu84c")
 
 [connection signal="pressed" from="ButtonManeger/MarginContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="ButtonManeger/MarginContainer/Settings" to="." method="_on_settings_pressed"]
