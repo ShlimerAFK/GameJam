@@ -15,16 +15,16 @@ shader_parameter/sanity_value = 0.0
 shader = ExtResource("2_hpa4t")
 shader_parameter/sanity_value = 0.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nnd5e"]
+shader = ExtResource("6_r8rgj")
+shader_parameter/sanity_value = 0.0
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_15w1s"]
 shader = ExtResource("4_47owg")
 shader_parameter/sanity_value = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_47owg"]
 shader = ExtResource("5_nnd5e")
-shader_parameter/sanity_value = 0.0
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_nnd5e"]
-shader = ExtResource("6_r8rgj")
 shader_parameter/sanity_value = 0.0
 
 [node name="Shaders" type="Node2D" unique_id=322748181]
@@ -55,6 +55,19 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_kd05p")
 
+[node name="Distort" type="CanvasLayer" parent="." unique_id=474179985]
+layer = 100
+
+[node name="Distort" type="ColorRect" parent="Distort" unique_id=247407242]
+material = SubResource("ShaderMaterial_nnd5e")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_kd05p")
+
 [node name="Vignette" type="CanvasLayer" parent="." unique_id=538733643]
 layer = 100
 
@@ -73,19 +86,6 @@ layer = 100
 
 [node name="Glitch" type="ColorRect" parent="Glitch" unique_id=1594058160]
 material = SubResource("ShaderMaterial_47owg")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-script = ExtResource("1_kd05p")
-
-[node name="Distort" type="CanvasLayer" parent="." unique_id=474179985]
-layer = 100
-
-[node name="Distort" type="ColorRect" parent="Distort" unique_id=247407242]
-material = SubResource("ShaderMaterial_nnd5e")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
