@@ -32,7 +32,6 @@ mouse_filter = 2
 [node name="InventoryText" parent="." unique_id=957070641 instance=ExtResource("7_s2vrj")]
 
 [node name="PadLockNode" parent="." unique_id=1720684290 instance=ExtResource("8_fug2i")]
-z_index = 2
 
 [node name="KnownInformationControler" parent="." unique_id=12775480 instance=ExtResource("9_qj787")]
 
