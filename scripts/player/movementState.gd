@@ -3,6 +3,9 @@ extends State
 class_name MovementState
 
 @onready var idle_timer = $"../../IdleTimer"
+@onready var footsteps_player: AudioStreamPlayer = $"../../FootstepsPlayer"
+@onready var animated_sprite_2d: AnimatedSprite2D = $"../../AnimatedSprite2D"
+
 
 var speed := 5000
 
@@ -11,6 +14,9 @@ var animations : PackedStringArray
 signal changed_direction(direction: String)
 
 var facing_direction := "down"
+
+func _ready() -> void:
+	animated_sprite_2d.frame_changed.connect(_on_frame_changed)
 
 func physics_update(delta: float):
 	
@@ -50,8 +56,13 @@ func handle_movement(delta: float):
 	
 	if not player.velocity == Vector2(0,0)	:
 		idle_timer.start(0.2)
-
-
+		
+func _on_frame_changed():
+	if player.velocity != Vector2(0,0):
+		match animated_sprite_2d.frame:
+			2, 5:
+				footsteps_player.play()
+	
 func _on_idle_timer_timeout() -> void:
 
 	state_machine.change_state("IdleState")

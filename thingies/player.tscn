@@ -10,6 +10,10 @@
 [ext_resource type="Script" uid="uid://dnbl05w8p0q1" path="res://scripts/player/runState.gd" id="3_ltg3l"]
 [ext_resource type="Texture2D" uid="uid://db3yghhj3upxd" path="res://sprites/player/playerUp/playerUWalk.png" id="4_bm45k"]
 [ext_resource type="Script" uid="uid://cxptm6csl73o2" path="res://scripts/player/walkState.gd" id="4_ybvl4"]
+[ext_resource type="AudioStream" uid="uid://dx2p3pyhgh5t0" path="res://audio/sfx/steps/footstep_1.3.mp3" id="11_8w6he"]
+[ext_resource type="AudioStream" uid="uid://c5qnfk6j2t0oo" path="res://audio/sfx/steps/footstep_2.3.mp3" id="12_4ooty"]
+[ext_resource type="AudioStream" uid="uid://eq0klv51eac1" path="res://audio/sfx/steps/footstep_3.3.mp3" id="13_aft4u"]
+[ext_resource type="Script" uid="uid://c4l2ov1etevet" path="res://scripts/audio/footsteps_player.gd" id="14_8w6he"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bphqr"]
 atlas = ExtResource("1_lp3ep")
@@ -363,6 +367,14 @@ height = 12.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_1makr"]
 radius = 5.0
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_bphbc"]
+random_pitch = 1.122462
+random_volume_offset_db = 1.82
+streams_count = 3
+stream_0/stream = ExtResource("11_8w6he")
+stream_1/stream = ExtResource("12_4ooty")
+stream_2/stream = ExtResource("13_aft4u")
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=629992924]
 y_sort_enabled = true
 
@@ -404,6 +416,12 @@ script = ExtResource("4_ybvl4")
 metadata/_custom_type_script = "uid://cxptm6csl73o2"
 
 [node name="IdleTimer" type="Timer" parent="." unique_id=1933726966]
+
+[node name="FootstepsPlayer" type="AudioStreamPlayer" parent="." unique_id=1884694079]
+stream = SubResource("AudioStreamRandomizer_bphbc")
+volume_db = -10.0
+bus = &"Footsteps"
+script = ExtResource("14_8w6he")
 
 [connection signal="changed_direction" from="StateMachine/RunState" to="StateMachine/IdleState" method="_on_run_state_changed_direction"]
 [connection signal="changed_direction" from="StateMachine/WalkState" to="StateMachine/IdleState" method="_on_walk_state_changed_direction"]
