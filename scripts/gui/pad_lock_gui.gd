@@ -1,6 +1,6 @@
 extends Control
 
-var correct_code := [1,2,3,4,5,6,7,8]
+var correct_code := [0,2,2,8,2,0]
 
 var inputed_numbers := []
 var quest_name = "padlock"

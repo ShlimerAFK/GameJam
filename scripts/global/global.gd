@@ -56,7 +56,7 @@ var quests := [
 		"quest_is_active": false,
 		"quest_is_done": false,
 		"needs_to_complete_quest": "item",
-		"completion_information" : "The bosses brithday is the 7th of october 1970"
+		"completion_information" : "The boss turns 50 next monday"
 	},
 	{
 		"name": "padlock",
@@ -70,7 +70,7 @@ var quests := [
 		"quest_is_active": false,
 		"quest_is_done": false,
 		"needs_to_complete_quest": "task",
-		"completion_information" : "The boss started working here 1990"
+		"completion_information" : "The boss started working here 1963"
 	},
 	{
 		"name": "popup",
@@ -86,7 +86,7 @@ var quests := [
 		"quest_is_active": false,
 		"quest_is_done": false,
 		"needs_to_complete_quest": "item",
-		"completion_information" : "The bosses wife is 55 years old"
+		"completion_information" : "The order of the code is his birthmonth then his wifs \n birth year and lastly how many years he as worked here"
 	}
 	,
 	{
@@ -95,7 +95,7 @@ var quests := [
 		"quest_is_active": false,
 		"quest_is_done": false,
 		"needs_to_complete_quest": "task",
-		"completion_information" : "I think the order of the code is his birthmonth ...."
+		"completion_information" : "The bosses wife is 55 years old"
 	}
 ]
 

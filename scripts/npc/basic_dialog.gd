@@ -20,9 +20,11 @@ var player_is_choosing := false
 var options := []
 var current_file_name: String
 var pitch_mod : float
+var pitch_variation : float
 
-func start_dialog(dialog: String, file_name: String, input_pitch_mod: float) -> void:
+func start_dialog(dialog: String, file_name: String, input_pitch_mod: float, input_pitch_variation: float) -> void:
 	pitch_mod = input_pitch_mod
+	pitch_variation = input_pitch_variation
 	
 	current_file_name = file_name
 	file_path = "res://dialogs/" + current_file_name
@@ -42,7 +44,7 @@ func start_new_dialog(index: int):
 	player_is_choosing = false
 	var new_dialog = options[index]["dialog"]
 	count = 0
-	start_dialog(new_dialog, current_file_name, pitch_mod)
+	start_dialog(new_dialog, current_file_name, pitch_mod, pitch_variation)
 
 func _process(delta: float) -> void:
 	
@@ -69,6 +71,7 @@ func _process(delta: float) -> void:
 		textbox.visible = false
 		Global.player_is_interacting = false
 		count = 0
+		timer.stop()
 		
 		
 func read_json_data(filepath):
@@ -202,4 +205,4 @@ func animate_lable(text: String, play_audio: bool):
 
 
 func _on_timer_timeout() -> void:
-	audio_stream_player.play_sound_with_random_pitch(pitch_mod)
+	audio_stream_player.play_sound_with_random_pitch(pitch_mod, pitch_variation)

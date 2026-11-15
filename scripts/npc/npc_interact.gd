@@ -5,6 +5,7 @@ class_name NPC
 var dialog := "dialog_1"
 @export var file_name : String
 @export var pitch_mod: float = 0
+@export var pitch_variation = 0.2
 
 @onready var dialog_node = $"../GUI/DialogNode"
 @onready var animation = $AnimatedSprite2D
@@ -18,7 +19,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact") and player_has_entered and Global.player_is_interacting == false:
 		Global.player_is_interacting = true
-		dialog_node.start_dialog(dialog, file_name, pitch_mod)
+		dialog_node.start_dialog(dialog, file_name, pitch_mod, pitch_variation)
 
 		
 

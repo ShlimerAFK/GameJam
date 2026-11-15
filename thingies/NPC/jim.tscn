@@ -27,6 +27,7 @@ radius = 15.0
 [node name="Jim" type="StaticBody2D" unique_id=1786658538]
 script = ExtResource("1_5qa6l")
 file_name = "jim.json"
+pitch_variation = 0.1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=853884083]
 position = Vector2(0, -3)
