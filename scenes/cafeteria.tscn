@@ -97,7 +97,7 @@ tile_map_data = PackedByteArray("AAACAAEAAAABAAQAAAD+/wUAAAAFAAIAAAD6//j/AAAEAAI
 
 [node name="Sanity3" parent="Tilemaps/Sanity3" unique_id=983892832 instance=ExtResource("7_fd8ba")]
 position = Vector2(8, 0)
-tile_map_data = PackedByteArray("AAD8//b/AAAGAAIAAAAGAPf/AAAGAAAAAAACAAIAAAAGAAEAAAA=")
+tile_map_data = PackedByteArray("AAD8//b/AAAGAAIAAAAGAPf/AAAGAAAAAAACAAIAAAAGAAEAAAD4/wEAAAAGAAQAAQA=")
 
 [node name="Sanity4" parent="Tilemaps/Sanity3" unique_id=1527699188 instance=ExtResource("7_fd8ba")]
 position = Vector2(0, 8)
@@ -118,7 +118,7 @@ tile_map_data = PackedByteArray("AAD8//X/AAAAAAAAAAD7//X/AAABAAAAAAABAPX/AAABAAA
 
 [node name="Sanity2" parent="Tilemaps/Sanity4" unique_id=168527509 instance=ExtResource("7_fd8ba")]
 position = Vector2(8, 0)
-tile_map_data = PackedByteArray("AAAGAPf/AAAHAAAAAAD8//b/AAAHAAIAAAD5//7/AAAGAAAAAAACAAIAAAAHAAEAAAD7/wcAAAAGAAIAAAA=")
+tile_map_data = PackedByteArray("AAAGAPf/AAAHAAAAAAD8//b/AAAHAAIAAAD5//7/AAAGAAAAAAACAAIAAAAHAAEAAAD7/wcAAAAGAAIAAAD9//3/AAAGAAQAAAA=")
 
 [node name="Sanity3" parent="Tilemaps/Sanity4" unique_id=1759079288 instance=ExtResource("7_fd8ba")]
 tile_map_data = PackedByteArray("AAAGAPj/AAAFAAYAAAD+/wEAAAAFAAQAAAAHAPv/AAAHAAAAAAA=")
@@ -141,7 +141,7 @@ tile_map_data = PackedByteArray("AAACAAEAAAAEAAQAAAD//wcAAAAFAAYAAAD+//X/AAAGAAA
 
 [node name="Sanity3" parent="Tilemaps/Sanity5" unique_id=851159648 instance=ExtResource("7_fd8ba")]
 position = Vector2(8, 0)
-tile_map_data = PackedByteArray("AAACAAIAAAAIAAEAAAD7/wcAAAAHAAIAAAD5//7/AAAHAAAAAAD8//b/AAAIAAIAAAAGAPf/AAAIAAAAAAA=")
+tile_map_data = PackedByteArray("AAACAAIAAAAIAAEAAAD7/wcAAAAHAAIAAAD5//7/AAAHAAAAAAD8//b/AAAIAAIAAAAGAPf/AAAIAAAAAAD4/wEAAAAHAAQAAAA=")
 
 [node name="Sanity6" type="Node2D" parent="Tilemaps" unique_id=1151725017]
 visible = false
@@ -161,6 +161,10 @@ tile_map_data = PackedByteArray("AAD8//b/AAALAAIAAAAGAPf/AAALAAAAAAD5//7/AAAIAAA
 [node name="Sanity4" parent="Tilemaps/Sanity6" unique_id=808644400 instance=ExtResource("7_fd8ba")]
 position = Vector2(8, 8)
 tile_map_data = PackedByteArray("AAD8/wYAAAAGAAIAAAD5/wYAAAAGAAEAAAD//wQAAAAGAAAAAAADAAIAAAAGAAIAAAAEAAAAAAAGAAAAAAD4////AAAGAAEAAAD5//3/AAAGAAEAAAD4//j/AAAGAAAAAAAFAPX/AAAGAAAAAAAGAPz/AAAGAAIAAAD+//v/AAAGAAIAAAA=")
+
+[node name="Sanity5" parent="Tilemaps/Sanity6" unique_id=11951078 instance=ExtResource("7_fd8ba")]
+position = Vector2(0, 8)
+tile_map_data = PackedByteArray("AAAHAAMAAAAHAAQAAQA=")
 
 [node name="Door1" parent="." unique_id=148327902 instance=ExtResource("5_fd8ba")]
 position = Vector2(48, -144)

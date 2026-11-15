@@ -52,10 +52,10 @@ tile_map_data = PackedByteArray("AAD9//z/AAAGAAIAAAD+//z/AAAAAAQAAAABAPz/AAAHAAA
 
 [node name="Decor4" parent="Tilemaps/Sanity1" unique_id=1676609516 instance=ExtResource("5_h5p11")]
 position = Vector2(0, 8)
-tile_map_data = PackedByteArray("AAAAAPv/AAAGAAMAAAA=")
+tile_map_data = PackedByteArray("AAAAAPz/AAACAAgAAAABAPv/AAAGAAMAAAA=")
 
 [node name="Decor5" parent="Tilemaps/Sanity1" unique_id=579364626 instance=ExtResource("5_h5p11")]
-tile_map_data = PackedByteArray("AAD9//3/AAADAAEAAAACAP3/AAADAAEAAAA=")
+tile_map_data = PackedByteArray("AAD9//3/AAADAAEAAAACAP3/AAADAAEAAAABAPz/AAABAAgAAAA=")
 
 [node name="Foreground" parent="Tilemaps/Sanity1" unique_id=2073150406 instance=ExtResource("4_uf2di")]
 z_index = 10

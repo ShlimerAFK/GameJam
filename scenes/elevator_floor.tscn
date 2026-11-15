@@ -146,7 +146,7 @@ z_index = -1
 tile_map_data = PackedByteArray("AAD+//z/AAAAAAMAAAABAPz/AAABAAMAAAD7//z/AAABAAMAAAAEAPz/AAAAAAMAAAA=")
 
 [node name="Sanity3" parent="Tilemaps/Sanity6" unique_id=1134539054 instance=ExtResource("6_48ey2")]
-tile_map_data = PackedByteArray("AAACAP//AAAHAAAAAAAEAAAAAAAHAAEAAAD7//7/AAAGAAEAAAAEAPv/AAAGAAIAAAACAPr/AAAGAAAAAAA=")
+tile_map_data = PackedByteArray("AAACAP//AAAHAAAAAAAEAAAAAAAHAAEAAAD7//7/AAAGAAEAAAAEAPv/AAAGAAIAAAACAPr/AAAGAAAAAAAEAPz/AAAHAAQAAQA=")
 
 [node name="Sanity4" parent="Tilemaps/Sanity6" unique_id=1525026625 instance=ExtResource("6_48ey2")]
 position = Vector2(8, 0)
