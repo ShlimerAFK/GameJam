@@ -222,6 +222,6 @@ door_position_in_room = "bottom"
 position = Vector2(63, 32)
 
 [node name="Plant" parent="." unique_id=1760318387 instance=ExtResource("11_f323m")]
-position = Vector2(-42, -52)
+position = Vector2(-40, -46)
 filename = "plant.json"
 narrations = ["narr_1", "narr_2", "narr_2", "narr_2", "narr_3", "narr_3"]

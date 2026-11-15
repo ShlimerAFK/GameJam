@@ -56,7 +56,7 @@ var quests := [
 		"quest_is_active": false,
 		"quest_is_done": false,
 		"needs_to_complete_quest": "item",
-		"completion_information" : "The boss turns 50 next monday"
+		"completion_information" : "The boss turned 50 last monday"
 	},
 	{
 		"name": "padlock",

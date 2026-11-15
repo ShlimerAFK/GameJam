@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dxws188rknph" path="res://thingies/NPC/janet.tscn" id="10_lxt4k"]
 [ext_resource type="PackedScene" uid="uid://deupdis45vhvk" path="res://thingies/vending_machine_area.tscn" id="11_lxt4k"]
 [ext_resource type="PackedScene" uid="uid://u3u7hjhnpphe" path="res://thingies/NPC/jim.tscn" id="12_h1qar"]
+[ext_resource type="PackedScene" uid="uid://c0tr1itluf640" path="res://thingies/narrative_object_area.tscn" id="14_dumee"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_p4o86"]
 a = Vector2(128, 0)
@@ -178,3 +179,22 @@ position = Vector2(88, -120)
 
 [node name="Jim" parent="." unique_id=1786658538 instance=ExtResource("12_h1qar")]
 position = Vector2(47, -39)
+
+[node name="Plant" parent="." unique_id=1760318387 instance=ExtResource("14_dumee")]
+position = Vector2(-24, 22)
+filename = "plant.json"
+
+[node name="FruitBowl" parent="." unique_id=728410814 instance=ExtResource("14_dumee")]
+position = Vector2(-32, -41)
+filename = "fruit.json"
+narrations = ["narr_1", "narr_1", "narr_2", "narr_2", "narr_2", "narr_2"]
+
+[node name="FruitBowl2" parent="." unique_id=1631766908 instance=ExtResource("14_dumee")]
+position = Vector2(-112, 26)
+filename = "fruit.json"
+narrations = ["narr_1", "narr_1", "narr_2", "narr_2", "narr_2", "narr_2"]
+
+[node name="Banana" parent="." unique_id=1332430691 instance=ExtResource("14_dumee")]
+position = Vector2(47, -11)
+filename = "banana.json"
+narrations = ["narr_1", "narr_1", "narr_2", "narr_2", "narr_3", "narr_4"]
