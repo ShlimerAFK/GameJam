@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b7uffv017svji"]
 
-[ext_resource type="Texture2D" uid="uid://dpki57oolf52r" path="res://sprites/minigames/minigame_background_temp.png" id="1_mpgp0"]
+[ext_resource type="Texture2D" uid="uid://dytfa2ee432v5" path="res://sprites/menu/minigameWhiteboard.png" id="1_mpgp0"]
 [ext_resource type="PackedScene" uid="uid://cgugmxpj7nu12" path="res://thingies/popup.tscn" id="1_phutd"]
 
 [node name="MinigameControler" type="Control" unique_id=1104580804]
@@ -30,17 +30,17 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
 texture = ExtResource("1_mpgp0")
-region_rect = Rect2(4.795453, 15.81768, 89.37052, 51.17415)
+region_rect = Rect2(-0.054153442, -0.18981934, 1380.4648, 719.7083)
 
 [node name="ExitButton" type="Button" parent="MarginContainer/NinePatchRect" unique_id=1292891147]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -77.0
-offset_top = 24.5
-offset_right = -27.0
-offset_bottom = 74.5
+offset_left = -80.0
+offset_top = 28.5
+offset_right = -30.0
+offset_bottom = 78.5
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 30
 text = "X"
