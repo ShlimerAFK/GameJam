@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://csmc7qeleky5o" path="res://thingies/NPC/carl.tscn" id="9_uiklb"]
 [ext_resource type="PackedScene" uid="uid://c0tr1itluf640" path="res://thingies/narrative_object_area.tscn" id="11_f323m"]
 [ext_resource type="PackedScene" uid="uid://hubwvmhrihvu" path="res://thingies/audio/clock.tscn" id="12_ucmnp"]
+[ext_resource type="PackedScene" uid="uid://bas4d4ml7cw6x" path="res://thingies/audio/trashcan_audio.tscn" id="13_35wme"]
 [ext_resource type="PackedScene" uid="uid://btj78si58mfna" path="res://thingies/audio/air_vent.tscn" id="13_pbkn3"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_e1il7"]
@@ -236,6 +237,13 @@ position = Vector2(263, -72)
 
 [node name="AirVent" parent="Audio" unique_id=849143158 instance=ExtResource("13_pbkn3")]
 position = Vector2(-241, -87)
+
+[node name="TrashcanAudio" parent="Audio" unique_id=1270641760 instance=ExtResource("13_35wme")]
+position = Vector2(216, -48)
+
+[node name="TrashcanAudio2" parent="Audio" unique_id=1726514104 instance=ExtResource("13_35wme")]
+position = Vector2(24, 41)
+starts_at_state = 6
 
 [node name="Objects" type="Node2D" parent="." unique_id=55918423]
 

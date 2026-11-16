@@ -38,18 +38,12 @@ func display_sanity_state_layers():
 		elif i > current_sanity_state - 1:
 			sanity_layers[i].visible = false
 
-#func _on_narr_timer_timeout() -> void:
-	#if Global.player_is_interacting:
-		#GlobalTimeLoop.start_narr_timer_short()
-	#else:
-		#play_narration("narr_2")
-			
 #TEMPORARY, REMOVE LATER
-func _input(event: InputEvent) -> void:	
-	if event.is_action_pressed("1"):
-		GlobalSanity.decrease_sanity(5)
-		display_sanity_state_layers()
-		
-	elif event.is_action_pressed("2"):
-		GlobalSanity.increase_sanity(5)
-		display_sanity_state_layers()
+#func _input(event: InputEvent) -> void:	
+	#if event.is_action_pressed("1"):
+		#GlobalSanity.decrease_sanity(5)
+		#display_sanity_state_layers()
+		#
+	#elif event.is_action_pressed("2"):
+		#GlobalSanity.increase_sanity(5)
+		#display_sanity_state_layers()

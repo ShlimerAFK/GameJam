@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bas4d4ml7cw6x"]
+
+[ext_resource type="Script" uid="uid://cxwfvh03elm86" path="res://trashcan_audio.gd" id="1_7ea0e"]
+[ext_resource type="AudioStream" uid="uid://h5x1e4lhf2tv" path="res://audio/sfx/fly/fly_insect_loop_2.mp3" id="2_y6xq8"]
+
+[node name="TrashcanAudio" type="Node2D" unique_id=1270641760]
+script = ExtResource("1_7ea0e")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1754179996]
+stream = ExtResource("2_y6xq8")
+volume_db = -13.0
+attenuation = 10.928275

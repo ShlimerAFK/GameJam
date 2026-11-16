@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://5jx0537728ia" path="res://thingies/NPC/stephanie.tscn" id="9_vvx4t"]
 [ext_resource type="PackedScene" uid="uid://btj78si58mfna" path="res://thingies/audio/air_vent.tscn" id="11_7n5vn"]
 [ext_resource type="PackedScene" uid="uid://hubwvmhrihvu" path="res://thingies/audio/clock.tscn" id="12_dnop2"]
+[ext_resource type="PackedScene" uid="uid://bas4d4ml7cw6x" path="res://thingies/audio/trashcan_audio.tscn" id="13_dnop2"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ok1ut"]
 a = Vector2(-80, 0)
@@ -244,8 +245,12 @@ position = Vector2(72, -89)
 [node name="Clock" parent="Audio" unique_id=1935997667 instance=ExtResource("12_dnop2")]
 position = Vector2(-7, -72)
 
+[node name="TrashcanAudio" parent="Audio" unique_id=1270641760 instance=ExtResource("13_dnop2")]
+starts_at_state = 6
+
 [node name="FadeOut" type="Node2D" parent="." unique_id=478035175]
 modulate = Color(1, 1, 1, 0)
+position = Vector2(72, -55)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="FadeOut" unique_id=1747603945]
 
