@@ -58,7 +58,7 @@ var quests := [
 		"quest_is_active": false,
 		"quest_is_done": false,
 		"needs_to_complete_quest": "item",
-		"completion_information" : "The boss turned 50 last monday"
+		"completion_information" : "The boss turned Fifty last monday"
 	},
 	{
 		"name": "padlock",
@@ -76,11 +76,11 @@ var quests := [
 	},
 	{
 		"name": "popup",
-		"text": "Remove Todds popups",
+		"text": "Remove the popups on Todds second computer",
 		"quest_is_active": false,
 		"quest_is_done": false,
 		"needs_to_complete_quest": "task",
-		"completion_information" : "The boss has 3 kids"
+		"completion_information" : "The boss has tree kids"
 	},
 	{
 		"name": "papers",
@@ -93,11 +93,11 @@ var quests := [
 	,
 	{
 		"name": "document",
-		"text": "Write Stephanie's document",
+		"text": "Sighn Jims document for him",
 		"quest_is_active": false,
 		"quest_is_done": false,
 		"needs_to_complete_quest": "task",
-		"completion_information" : "The bosses wife is 55 years old"
+		"completion_information" : "The bosses wife is fifty five years old"
 	}
 ]
 

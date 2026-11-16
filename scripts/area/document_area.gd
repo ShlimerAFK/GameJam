@@ -7,7 +7,7 @@ extends MiniGame
 @onready var label = $"../GUI/MinigameControler/MarginContainer/NinePatchRect/MiniGame4/Label"
 @onready var notification_controler = $"../GUI/NotificationControler"
 
-var correct_text = "Bob"
+var correct_text = "Jim"
 
 # Called when the node enters the scene tree for the first time.
 
