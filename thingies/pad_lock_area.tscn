@@ -31,11 +31,11 @@ volume_db = -3.0
 
 [node name="WrongPasswordPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1642955815]
 stream = ExtResource("6_g1v54")
-volume_db = 3.0
+volume_db = 8.0
 
 [node name="CorrectPasswordPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1806392931]
 stream = ExtResource("7_mj2jk")
-volume_db = 1.0
+volume_db = -8.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

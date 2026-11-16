@@ -11,12 +11,16 @@
 [ext_resource type="PackedScene" uid="uid://douyv2kqqv15h" path="res://thingies/tileset_templates/animated.tscn" id="7_w4pu7"]
 [ext_resource type="PackedScene" uid="uid://c0tr1itluf640" path="res://thingies/narrative_object_area.tscn" id="11_v00gy"]
 [ext_resource type="PackedScene" uid="uid://btj78si58mfna" path="res://thingies/audio/air_vent.tscn" id="12_q08c4"]
+[ext_resource type="Script" uid="uid://dvvaif6xjhn4c" path="res://scripts/area/narrative_object_area.gd" id="13_8swa1"]
 [ext_resource type="PackedScene" uid="uid://hubwvmhrihvu" path="res://thingies/audio/clock.tscn" id="13_bhh6c"]
 [ext_resource type="PackedScene" uid="uid://c4ssiqogpip5k" path="res://thingies/load_in.tscn" id="13_dvnn5"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_7w20u"]
 a = Vector2(-48, 0)
 b = Vector2(48, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ly8c"]
+radius = 12.0
 
 [node name="Node2D" type="Node2D" unique_id=350274399]
 y_sort_enabled = true
@@ -169,5 +173,15 @@ position = Vector2(-32, -71)
 [node name="Calendar" parent="Objects" unique_id=1760318387 instance=ExtResource("11_v00gy")]
 position = Vector2(29, -58)
 filename = "calendar.json"
+
+[node name="Computer" type="Area2D" parent="Objects" unique_id=1388791277]
+position = Vector2(0, -27)
+script = ExtResource("13_8swa1")
+filename = "computer.json"
+narrations = ["narr_1", "narr_1", "narr_1", "narr_1", "narr_2", "narr_2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Computer" unique_id=899872071]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_5ly8c")
 
 [node name="LoadIn" parent="." unique_id=25977240 instance=ExtResource("13_dvnn5")]

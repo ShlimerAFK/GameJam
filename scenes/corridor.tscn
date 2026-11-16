@@ -238,3 +238,8 @@ position = Vector2(-241, -87)
 position = Vector2(-40, -46)
 filename = "plant.json"
 narrations = ["narr_1", "narr_2", "narr_2", "narr_2", "narr_3", "narr_3"]
+
+[node name="Trashcan" parent="Objects" unique_id=158063850 instance=ExtResource("11_f323m")]
+position = Vector2(215, -48)
+filename = "trash.json"
+narrations = ["narr_1", "narr_1", "narr_2", "narr_2", "narr_3", "narr_3"]

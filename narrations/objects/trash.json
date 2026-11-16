@@ -1,0 +1,23 @@
+{
+	"narr_1": [
+		
+		{
+			"speaker": "You",
+			"text" : "That is a trashcan"
+		}
+	],
+	"narr_2": [
+		
+		{
+			"speaker": "You",
+			"text" : "What even is that?"
+		}
+	],
+	"narr_3": [
+		
+		{
+			"speaker": "You",
+			"text" : "What the fuck"
+		}
+	]
+}

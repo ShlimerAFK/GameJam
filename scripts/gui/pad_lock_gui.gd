@@ -70,6 +70,7 @@ func check_if_code_matches():
 		hide_pad_lock()
 		correct_password_player.play()
 		animation_player.play("fade_out")
+		await animation_player.animation_finished
 		switch_scene()
 	else:
 		wrong_password_player.play()
