@@ -116,10 +116,10 @@ tile_map_data = PackedByteArray("AAD///3/AAAGAAUAAAAAAP3/AAAHAAUAAAAEAP3/AAAIAAU
 
 [node name="Decor2" parent="Tilemaps/Sanity1" unique_id=595080004 instance=ExtResource("5_sbatj")]
 position = Vector2(0, 8)
-tile_map_data = PackedByteArray("AAAAAPv/AAAFAAMAAAD+//v/AAACAAMAAAA=")
+tile_map_data = PackedByteArray("AAAAAPv/AAAFAAMAAAD+//v/AAACAAMAAAD7//v/AAAJAAgAAAA=")
 
 [node name="Decor3" parent="Tilemaps/Sanity1" unique_id=1462928878 instance=ExtResource("5_sbatj")]
-tile_map_data = PackedByteArray("AAAEAPr/AAACAAAAAAD///v/AAADAAAAAAAEAPz/AAAAAAQAAAA=")
+tile_map_data = PackedByteArray("AAAEAPr/AAACAAAAAAD///v/AAADAAAAAAAEAPz/AAAAAAQAAAD8//r/AAAJAAcAAAA=")
 
 [node name="Sanity2" type="Node2D" parent="Tilemaps" unique_id=1618327479]
 visible = false
