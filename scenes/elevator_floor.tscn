@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cchsb3liba1f8" path="res://thingies/tileset_templates/decor.tscn" id="5_sbatj"]
 [ext_resource type="PackedScene" uid="uid://bmt6sgusf1o0h" path="res://thingies/tileset_templates/sanity.tscn" id="6_48ey2"]
 [ext_resource type="PackedScene" uid="uid://bs46i8y6tukst" path="res://thingies/door_area.tscn" id="6_mr5hx"]
+[ext_resource type="PackedScene" uid="uid://douyv2kqqv15h" path="res://thingies/tileset_templates/animated.tscn" id="7_dnop2"]
 [ext_resource type="PackedScene" uid="uid://eabk4v5p752v" path="res://thingies/pad_lock_area.tscn" id="8_ofdbp"]
 [ext_resource type="PackedScene" uid="uid://5jx0537728ia" path="res://thingies/NPC/stephanie.tscn" id="9_vvx4t"]
 [ext_resource type="PackedScene" uid="uid://btj78si58mfna" path="res://thingies/audio/air_vent.tscn" id="11_7n5vn"]
@@ -121,6 +122,12 @@ tile_map_data = PackedByteArray("AAAAAPv/AAAFAAMAAAD+//v/AAACAAMAAAD7//v/AAAJAAg
 
 [node name="Decor3" parent="Tilemaps/Sanity1" unique_id=1462928878 instance=ExtResource("5_sbatj")]
 tile_map_data = PackedByteArray("AAAEAPr/AAACAAAAAAD///v/AAADAAAAAAAEAPz/AAAAAAQAAAD8//r/AAAJAAcAAAA=")
+
+[node name="Animated" parent="Tilemaps/Sanity1" unique_id=1935734834 instance=ExtResource("7_dnop2")]
+tile_map_data = PackedByteArray("AAD///v/AAAAAAIAAAA=")
+
+[node name="Animated2" parent="Tilemaps/Sanity1" unique_id=1320508947 instance=ExtResource("7_dnop2")]
+tile_map_data = PackedByteArray("AAD///v/AAAAAAMAAAA=")
 
 [node name="Sanity2" type="Node2D" parent="Tilemaps" unique_id=1618327479]
 visible = false
