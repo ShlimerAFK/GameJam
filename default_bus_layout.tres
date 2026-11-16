@@ -10,6 +10,13 @@ spread = 0.0
 hipass = 0.5
 wet = 0.2
 
+[sub_resource type="AudioEffectEQ" id="AudioEffectEQ_j3pel"]
+resource_name = "EQ"
+band_db/320_hz = -3.8
+band_db/1000_hz = -10.8
+band_db/3200_hz = -15.0
+band_db/10000_hz = -20.0
+
 [resource]
 bus/1/name = &"Music"
 bus/1/solo = false
@@ -37,3 +44,11 @@ bus/4/mute = false
 bus/4/bypass_fx = false
 bus/4/volume_db = 0.0
 bus/4/send = &"Master"
+bus/5/name = &"Dialog"
+bus/5/solo = false
+bus/5/mute = false
+bus/5/bypass_fx = false
+bus/5/volume_db = 0.0
+bus/5/send = &"Master"
+bus/5/effect/0/effect = SubResource("AudioEffectEQ_j3pel")
+bus/5/effect/0/enabled = false
