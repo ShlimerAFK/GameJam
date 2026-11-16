@@ -21,7 +21,7 @@ func start_narr_timer_short():
 	narr_timer.start(50)
 
 func start_Sanity_timer():
-	var time_before_sanity_decrease = 5
+	var time_before_sanity_decrease = 10
 	sanity_timer.start(time_before_sanity_decrease)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
