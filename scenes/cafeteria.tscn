@@ -196,7 +196,7 @@ filename = "plant.json"
 [node name="FruitBowl" parent="InteractableObjects" unique_id=728410814 instance=ExtResource("14_dumee")]
 position = Vector2(-32, -41)
 filename = "fruit.json"
-narrations = ["narr_1", "narr_1", "narr_2", "narr_2", "narr_2", "narr_2"]
+narrations = ["narr_1", "narr_1", "narr_1", "narr_2", "narr_2", "narr_2"]
 
 [node name="FruitBowl2" parent="InteractableObjects" unique_id=1631766908 instance=ExtResource("14_dumee")]
 position = Vector2(-112, 26)

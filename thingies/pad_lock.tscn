@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://itfk6vags3sj"]
 
 [ext_resource type="Script" uid="uid://veh32bftk06e" path="res://scripts/gui/pad_lock_gui.gd" id="1_7fnnx"]
-[ext_resource type="Texture2D" uid="uid://bfaq326yrx7a0" path="res://sprites/keypad/keypadBase.png" id="2_m43iw"]
 [ext_resource type="Texture2D" uid="uid://cupnam1hm7ea7" path="res://sprites/keypad/keypadBtn.png" id="3_56ytl"]
 [ext_resource type="Texture2D" uid="uid://b0ainm4m8hqnq" path="res://sprites/keypad/keypadBtnPress.png" id="4_l52sd"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bhn5t"]
+load_path = "res://.godot/imported/keypadBase.png-c6f0e33ff76c99449ea4cebd0063dee2.ctex"
 
 [node name="PadLockNode" type="Control" unique_id=1720684290]
 layout_mode = 3
@@ -30,7 +32,7 @@ grow_vertical = 2
 
 [node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer" unique_id=1621644473]
 layout_mode = 2
-texture = ExtResource("2_m43iw")
+texture = SubResource("CompressedTexture2D_bhn5t")
 patch_margin_left = 10
 patch_margin_top = 10
 patch_margin_right = 10
