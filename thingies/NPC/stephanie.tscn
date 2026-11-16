@@ -25,6 +25,7 @@ animations = [{
 radius = 15.0
 
 [node name="Stephanie" type="StaticBody2D" unique_id=496411993]
+y_sort_enabled = true
 script = ExtResource("1_bqwi4")
 file_name = "stephanie.json"
 pitch_mod = 0.2
