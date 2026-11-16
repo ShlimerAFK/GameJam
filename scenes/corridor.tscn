@@ -81,6 +81,9 @@ z_index = 10
 position = Vector2(0, 1)
 tile_map_data = PackedByteArray("AAASAAkAAAAFAAIAAADz/wIAAAAFAAYAAAA=")
 
+[node name="ForegroundDecor" parent="Tilemaps/Sanity1" unique_id=181971101 instance=ExtResource("5_n8bhm")]
+z_index = 1
+
 [node name="Sanity2" type="Node2D" parent="Tilemaps" unique_id=523314284]
 visible = false
 y_sort_enabled = true
@@ -223,6 +226,8 @@ door_position_in_room = "bottom"
 
 [node name="Carl" parent="." unique_id=368403260 instance=ExtResource("9_uiklb")]
 position = Vector2(63, 32)
+pitch_mod = 0.0
+pitch_variation = 0.2
 
 [node name="Audio" type="Node2D" parent="." unique_id=1627665205]
 

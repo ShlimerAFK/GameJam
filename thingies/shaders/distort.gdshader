@@ -9,7 +9,7 @@ float random_noise(vec2 uv) {
 
 void fragment() {
     float distort_amount = sanity_value;
-    distort_amount = smoothstep(0.7, 1.0, distort_amount) * 0.05;
+    distort_amount = smoothstep(0.7, 1.0, distort_amount) * 0.1;
     
     vec4 screen_color = texture(SCREEN_TEXTURE, SCREEN_UV);
 	vec3 distort_effect = screen_color.rgb + random_noise(SCREEN_UV + fract(TIME));
