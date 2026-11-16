@@ -3,35 +3,30 @@
 		
 		{
 			"speaker": "Janet",
-			"text" : "Hello"
-		},
-		
-		{
-			"speaker": "Janet",
-			"text" : "How are you doing today"
+			"text" : "Hi, Bob"
 		},
 		{
 			"speaker": "You",
 			"options" : [
 				{
-					"text" : "dialog option 1",
+					"text" : "What are you up to?",
 					"dialog" : "dialog_2"
 				},
 				{
-					"text" : "dialog option 2",
+					"text" : "Enjoying your break?",
 					"dialog" : "dialog_3"
 				},
 				{
-					"text" : "dialog option 3",
+					"text" : "Bye, Janet",
 					"dialog" : "dialog_4"
 				},
 				{
-					"text" : "start quest",
+					"text" : "Do you know the code to the bosses office?",
 					"dialog" : "dialog_5",
 					"needs_quest" : "padlock"
 				},
 				{
-					"text" : "complete quest",
+					"text" : "The vending machine is fixed...",
 					"dialog" : "dialog_6",
 					"needs_quest" : "vending machine",
 					"needs_task" : "vending machine"
@@ -44,20 +39,28 @@
 	"dialog_2": [
 		{
 			"speaker": "Janet",
-			"text" : "Hello"
+			"text" : "Im on my alocated breake thank you vary much"
+		},
+		
+		{
+			"speaker": "Janet",
+			"text" : "Not looking very productive yourself, huh?"
 		}
 		
 	],
 	
 	"dialog_3": [
 		{
-			"speaker": "Janet",
-			"text" : "Nothing much"
+			"speaker" : "Janet",
+			"text" : "Ugh, I would be"
 		},
-		
 		{
-			"speaker": "Janet",
-			"text" : "How about you?"
+			"speaker" : "Janet",
+			"text" : "That damn vending machine has broken down..."
+		},
+		{
+			"speaker" : "Janet",
+			"text" : "again"
 		}
 		
 	],
@@ -65,20 +68,14 @@
 	"dialog_4": [
 		{
 			"speaker": "Janet",
-			"text" : "Good morning"
-		},
-		
-		{
-			"speaker": "Janet",
-			"text" : "How has your morning been"
+			"text" : "..."
 		}
-		
 	],
 	
 	"dialog_5": [
 		{
 			"speaker": "Janet",
-			"text" : "quest",
+			"text" : "Maybe if that vending machine worked",
 			"quest_name" : "vending machine"
 		}
 		
@@ -86,7 +83,11 @@
 	"dialog_6": [
 		{
 			"speaker": "Janet",
-			"text" : "quest compleated",
+			"text" : "Hhm, would you look at that?"
+		},
+		{
+			"speaker": "Janet",
+			"text" : "Maybe you're not so useless after all",
 			"completes_quest": "vending machine"
 		}
 		

@@ -54,7 +54,7 @@ var quests := [
 	
 	{
 		"name": "coffee",
-		"text": "Get dan a cup of coffee",
+		"text": "Dan: Get Dan a cup of coffee",
 		"quest_is_active": false,
 		"quest_is_done": false,
 		"needs_to_complete_quest": "item",
@@ -68,7 +68,7 @@ var quests := [
 	},
 	{
 		"name": "vending machine",
-		"text": "Fix the vending machine",
+		"text": "Janet: Fix the vending machine",
 		"quest_is_active": false,
 		"quest_is_done": false,
 		"needs_to_complete_quest": "task",
@@ -76,7 +76,7 @@ var quests := [
 	},
 	{
 		"name": "popup",
-		"text": "Remove the popups on Todds second computer",
+		"text": "Todd: Remove the popups on Todds second computer",
 		"quest_is_active": false,
 		"quest_is_done": false,
 		"needs_to_complete_quest": "task",
@@ -84,7 +84,7 @@ var quests := [
 	},
 	{
 		"name": "papers",
-		"text": "Get Jim's papers from his desk",
+		"text": "Stephanie: Get Jim's papers from his desk",
 		"quest_is_active": false,
 		"quest_is_done": false,
 		"needs_to_complete_quest": "item",
@@ -93,7 +93,7 @@ var quests := [
 	,
 	{
 		"name": "document",
-		"text": "Sighn Jims document for him",
+		"text": "Jim: Sighn Jims document for him",
 		"quest_is_active": false,
 		"quest_is_done": false,
 		"needs_to_complete_quest": "task",

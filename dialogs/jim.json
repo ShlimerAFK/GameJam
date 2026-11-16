@@ -3,31 +3,36 @@
 		
 		{
 			"speaker": "Jim",
-			"text" : "Hello"
+			"text" : "zzz"
+		},
+		 
+		{
+			"speaker": "Jim",
+			"text" : "sup"
 		},
 		
 		{
 			"speaker": "You",
 			"options" : [
 				{
-					"text" : "dialog option 1",
+					"text" : "What are you up to?",
 					"dialog" : "dialog_2"
 				},
 				{
-					"text" : "dialog option 2",
+					"text" : "Why are you on the table?",
 					"dialog" : "dialog_3"
 				},
 				{
-					"text" : "dialog option 3",
+					"text" : "Bye, Jim",
 					"dialog" : "dialog_4"
 				},
 				{
-					"text" : "start quest",
+					"text" : "Do you know the code to the bosses office?",
 					"dialog" : "dialog_5",
 					"needs_quest" : "padlock"
 				},
 				{
-					"text" : "complete quest",
+					"text" : "I've got the signed documents",
 					"dialog" : "dialog_6",
 					"needs_quest" : "document",
 					"needs_task" : "document"
@@ -40,7 +45,7 @@
 	"dialog_2": [
 		{
 			"speaker": "Jim",
-			"text" : "Hello"
+			"text" : "chillin'"
 		}
 		
 	],
@@ -48,12 +53,12 @@
 	"dialog_3": [
 		{
 			"speaker": "Jim",
-			"text" : "Nothing much"
+			"text" : "..."
 		},
 		
 		{
 			"speaker": "Jim",
-			"text" : "How about you?"
+			"text" : "yup"
 		}
 		
 	],
@@ -61,12 +66,7 @@
 	"dialog_4": [
 		{
 			"speaker": "Jim",
-			"text" : "Good morning"
-		},
-		
-		{
-			"speaker": "Jim",
-			"text" : "How has your morning been"
+			"text" : "cya"
 		}
 		
 	],
@@ -74,15 +74,30 @@
 	"dialog_5": [
 		{
 			"speaker": "Jim",
-			"text" : "staring quest",
+			"text" : "perhaps"
+		},
+		
+		{
+			"speaker": "Jim",
+			"text" : "if sign my documents for me first?",
+		},
+		
+		{
+			"speaker": "Jim",
+			"text" : "those in the middle office",
 			"quest_name" : "document"
-		}
+		},
 		
 	],
 	"dialog_6": [
 		{
 			"speaker": "Jim",
-			"text" : "quest compleated",
+			"text" : "don't need 'em"
+		},
+		
+		{
+			"speaker": "Jim",
+			"text" : "Steph has been nagging me like crazy, thanks mate",
 			"completes_quest": "document"
 		}
 		

@@ -1,16 +1,21 @@
 {
 	"dialog_1": [
-		
-		
-		
-		
 		{
 			"speaker": "Carl",
 			"text" : "..."
 		},
 		{
 			"speaker": "Carl",
-			"text" : "Oh, you're quiting? lucky"
+			"text" : "Oh, you're quiting?"
+		},
+		{
+			"speaker": "Carl",
+			"text" : "..."
+		}
+		,
+		{
+			"speaker": "Carl",
+			"text" : "See you around Bob"
 		}
 	]
 }

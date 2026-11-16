@@ -3,31 +3,31 @@
 		
 		{
 			"speaker": "Todd",
-			"text" : "Hello"
+			"text" : "If you need something it better be important"
 		},
 		
 		{
 			"speaker": "You",
 			"options" : [
 				{
-					"text" : "dialog option 1",
+					"text" : "What are you up to?",
 					"dialog" : "dialog_2"
 				},
 				{
-					"text" : "dialog option 2",
+					"text" : "Why are you at Janets computer",
 					"dialog" : "dialog_3"
 				},
 				{
-					"text" : "dialog option 3",
+					"text" : "Bye, Todd",
 					"dialog" : "dialog_4"
 				},
 				{
-					"text" : "start quest",
+					"text" : "Do you know the code to the bosses office?",
 					"dialog" : "dialog_5",
 					"needs_quest" : "padlock"
 				},
 				{
-					"text" : "complete quest",
+					"text" : "I've fixed the computer",
 					"dialog" : "dialog_6",
 					"needs_quest" : "popup",
 					"needs_task" : "popup"
@@ -40,7 +40,12 @@
 	"dialog_2": [
 		{
 			"speaker": "Todd",
-			"text" : "Hello"
+			"text" : "Under section 12 of the ‘employee contract’, it states that: ‘Workers who are given a task directly by a higher up of any form are strictly prohibited to state what that task is about or what it is for *blah* *blah* *buzzword* *buzzword*, *blah* *blah* *buzzword* *buzzword*, *blah* *blah* *buzzword* *buzzword*, *blah* *blah* *buzzword* *buzzword*, *blah* *blah* *buzzword* *buzzword*, *blah* *blah* *buzzword* *buzzword*, *blah* *blah* *buzzword* *buzzword*, *blah* *blah* *buzzword* *buzzword*, *blah* *blah* *buzzword* *buzzword*, *blah* *blah* *buzzword* *buzzword*, *blah* *blah* *buzzword* *buzzword*, *blah* *blah* *buzzword* *buzzword*, *blah* *blah* *buzzword* *buzzword*,"
+		},
+		
+		{
+			"speaker": "Todd",
+			"text": "In other words – it's none of your business, legally speaking"
 		}
 		
 	],
@@ -48,12 +53,22 @@
 	"dialog_3": [
 		{
 			"speaker": "Todd",
-			"text" : "Nothing much"
+			"text" : "Well, its a long story you see, it all began when I got a mail in my digital mailbox from this young lady named Sarah, you see"
 		},
 		
 		{
 			"speaker": "Todd",
-			"text" : "How about you?"
+			"text" : "I simply opened the mail, and suddenly these little boxes started covering the digitial screen, you see"
+		},
+		
+		{
+			"speaker": "Todd",
+			"text": "So I simply had to switch computers! Which hsa been a real inconvenience to my work, you see"
+		},
+		
+		{
+			"speaker": "Todd",
+			"text": "It has to be done by 17:38 tonight, so I still have 2 minutes for my toilet break, you see"
 		}
 		
 	],
@@ -61,12 +76,7 @@
 	"dialog_4": [
 		{
 			"speaker": "Todd",
-			"text" : "Good morning"
-		},
-		
-		{
-			"speaker": "Todd",
-			"text" : "How has your morning been"
+			"text" : "So you didn't want anything? What a waste of time"
 		}
 		
 	],
@@ -74,15 +84,25 @@
 	"dialog_5": [
 		{
 			"speaker": "Todd",
-			"text" : "staring quest",
+			"text" : "Why would you want the code? That is none of your business, you see"
+		},
+		
+		{
+			"speaker": "Todd",
+			"text" : "But maybe... you tech-savvy youngster could lend me a hand with those pesky little boxes on the other computer",
 			"quest_name" : "popup"
-		}
+		},
 		
 	],
 	"dialog_6": [
 		{
 			"speaker": "Todd",
-			"text" : "quest compleated",
+			"text" : "Already? I see..."
+		},
+		
+		{
+			"speaker": "Todd",
+			"text": "That's quite impressive, I tried for two whole hours without success",
 			"completes_quest": "popup"
 		}
 		

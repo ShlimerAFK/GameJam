@@ -184,10 +184,6 @@ position = Vector2(-33, -11)
 [node name="Area2D" parent="." unique_id=1040853065 instance=ExtResource("10_aqdri")]
 position = Vector2(16, -50)
 
-[node name="Calendar" parent="." unique_id=1760318387 instance=ExtResource("12_nkwxu")]
-position = Vector2(-24, -63)
-filename = "calendar.json"
-
 [node name="Audio" type="Node2D" parent="." unique_id=218430703]
 position = Vector2(23, -87)
 
@@ -195,3 +191,9 @@ position = Vector2(23, -87)
 position = Vector2(1, -72)
 
 [node name="AirVent" parent="Clock" unique_id=1216952571 instance=ExtResource("14_uh7oo")]
+
+[node name="Objects" type="Node2D" parent="." unique_id=941084494]
+
+[node name="Calendar" parent="Objects" unique_id=1760318387 instance=ExtResource("12_nkwxu")]
+position = Vector2(-24, -63)
+filename = "calendar.json"

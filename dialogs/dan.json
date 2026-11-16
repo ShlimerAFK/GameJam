@@ -2,13 +2,13 @@
 	"dialog_1": [
 		{
 			"speaker": "Dan",
-			"text": "Wazzzzzzzzzaaaaaaa"
+			"text": "Whats up, Bob?"
 		},
 		{
 			"speaker": "You",
 			"options": [
 				{
-					"text": "Hey Dan",
+					"text": "What are you up to?",
 					"dialog": "dialog_2"
 				},
 				{
@@ -16,7 +16,7 @@
 					"dialog": "dialog_4"
 				},
 				{
-					"text": "Bye Dan",
+					"text": "Bye, Dan",
 					"dialog": "dialog_5"
 				},
 				{
@@ -36,24 +36,24 @@
 	"dialog_2": [
 		{
 			"speaker": "Dan",
-			"text": "Hello Bob, you look tired, not getting enough sleep are you?"
+			"text": "Looking forward to the afterwork"
 		}
 	],
 	"dialog_3": [
 		{
 			"speaker": "Dan",
-			"text": "I don't know the code but i do got info about the code.."
+			"text": "I think I've heard something about it"
 		},
 		{
 			"speaker": "Dan",
-			"text": "If you give me a cup of coffee then i will tell you one of the numbers",
+			"text": "If you give me a cup of coffee then I'll tell you",
 			"quest_name": "coffee"
 		}
 	],
 	"dialog_4": [
 		{
 			"speaker": "Dan",
-			"text": "Oh really? well i hope you the best"
+			"text": "Oh really? well I hope you the best"
 		},
 		{
 			"speaker": "Dan",
@@ -63,13 +63,13 @@
 	"dialog_5": [
 		{
 			"speaker": "Dan",
-			"text": "Bye bye"
+			"text": "Ciao, Bob"
 		},
 	],
 	"dialog_6": [
 		{
 			"speaker": "Dan",
-			"text": "Thank you!",
+			"text": "Thanks for the coffee, dude!",
 			"completes_quest": "coffee"
 		},
 	]

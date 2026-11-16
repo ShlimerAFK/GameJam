@@ -2,8 +2,8 @@
 	"dialog_1": [
 		
 		{
-			"speaker": "stephanie",
-			"text" : "Hello"
+			"speaker": "Stephanie",
+			"text" : "Oh, Bob, didn't see you there"
 		},
 		
 		{
@@ -11,19 +11,19 @@
 			"options" : [
 				{
 					
-					"text" : "dialog option 1",
+					"text" : "What are you up to?",
 					"dialog" : "dialog_2",
 				},
 				{
-					"text" : "dialog option 2",
+					"text" : "Do you know where the boss is at?",
 					"dialog" : "dialog_3",
 				},
 				{
-					"text" : "dialog option 3",
+					"text" : "Bye, Stephanie",
 					"dialog" : "dialog_4"
 				},
 				{
-					"text" : "start quest",
+					"text" : "Do you know the code to the bosses office?",
 					"dialog" : "dialog_5",
 					"needs_quest" : "padlock"
 				},
@@ -40,50 +40,60 @@
 	
 	"dialog_2": [
 		{
-			"speaker": "stephanie",
-			"text" : "Hello"
+			"speaker": "Stephanie",
+			"text" : "Me? Just the normal stuff, just some paperwork"
 		}
 		
 	],
 	
 	"dialog_3": [
 		{
-			"speaker": "stephanie",
-			"text" : "Nothing much"
+			"speaker": "Stephanie",
+			"text" : "The boss? Should be in his office as usual..."
 		},
 		
 		{
-			"speaker": "stephanie",
-			"text" : "How about you?"
+			"speaker": "Stephanie",
+			"text" : "I think?"
 		}
 		
 	],
 	
 	"dialog_4": [
 		{
-			"speaker": "stephanie",
-			"text" : "Good morning"
-		},
-		
-		{
-			"speaker": "stephanie",
-			"text" : "How has your morning been"
+			"speaker": "Stephanie",
+			"text" : "See you around"
 		}
 		
 	],
 	
 	"dialog_5": [
 		{
-			"speaker": "stephanie",
-			"text" : "staring quest",
+			"speaker": "Stephanie",
+			"text" : "The code? Oh, that one"
+		},
+		
+		{
+			"speaker": "Stephanie",
+			"text" : "Can you fetch Jims documents for me, that slacker has been procrastinating again, like usual",
 			"quest_name" : "papers"
 		}
 		
 	],
 	"dialog_6": [
 		{
-			"speaker": "stephanie",
-			"text" : "quest compleated",
+			"speaker": "Stephanie",
+			"text" : "What's this? Ah, right, Jims documents..."
+		},
+		
+		{
+			"speaker": "Stephanie",
+			"text" : "His signature is a little of...? Nevermind"
+		},
+		
+		{
+			"speaker": "Stephanie",
+			"text" : "You still here? Oh, the code, right",
 			"completes_quest": "papers"
 		}
 		
