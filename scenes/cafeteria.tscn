@@ -68,6 +68,20 @@ tile_map_data = PackedByteArray("AAD5/wEAAAAFAAAAAAD///j/AAAIAAQAAAD6/wIAAAAIAAM
 position = Vector2(8, 0)
 tile_map_data = PackedByteArray("AAACAP7/AAAFAAAAAAD6/wMAAAAIAAQAAAD9//3/AAAGAAQAAAD4/wEAAAAGAAQAAQA=")
 
+[node name="Animated2" parent="Tilemaps/Sanity1" unique_id=1920477250 instance=ExtResource("5_p4o86")]
+tile_map_data = PackedByteArray("AAD5//b/AAAAAAIAAAA=")
+
+[node name="Animated3" parent="Tilemaps/Sanity1" unique_id=1735531767 instance=ExtResource("5_p4o86")]
+tile_map_data = PackedByteArray("AAD5//b/AAAAAAMAAAA=")
+
+[node name="Animated4" parent="Tilemaps/Sanity1" unique_id=197693003 instance=ExtResource("5_p4o86")]
+position = Vector2(0, 8)
+tile_map_data = PackedByteArray("AAAFAPX/AAAAAAIAAAA=")
+
+[node name="Animated5" parent="Tilemaps/Sanity1" unique_id=1902161308 instance=ExtResource("5_p4o86")]
+position = Vector2(0, 8)
+tile_map_data = PackedByteArray("AAAFAPX/AAAAAAMAAAA=")
+
 [node name="Sanity2" type="Node2D" parent="Tilemaps" unique_id=1314109763]
 visible = false
 y_sort_enabled = true

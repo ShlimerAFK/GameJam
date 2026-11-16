@@ -65,6 +65,14 @@ tile_map_data = PackedByteArray("AAAAAP3/AAADAAEAAAD///v/AAADAAAAAAA=")
 position = Vector2(0, 8)
 tile_map_data = PackedByteArray("AAABAPv/AAAEAAMAAAD+//v/AAAEAAAAAAACAPz/AAABAAQAAAA=")
 
+[node name="Animated" parent="Tilemaps/Sanity1" unique_id=1935734834 instance=ExtResource("7_76a0y")]
+position = Vector2(8, 0)
+tile_map_data = PackedByteArray("AAD///v/AAAAAAIAAAA=")
+
+[node name="Animated2" parent="Tilemaps/Sanity1" unique_id=413265488 instance=ExtResource("7_76a0y")]
+position = Vector2(8, 0)
+tile_map_data = PackedByteArray("AAD///v/AAAAAAMAAAA=")
+
 [node name="Foreground" parent="Tilemaps/Sanity1" unique_id=2073150406 instance=ExtResource("4_thxof")]
 z_index = 10
 tile_map_data = PackedByteArray("AAABAAEAAAAEAAAAAAA=")
@@ -157,7 +165,7 @@ y_sort_enabled = true
 z_index = -1
 tile_map_data = PackedByteArray("AAD+//7/AAACAAgAAgABAAEAAAAAAAgAAAAAAP//AAAAAAkAAAD9/wAAAAADAAMAAAD+/wEAAAAEAAIAAAACAAEAAAACAAMAAAD+//r/AAAAAAIAAAAAAPr/AAABAAMAAAACAPr/AAAAAAMAAAAAAP3/AAADAAIAAAD9//7/AAAEAAIAAAD9//3/AAABAAMAAAA=")
 
-[node name="Animated" parent="Tilemaps/Sanity6" unique_id=1935734834 instance=ExtResource("7_76a0y")]
+[node name="Animated" parent="Tilemaps/Sanity6" unique_id=1635396353 instance=ExtResource("7_76a0y")]
 position = Vector2(8, 0)
 tile_map_data = PackedByteArray("AAAAAPz/AAAAAAEAAAA=")
 
