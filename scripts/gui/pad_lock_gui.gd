@@ -1,6 +1,9 @@
 extends Control
 
-var correct_code := [0,2,2,8,2,0]
+var correct_code_1 := [0,2,2,8,2,0]
+var correct_code_2 := [2,2,8,2,0]
+var correct_code_3 := [0,2,1,9,2,8,2,0]
+var correct_code_4 := [2,1,9,2,8,2,0]
 
 var inputed_numbers := []
 var quest_name = "padlock"
@@ -53,7 +56,7 @@ func _on_button_pressed(text: String):
 		inputed_numbers.pop_back()
 		update_shown_code()
 		
-	elif inputed_numbers.size() < correct_code.size():
+	elif inputed_numbers.size() < correct_code_3.size():
 		button_beep.play()
 		inputed_numbers.append(int(text))
 		update_shown_code()
@@ -66,7 +69,7 @@ func update_shown_code():
 	code_input.text = text
 	
 func check_if_code_matches():
-	if correct_code == inputed_numbers:
+	if correct_code_1 == inputed_numbers or correct_code_2 == inputed_numbers or correct_code_3 == inputed_numbers or correct_code_4 == inputed_numbers:
 		hide_pad_lock()
 		correct_password_player.play()
 		animation_player.play("fade_out")
