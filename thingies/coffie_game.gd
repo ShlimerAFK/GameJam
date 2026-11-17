@@ -12,10 +12,10 @@ extends MiniGame
 
 
 func _ready() -> void:
-	instructions = "Press a buton to brew a cup"
+	instructions = "Press a button to brew a cup"
 	main_text = "Coffee machine"
 	completes_quest = "coffee"
-	button_text = ["Coffee", "Te", "Hot chokolet", "Decaf"]
+	button_text = ["Coffee", "Tea", "Hot chocolate", "Decaf"]
 	current_minigame = mini_game_1
 	
 	set_button_text()

@@ -28,7 +28,7 @@
 					"needs_quest" : "padlock"
 				},
 				{
-					"text" : "complete quest",
+					"text" : "Here is Jims documents",
 					"dialog" : "dialog_6",
 					"needs_quest" : "papers",
 					"needs_item" : "Jims papers"

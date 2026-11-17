@@ -189,7 +189,7 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 14
 text = "Press space 
-to coninue dialog"
+to continue dialog"
 horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="ButtonManeger/NinePatchRect2" unique_id=253087842]
