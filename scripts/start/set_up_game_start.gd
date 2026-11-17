@@ -3,7 +3,8 @@ extends Node2D
 @onready var narration = $"../GUI/NarrationNode"
 @onready var player: CharacterBody2D = $"../CharacterBody2D"
 @onready var animation_player: AnimationPlayer = $CanvasLayer/AnimationPlayer
-
+@onready var timer: Timer = $Timer
+@onready var quest_controler :Control = $"../GUI/QuestControler"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,6 +25,8 @@ func _ready() -> void:
 		
 		await animation_player.animation_finished
 		
+		timer.start(1)
+		
 	else:
 		animation_player.play("nothing")
 		
@@ -34,3 +37,8 @@ func play_narration(narr: String):
 		
 	else:
 		narration.start_narration(narr, "other_days.json")
+
+
+func _on_timer_timeout() -> void:
+	
+	quest_controler.add_quest(Global.get_quest("boss"))
