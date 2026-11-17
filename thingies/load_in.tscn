@@ -71,3 +71,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+
+[node name="Timer" type="Timer" parent="." unique_id=1057514739]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

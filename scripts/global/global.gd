@@ -89,8 +89,7 @@ var quests := [
 		"quest_is_done": false,
 		"needs_to_complete_quest": "item",
 		"completion_information" : "The order of the code is his birthmonth then his wifs \n birth year and lastly how many years he as worked here"
-	}
-	,
+	},
 	{
 		"name": "document",
 		"text": "Jim: Sighn Jims document for him",
@@ -98,6 +97,14 @@ var quests := [
 		"quest_is_done": false,
 		"needs_to_complete_quest": "task",
 		"completion_information" : "The bosses wife is fifty five years old"
+	},
+	{
+		"name": "boss",
+		"text": "Take the elevator to the bosses office",
+		"quest_is_active": false,
+		"quest_is_done": false,
+		"needs_to_complete_quest": "task",
+		"completion_information" : ""
 	}
 ]
 

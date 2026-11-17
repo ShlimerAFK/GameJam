@@ -34,10 +34,11 @@ func connect_all_buttons():
 func on_interacted():
 	padlock.visible = true
 	code_lock_node.mouse_filter = MOUSE_FILTER_STOP
+	Global.complete_quest("boss")
 	activate_quest()
 	
 func activate_quest():
-	if not Global.check_if_quest_is_activated(quest_name):
+	if not Global.check_if_quest_is_activated(quest_name):	
 		Global.activate_quest(Global.get_quest(quest_name))
 		quest_controler.display_active_quests()
 		notification_controler.display_notification()
